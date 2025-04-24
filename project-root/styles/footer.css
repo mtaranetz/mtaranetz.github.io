@@ -1,0 +1,79 @@
+.footer {
+    background: #FFF;
+    padding: 24px 0;
+  }
+  
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr 566px;
+    column-gap: 32px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer__left {
+    grid-column: 1;
+    margin-bottom: 0; /* можно убрать, если не нужно */
+  }
+  
+  .footer__logo img {
+    height: 67px;
+    display: block;
+  }
+  
+  .footer__right {
+    grid-column: 2;
+    text-align: left;
+    font-family: Commissioner, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .footer__policy {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  
+  .footer__company p {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    /* 1. Логотип поменьше */
+    .footer__logo img {
+      height: 48px;
+      width: auto;
+    }
+  
+    /* 2. Показываем <br> только на мобилке */
+    .mobile-only-break {
+      display: inline;
+    }
+
+    .footer__policy{ 
+      font-family: Commissioner;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+
+    }
+  
+    /* 3. Чуть подтягиваем отступы между строками в компании */
+    .footer__company p {
+      font-family: Commissioner;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+
+      margin-bottom: 4px;
+      white-space: normal; /* разрешаем переносы */
+    }
+  }
+  
+  

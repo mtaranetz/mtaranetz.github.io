@@ -1,0 +1,477 @@
+/* ========================================
+   Сброс и переменные
+   ======================================== */
+   :root {
+    --color-primary:      #719C2E;
+    --dark-color-primary: #456C1D;
+  }
+  
+  /* Сброс отступов и box-sizing */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Общие стили для ссылок и списков */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  /* Контейнер-обёртка */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    min-height: 97px;
+  }
+  
+  
+  /* ========================================
+     Header
+     ======================================== */
+  .header {
+    background-color: transparent;
+  }
+  
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+  
+  /* Логотип */
+  .header__logo img {
+    height: 48px;
+    object-fit: contain;
+    display: block;
+  }
+  
+  
+  /* Навигация */
+  .header__nav .menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .header__nav .menu li.has-submenu {
+    position: relative;
+  }
+  .header__nav .menu li a {
+    position: relative;
+    padding-right: 20px;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #333;
+    transition: color 0.3s;
+  }
+
+  /* 1) общий стиль ссылок меню */
+.menu li a {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: var(--color-primary);
+}
+
+/* 2) псевдо-стрелка справа от ссылки */
+.header__nav .menu li a::after {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  background-image: url('../images/icons/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+}
+/* 3) поворот стрелки и серый цвет текста у открытого пункта */
+.menu li.has-submenu.open > a::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.menu li.has-submenu.open > a {
+  color: #777;
+}
+
+
+  .header__nav .menu li a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Вот секция для стрелочек слева от подпунктов */
+  .header__nav .menu li.has-submenu > a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../images/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.2s ease;
+  }
+  .header__nav .menu li.has-submenu.open > a::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .header__nav .menu li.has-submenu.open > a {
+    color: #777;
+  }
+  
+  /* Подменю */
+  .menu .submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    background: #FAF8F8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    min-width: 200px;
+    z-index: 10;
+  }
+  .menu li.has-submenu.open > .submenu {
+    display: block;
+  }
+  .menu .submenu > li.has-submenu > .submenu {
+    position: static;
+    margin: 10px 0 0 15px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu > li.has-submenu > .submenu > li + li {
+    margin-top: 17px;
+  }
+  .menu .submenu > li.has-submenu > .submenu > li + li {
+    margin-top: 10px;
+  }
+  .menu .submenu li a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+  }
+  .menu .submenu li a:hover {
+    background-color: #f5f5f5;
+  }
+  
+  
+  /* Контакты в шапке */
+  .header__contacts {
+    display: flex;
+    gap: 16px;
+  }
+  .header__contact-link {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  .header__contact-link:hover {
+    background-color: var(--dark-color-primary);
+  }
+  .header__contact-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    display: block;
+  }
+  
+  /* прячем мобильные элементы на десктопе */
+  .header__toggle {
+    display: none;
+  }
+  .header__contacts .messaging {
+    display: none;
+  }
+  
+  /* фирменные цвета для иконок мессенджеров */
+  .header__contact-link.telegram {
+    background-color: #26A5E4;
+  }
+  .header__contact-link.whatsapp {
+    background-color: #25D366;
+  }
+  
+  
+/* ========================================
+   Off-canvas меню (базовые стили)
+   ======================================== */
+   .header__mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    z-index: 999;
+  }
+  .header__mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .header__mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+    z-index: 1000;
+  
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .header__mobile-menu.open {
+    transform: translateY(0);
+  }
+  
+  /* Верхний ряд: логотип и кнопка закрытия */
+  .header__mobile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__mobile-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    margin: 0;
+    height: 14px;
+    width: 14px;
+  }
+  
+  /* Список пунктов меню (мобилка) */
+  .mobile-menu {
+    flex: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -3%;
+    padding-top: 50px;
+  }
+  .mobile-menu li {
+    position: relative;
+  }
+  .mobile-menu a {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -3%;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 0; /* чуть больше кликабельной зоны */
+  }
+
+  .mobile-menu li > a {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  
+  /* Псевдо-стрелка справа у каждого пункта (мобилка) */
+  .mobile-menu li > a::after {
+    content: "";
+    display: inline-block;
+    margin-left: 8px;        /* отступ между текстом и стрелкой */
+    width: 11px;
+    height: 10px;
+    background-image: url('../images/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .2s ease;
+  }
+
+  /* Разворот стрелки для открытого подменю */
+  .mobile-menu li.has-submenu.open > a::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  /* Серый текст для открытого пункта */
+  .mobile-menu li.has-submenu.open > a {
+    color: #777;
+  }
+  
+  /* Кнопка-раскрыватель подменю */
+  .submenu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Подменю (мобилка) */
+  .mobile-menu .submenu {
+    
+    display: none;
+    list-style: none;
+    margin: 8px 0 0 16px;
+    padding: 0;
+  }
+
+  .mobile-menu .submenu li {
+    
+    margin-bottom: 12px;
+  }
+  .mobile-menu .has-submenu.open .submenu {
+    
+    display: block;
+  }
+  
+  /* Контакты внизу офф-канвас */
+  .header__mobile-contacts {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -3%;
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .header__mobile-contacts .messaging {
+    display: inline-flex;
+  }
+  .header__mobile-contacts .messaging img {
+    width: 24px;
+    height: 24px;
+  }
+  .header__mobile-contacts .phone {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* ========== Мобильное подменю: меньший текст + без стрелок ========== */
+.mobile-menu .submenu li > a {
+    font-family: "Commissioner";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -3%;
+}
+
+/* Убираем псевдо-стрелку у ссылок внутри подменю */
+.mobile-menu .submenu li > a::after {
+  display: none;
+}
+
+  
+  /* ========================================
+     Мобильная шапка (≤768px)
+     ======================================== */
+  @media (max-width: 768px) {
+    /* Основная строка: лого, мессенджеры, бургер */
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 16px 0;
+      min-height: 70px;
+    }
+    .header__logo {
+      order: 1;
+    }
+    .header__nav {
+      display: none;
+    }
+    .header__contacts {
+      order: 2;
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+    }
+    .header__contacts .phone {
+      display: none;
+    }
+    .header__contacts .messaging {
+      display: inline-flex;
+    }
+    .header__contact-link {
+      padding: 6px;
+    }
+    .header__contact-icon {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+    }
+    .header__toggle {
+      display: block;
+      order: 3;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+    .header__burger-icon {
+      width: 24px;
+      height: 24px;
+    }
+  
+    /* Кнопки Telegram / WhatsApp в мобильном меню */
+    .header__mobile-contacts .messaging {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      padding: 7px;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    .header__mobile-contacts .messaging.telegram {
+      background: #29AEEC;
+    }
+    .header__mobile-contacts .messaging.whatsapp {
+      background: #6AD567;
+    }
+    .header__mobile-contacts .messaging img {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+  }

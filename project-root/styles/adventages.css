@@ -1,0 +1,166 @@
+:root {
+    --color-primary: #719C2E;
+    --dark-color-primary: #456C1D
+  }
+  
+
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: 'You2013';                        
+    src: url('../fonts/you2013.ttf') format('truetype');  
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  /* Базовые настройки */
+  body {
+    font-family: "Commissioner", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #FAF8F8;
+  }
+
+/* контейнер сетки */
+.advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* каждая карточка */
+  .advantages__item {
+    position: relative;
+    background: #fff;
+    border-radius: 15.6px;
+    padding: 16px 24px 24px;    /* увеличили нижний паддинг */
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  
+  /* номер в правом верхнем углу */
+  .advantages__number {
+    font-family: Commissioner;
+    font-weight: 100;
+    font-size: 42px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    position: absolute;
+    top: 13px;
+    right: 23px;
+    color: #000;
+    opacity: 4%;
+  }
+  
+  /* заголовок карточки */
+  .advantages__item-title {
+    margin: 0 0 0px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Commissioner";
+    color: var(--color-primary);
+    line-height: 1.2;
+  }
+  
+  /* описание под заголовком */
+  .advantages__item-desc {
+    margin: 0;
+    font-weight: 300;
+    font-family: "Commissioner";
+    font-size: 20px;
+    color: #000;
+    line-height: 1.4;
+  }
+  
+  /* заголовок секции */
+  .advantages__title {
+    font-family: "You2013", serif;
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom: 24px;
+    color: #000;
+  }
+  
+  /* общий паддинг секции */
+  .advantages {
+    padding: 60px 20px;
+    background-color: #FAF8F8;
+  }
+
+  /* ================================================
+   Мобильная адаптация для секции «Преимущества» (≤768px)
+   ================================================ */
+@media (max-width: 768px) {
+  /* Делаем грид в две колонки вместо трёх */
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;           /* можно подкорректировать отступ */
+  }
+
+  /* Заголовок секции — чуть меньше */
+  .advantages__title {
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2%;
+    margin-bottom: 16px;
+  }
+
+  .advantages__item {
+      min-height: 130px; 
+      padding: 15px;
+  }
+
+  /* Номер в углу — уменьшаем и чуть подвигаем */
+  .advantages__number {
+    font-family: Commissioner;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    top: 10px;
+    right: 10px;
+    opacity: 0.04;      /* по-прежнему очень «бледный» */
+  }
+
+  /* Заголовки карточек */
+  .advantages__item-title {
+    font-family: Commissioner;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+
+  /* Описания карточек */
+  .advantages__item-desc {    
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+  

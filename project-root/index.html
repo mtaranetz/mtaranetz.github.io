@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЭкоСервис74 — Главная</title>
+  <link rel="stylesheet" href="styles/header.css" />  
+  <link rel="stylesheet" href="styles/banner.css" />
+  <link rel="stylesheet" href="styles/adventages.css" />
+  <link rel="stylesheet" href="styles/services.css" />
+  <link rel="stylesheet" href="styles/testimonials.css" />
+  <link rel="stylesheet" href="styles/catalog.css" />
+  <link rel="stylesheet" href="styles/team.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+
+
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+  <section class="header">
+    <div class="header__inner container">
+
+      <!-- 1) Логотип (всегда виден) -->
+      <a href="/" class="header__logo">
+        <img src="images/logo.svg" alt="Экосервис74">
+      </a>
+
+      <!-- 4) Навигация (классику скрываем на мобилке) -->
+      <nav class="header__nav">
+        <ul class="menu">
+          <li class="has-submenu">
+            <a href="#services">Услуги</a>
+            <ul class="submenu">
+                <li class="has-submenu">
+                  <a href="/services/design">Ландшафтный дизайн</a>
+                  <!-- Второй уровень -->
+                  <ul class="submenu">
+                    <li><a href="/services/design/project">Заказ и реализация проекта</a></li>
+                    <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+                    <li><a href="/services/design/lawn">Устройство газона</a></li>
+                    <li><a href="/services/design/gardening">Уход за садом</a></li>
+                    <li><a href="/services/design/portfolio">Наши работы</a></li>
+                  </ul>
+                </li>
+                <li><a href="/services/center">Садовый центр</a></li>
+                <li><a href="/services/gardener">Товары для сада</a></li>
+              </ul>
+          </li>
+          <li><a href="#portfolio">Галерея работ</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">О нас</a></li>
+        </ul>
+      </nav>
+
+      <!-- 2) Контакты: телефоны + мессенджеры -->
+      <div class="header__contacts">
+        <!-- телефоны: desktop-only -->
+        <a href="tel:+73517505524" class="header__contact-link phone">
+          <img src="images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 750-55-24
+        </a>
+        <a href="tel:+73517007724" class="header__contact-link phone">
+          <img src="images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 700-77-24
+        </a>
+
+        <!-- мессенджеры: mobile-only -->
+        <a href="https://t.me/your_telegram" class="header__contact-link messaging telegram" aria-label="Telegram">
+          <img src="images/icons/telegram.svg" class="header__contact-icon" alt="">
+        </a>
+        <a href="https://wa.me/73517505524" class="header__contact-link messaging whatsapp" aria-label="WhatsApp">
+          <img src="images/icons/whatsapp.svg" class="header__contact-icon" alt="">
+        </a>
+      </div>
+
+      <!-- 3) Бургер -->
+      <button class="header__toggle" aria-label="Открыть меню">
+        <img src="images/icons/burger.svg" class="header__burger-icon" alt="Меню">
+      </button>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="header__mobile-overlay">
+
+      <!-- Fullscreen меню -->
+      <nav class="header__mobile-menu" aria-hidden="true">
+        <!-- Верхний ряд: логотип + крестик -->
+        <div class="header__mobile-top">
+          <a href="/" class="header__mobile-logo">
+            <img src="images/logo.svg" alt="ЭкоСервис74">
+          </a>
+          <button class="header__mobile-close" aria-label="Закрыть меню">
+            <img src="images/icons/close.svg" alt="Закрыть меню">
+          </button>
+        </div>
+
+        <!-- Пункты меню -->
+        <ul class="mobile-menu">
+          <li class="has-submenu">
+            <a href="/services/design">Ландшафтный дизайн</a>
+            <!-- кнопка-раскрыватель подменю -->
+            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+            <!-- Вложенное подменю -->
+            <ul class="submenu">
+              <li><a href="/services/design/project">Заказ и реализация проекта</a></li>
+              <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+              <li><a href="/services/design/lawn">Устройство газона</a></li>
+              <li><a href="/services/design/gardening">Уход за садом</a></li>
+              <li><a href="/services/design/portfolio">Наши работы</a></li>
+            </ul>
+          </li>
+          <li><a href="/services/center">Садовый центр</a></li>
+          <li><a href="/services/gardener">Товары для сада</a></li>
+          <li><a href="#portfolio">Галерея работ</a></li>
+          <li><a href="#portfolio">Статьи</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">Контакты</a></li>
+        </ul>
+
+        <!-- Контакты -->
+        <div class="header__mobile-contacts">
+          <a href="https://t.me/your_telegram" class="messaging telegram " aria-label="Telegram">
+            <img src="images/icons/telegram.svg" alt="">
+          </a>
+          <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
+            <img src="images/icons/whatsapp.svg" alt="">
+          </a>
+          <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
+          <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
+        </div>
+      </nav>
+      
+    </div>
+  </section>
+  
+  <section class="banner">
+    <div class="container">
+      <!-- Заголовок и локация -->
+      <h1 class="banner__title">
+        Создаем <span class="accent">живое</span>
+        <span class="accent accent--block">пространство</span>
+      </h1>  
+      <!-- Карточка баннера -->
+      <div class="banner__card">
+        <!-- Менеджер -->
+        <div class="manager-card">
+          <img src="images/manager.svg" alt="Максим Молоков" class="manager-card__photo">
+          <div class="manager-card__info">
+            <p class="manager-card__name">Максим Молоков</p>
+            <p class="manager-card__role">Руководитель компании</p>
+            <p class="manager-card__role">«ЭкоСервис74»</p>
+          </div>
+        </div>
+  
+        <!-- Картинка -->
+        <div class="banner__img-wrapper">
+          <img src="images/banner.png" alt="Живое пространство">
+        </div>
+  
+        <!-- Контент с кнопками -->
+        <div class="banner__content">
+          <p class="banner__location">
+            <img src="images/icons/location.svg"
+                 alt=""
+                 class="banner__location-icon">
+            Работаем в Челябинске и по всей РФ
+          </p>
+          <div class="banner__buttons">
+            <a href="#consult" class="button button--primary">
+              Оставить заявку
+              <img src="images/icons/arrow-right.svg" alt="" class="button__icon">              
+            </a>
+            <a href="https://t.me/your_telegram" class="button button--tg">
+              <img src="images/icons/telegram.svg" alt="" class="button__icon">
+            </a>
+            <a href="https://wa.me/73517505524" class="button button--wa">
+              <img src="images/icons/whatsapp.svg" alt="" class="button__icon">
+            </a>
+          </div>
+          <p class="banner__note">
+            <span class="accent">Бесплатная консультация</span><br>
+            <span class="banner__note--sub">нашего специалиста</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="advantages container">
+    <h2 class="advantages__title">Преимущества компании</h2>
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <span class="advantages__number">01</span>
+        <h3 class="advantages__item-title">Гарантия 2 года</h3>
+        <p class="advantages__item-desc">на наши работы</p>
+      </li>
+      <li class="advantages__item">
+        <span class="advantages__number">02</span>
+        <h3 class="advantages__item-title">Более 10 лет</h3>
+        <p class="advantages__item-desc">опыт работы</p>
+      </li>
+      <li class="advantages__item">
+        <span class="advantages__number">03</span>
+        <h3 class="advantages__item-title">Сдаем в срок</h3>
+        <p class="advantages__item-desc">все объекты</p>
+      </li>
+      <li class="advantages__item">
+        <span class="advantages__number">04</span>
+        <h3 class="advantages__item-title">Свой садовый центр</h3>
+        <p class="advantages__item-desc">работает ежедневно</p>
+      </li>
+      <li class="advantages__item">
+        <span class="advantages__number">05</span>
+        <h3 class="advantages__item-title">Любой способ оплаты</h3>
+        <p class="advantages__item-desc">платите чем угодно</p>
+      </li>
+      <li class="advantages__item">
+        <span class="advantages__number">06</span>
+        <h3 class="advantages__item-title">Свои бригады</h3>
+        <p class="advantages__item-desc">только проверенные рабочие</p>
+      </li>
+    </ul>
+  </section>
+  
+
+  <section class="services container" id="services">
+    <h2 class="services__title">
+      Наши услуги
+      <span class="services__subtitle">/ от проекта до реализации</span>
+    </h2>
+  
+    <div class="services__grid">
+      <!-- Ландшафтный дизайн -->
+      <div class="service service--design">
+        <div class="service__img">
+          <img src="images/service-design.svg" alt="Ландшафтный дизайн">
+        </div>
+        <div class="service__info">
+          <div class="service__header">
+            <h3 class="service__name">Ландшафтный дизайн</h3>
+            <a href="/services/design" class="service__link">
+              Подробнее
+              <img src="images/icons/arrow-right.svg"
+                   alt=""
+                   class="service__link-icon">
+            </a>
+          </div>
+          <p class="service__desc">Заказ и реализация проекта</p>
+        </div>
+      </div>
+  
+      <!-- Садовый центр -->
+      <div class="service service--center">
+        <div class="service__img">
+          <img src="images/service-center.svg" alt="Садовый центр">
+        </div>
+        <div class="service__info">
+          <div class="service__header">
+            <h3 class="service__name">Садовый центр</h3>
+            <a href="/services/center" class="service__link">
+              Подробнее
+              <img src="images/icons/arrow-right.svg"
+                   alt=""
+                   class="service__link-icon">
+            </a>
+          </div>
+          <p class="service__desc">Продажа и посадка растений</p>
+        </div>
+      </div>
+  
+      <!-- Услуги садовника -->
+      <div class="service service--gardener">
+        <div class="service__img">
+          <img src="images/service-gardener.svg" alt="Услуги садовника">
+        </div>
+        <div class="service__info">
+          <div class="service__header">
+            <h3 class="service__name">Услуги садовника</h3>
+            <a href="/services/gardener" class="service__link">
+              Подробнее
+              <img src="images/icons/arrow-right.svg"
+                   alt=""
+                   class="service__link-icon">
+            </a>
+          </div>
+          <p class="service__desc">Комплексный уход за вашим участком</p>
+        </div>
+      </div>
+  
+      <!-- Автополив -->
+      <div class="service service--irrigation">
+        <div class="service__img">
+          <img src="images/service-irrigation.svg" alt="Автополив">
+        </div>
+        <div class="service__info">
+          <div class="service__header">
+            <h3 class="service__name">Автополив</h3>
+            <a href="/services/irrigation" class="service__link">
+              Подробнее
+              <img src="images/icons/arrow-right.svg"
+                   alt=""
+                   class="service__link-icon">
+            </a>
+          </div>
+          <p class="service__desc">
+            Проектирование, установка,<br>пуско-наладочные работы
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials__image-wrapper">
+      <img src="images/banner2.svg" alt="Елки" class="testimonials__image">
+    </div>
+    <div class="testimonials__content">
+      <div class="container">
+        <div class="testimonials__header">
+          <h2 class="testimonials__title">
+            Отзывы клиентов /
+            <span class="testimonials__subtitle">Яндекс.Карты и 2ГИС</span>
+          </h2>
+          <a href="#consult" class="button button--primary testimonials__cta">
+            Оставить заявку
+            <img src="images/icons/arrow-right.svg" alt="" class="button__icon">
+          </a>
+        </div>
+  
+        <div class="testimonials__slider">
+          <ul class="testimonials__list">
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+            <li class="testimonial">
+              <p class="testimonial__text">
+                Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
+              </p>
+              <div class="testimonial__footer">
+                <span class="testimonial__author">Лариса К.</span>
+                <div class="testimonial__rating">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                  <img src="images/icons/star.svg" alt="звезда" class="testimonial__star">
+                </div>
+              </div>
+            </li>
+          </ul>
+  
+          <div class="testimonials__controls">
+            <button class="testimonials__nav testimonials__nav--prev" aria-label="Назад">
+              <img src="images/icons/arrow-forward.svg" alt="">
+            </button>
+            <button class="testimonials__nav testimonials__nav--next" aria-label="Вперёд">
+              <img src="images/icons/arrow-forward.svg" alt="">
+            </button>
+            <!-- новая кнопка, появится только на мобилке -->
+            <a href="#consult" class="button button--primary testimonials__cta--mobile">
+              Оставить заявку
+              <img src="images/icons/arrow-right.svg" class="button__icon" alt="">
+            </a>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+
+  
+  
+
+  <section class="catalog">
+    <div class="catalog__inner">
+      <div class="catalog__header">
+        <h2 class="catalog__title">
+          Каталог<br>
+          наших работ
+        </h2>
+        <p class="catalog__subtitle">
+          Реализованные нами<br>
+          проекты
+        </p>
+      </div>
+  
+      <div class="catalog__slider">
+        <div class="catalog__slides">
+          <div class="catalog__slide">
+            <img src="images/catalog1.svg" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="images/catalog2.svg" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="images/catalog3.svg" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="images/catalog4.svg" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="images/catalog4.svg" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="catalog__controls">
+          <button type="button"
+          class="catalog__arrow catalog__arrow--prev"
+          aria-label="Предыдущий слайд">
+          <!-- вместо arrow-back.svg используем arrow-forward.svg и повернём его CSS‑ом -->
+          <img src="images/icons/arrow-forward.svg"
+              alt=""
+              class="catalog__arrow-icon">
+          </button>
+          <button type="button"
+                class="catalog__arrow catalog__arrow--next"
+                aria-label="Следующий слайд">
+                <img src="images/icons/arrow-forward.svg"
+              alt=""
+              class="catalog__arrow-icon">
+        </button>
+        </div>
+        <button class="catalog__btn">Бесплатная консультация</button>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="team__inner">
+      <div class="team__header">
+        <h2 class="team__title">
+          Команда профессионалов
+        </h2>
+      </div>
+  
+      <div class="team__slider">
+        <div class="team__slides">
+          <div class="team__slide">
+            <img src="images/team1.svg" alt="Менеджер" loading="lazy">
+            <div class="team__info">
+              <h3 class="team__name">Максим Молоков</h3>
+              <p class="team__role">Руководитель проекта</p>
+            </div>
+          </div>
+          <div class="team__slide">
+            <img src="images/team2.svg" alt="Менеджер" loading="lazy">
+            <div class="team__info">
+              <h3 class="team__name">Наталья Молокова</h3>
+              <p class="team__role">Заместитель руководителя</p>
+            </div>
+          </div>
+          <div class="team__slide">
+            <img src="images/team_card.svg" alt="Менеджер" loading="lazy">
+            <div class="team__info">
+              <h3 class="team__name">ФИО</h3>
+              <p class="team__role">Должность</p>
+            </div>
+          </div>
+          <div class="team__slide">
+            <img src="images/team_card.svg" alt="Менеджер" loading="lazy">
+            <div class="team__info">
+              <h3 class="team__name">ФИО</h3>
+              <p class="team__role">Должность</p>
+            </div>
+          </div>
+          <div class="team__slide">
+            <img src="images/team_card.svg" alt="Менеджер" loading="lazy">
+            <div class="team__info">
+              <h3 class="team__name">ФИО</h3>
+              <p class="team__role">Должность</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="team__controls">
+          <button type="button" class="team__arrow team__arrow--prev" aria-label="Назад">
+            <img src="images/icons/arrow-forward.svg" alt="">
+          </button>
+          <button type="button" class="team__arrow team__arrow--next" aria-label="Вперёд">
+            <img src="images/icons/arrow-forward.svg" alt="">
+          </button>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Контактный раздел -->
+  <section class="contact">
+    <div class="contact__inner">
+      <div class="contact__grid">
+        
+        <!-- Левая колонка -->
+        <div class="contact__left">
+          <!-- Заголовок -->
+          <h2 class="contact__title">Связаться с нами</h2>
+          
+          <!-- Список контактов -->
+          <ul class="contact__list">
+            <li class="contact__item">
+              <img src="images/icons/phone-icon-black.svg"
+                  alt="Телефон"
+                  class="icon icon--phone"
+                  width="16" height="16">
+              <span class="contact__phones">
+                <a href="tel:+73517505524">+7 351 750‑55‑24</a>,
+                <a href="tel:+73517007724">+7 351 700‑77‑24</a>
+              </span>
+            </li>
+            <li class="contact__item">
+              <img src="images/icons/mail.svg"
+                  alt="E‑mail"
+                  class="icon icon--mail"
+                  width="16" height="16">
+              <a href="mailto:ecoservice74@mail.ru" class="contact__link">
+                Ecoservice74@mail.ru
+              </a>
+            </li>
+            <li class="contact__item">
+              <img src="images/icons/location.svg"
+                  alt="Адрес"
+                  class="icon icon--map-marker"
+                  width="16" height="16">
+              г. Челябинск, ул. Кожзаводская, 10а, оф. 207
+            </li>
+          </ul>
+          
+          <!-- Блок «Оставить заявку» -->
+          <div class="contact__footer">
+            <p class="contact__note">
+              Остались вопросы? Хотите узнать стоимость?<br> 
+              Заполните форму и наш специалист свяжется <br>с вами для уточнения деталей!
+            </p>
+            <a href="#consult" class="contact__button">
+              Оставить заявку
+              <img 
+                src="images/icons/arrow-right.svg" 
+                alt="↑" 
+                class="contact__button-icon" 
+                width="36" 
+                height="36"
+              >
+            </a>        </div>
+        </div>
+        
+        <!-- Правая колонка: карта -->
+        <div class="map-container">
+          <a href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0">
+            Челябинск
+          </a>
+          <a href="https://yandex.ru/maps/56/chelyabinsk/house/kozhzavodskaya_ulitsa_10a/YkgYdQ5lSEQBQFtvfX14d3hrZA==/?ll=61.396560%2C55.195556&utm_medium=mapframe&utm_source=maps&z=15.66"
+            style="color:#eee;font-size:12px;position:absolute;top:14px">
+            Кожзаводская улица, 10А — Яндекс Карты
+          </a>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=61.396560%2C55.195556&mode=search"
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <a href="/" class="footer__logo">
+          <img src="images/logo.svg" alt="ЭкоСервис74">
+        </a>
+      </div>
+      <div class="footer__right">
+        <a href="/privacy" class="footer__policy">Политика конфиденциальности</a>
+        <div class="footer__company">
+          <p>
+            Общество с ограниченной<br class="mobile-only-break"> ответственностью
+            «ЭкоСервис74»
+          </p>
+          <p>
+            ИНН / КПП 7442721733 / 744201001<br class="mobile-only-break">
+            ОГРН 1177456026164
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

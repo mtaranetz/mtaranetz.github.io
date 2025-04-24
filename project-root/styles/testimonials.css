@@ -1,0 +1,274 @@
+/* запрет горизонтальной прокрутки */
+html, body {
+  overflow-x: hidden;
+}
+
+/* скрываем мобильную кнопку и брейк по умолчанию */
+.testimonials__cta--mobile,
+.mobile-only-break {
+  display: none;
+}
+
+/* сама секция */
+.testimonials {
+  position: relative;
+  overflow: hidden;
+  background-color: #FAF8F8;
+  padding: 60px 0;
+}
+
+/* фоновые ёлки */
+.testimonials__image-wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.testimonials__image {
+  display: block;
+  width: 70%;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0 auto;
+}
+
+/* белый блок под картинкой */
+.testimonials__content {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  left: 50%; transform: translateX(-50%);
+  margin-top: 500px;
+  background-color: #FFF;
+  border-radius: 30px 30px 0 0;
+  padding: 24px 60px 60px;
+}
+
+/* header: заголовок + десктоп-кнопка */
+.testimonials__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.testimonials__title {
+  font-family: "You2013", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+}
+.testimonials__subtitle {
+  font-family: "You2013", serif;
+  font-size: 42px;
+  color: #AAAAAA;
+  margin: 0 0 0 8px;
+}
+.testimonials__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* слайдер и список */
+.testimonials__slider {
+  width: calc(280px * 3 + 32px * 2);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.testimonials__list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 280px;
+  grid-template-rows: repeat(2, auto);
+  gap: 32px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  transition: transform .3s ease;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.testimonials__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* карточка */
+.testimonial {
+  background: #FAF8F8;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonial__text {
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  margin: 0 0 16px;
+}
+.testimonial__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonial__author {
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #AAAAAA;
+}
+.testimonial__rating {
+  display: inline-flex;
+  gap: 4px;
+}
+.testimonial__star {
+  width: 16px;
+  height: 16px;
+}
+
+/* controls + мобильная кнопка */
+.testimonials__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin: 32px auto 0;
+}
+.testimonials__nav {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #F6F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .2s;
+}
+.testimonials__nav:hover {
+  transform: scale(1.05);
+}
+.testimonials__nav--prev img {
+  transform: rotate(180deg);
+  transition: transform .2s, filter .2s;
+}
+.testimonials__nav:disabled {
+  cursor: default;
+}
+.testimonials__nav:disabled img {
+  filter: grayscale(100%) brightness(60%);
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  /* 1) Ёлки на всю ширину */
+  .testimonials__image {
+    width: 100% !important;
+    object-position: center top;
+  }
+
+  /* 2) Белый блок — ниже и компактнее */
+  .testimonials__content {
+    margin-top: 140px;
+    padding: 8px 16px 44px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  /* 3) Заголовок и подзаголовок */
+  .testimonials__title,
+  .testimonials__subtitle {
+    display: block;       /* span тоже займёт всю ширину */
+    margin: 0;            /* сброс отступов */
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .testimonials__subtitle {
+    margin-left: 0 !important;
+  }
+  .mobile-only-break {
+    display: block;       /* активируем <br> в span */
+  }
+
+  /* 4) CTA: показываем мобильную, скрываем десктопную */
+  .testimonials__cta--mobile {
+    display: inline-flex;
+  }
+  .testimonials__cta {
+    display: none;
+  }
+
+  /* 5) Порядок блоков: слайдер → контролы+моб-кнопка → заголовок */
+  .testimonials__slider {
+    order: 1;
+    width: 100%;
+  }
+  .testimonials__controls {
+    order: 2;
+    justify-content: flex-end;
+    margin-top: 16px;
+    
+  }
+  .testimonials__header {
+    order: 3;
+    margin-top: 24px;
+  }
+
+  /* 6) По одному отзыву */
+  .testimonials__list {
+    grid-auto-columns: 100%;
+    grid-template-rows: 1fr;
+    gap: 16px;
+  }
+
+  /* 7) Шрифты в карточках */
+  .testimonial__text {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .testimonial__author {
+    font-size: 12px;
+  }
+  .testimonial__star {
+    width: 12px;
+    height: 12px;
+  }
+
+  .testimonials__controls {
+    display: flex;
+    justify-content: space-between; /* кнопка слева, навигация справа */
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+    
+
+  }
+
+  .testimonials__cta--mobile {
+    order: 1;
+  }
+
+  /* 3) Кнопкам навигации даём порядок 2 (они будут идти после) */
+  .testimonials__nav {
+    order: 2;
+    width: 36px;
+    height: 36px;
+  }
+
+  .testimonials__nav img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .testimonials__content {
+    width: auto;
+    left: auto;
+    transform: none;
+    padding: 8px 8px 44px; /* ваш текущий вертикальный, а горизонтальный — 16px */
+  }
+
+  
+}

@@ -1,0 +1,235 @@
+/* —————————————————————————— */
+/* Общие стили секции */
+.catalog {
+  padding: 40px 0;
+  background: #FAF8F8;
+}
+
+.catalog__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Заголовок: сетка из 4 колонок, gap = 16px */
+.catalog__header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  align-items: baseline;
+  margin-bottom: 33px;
+}
+
+.catalog__title {
+  font-family: You2013;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44.33px;
+  letter-spacing: 2%;
+  margin: 0;
+  grid-column: 1 / span 3;
+}
+
+.catalog__subtitle {
+  font-family: Commissioner;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  margin: 0;
+  grid-column: 4 / 5;
+}
+
+/* Слайдер */
+.catalog__slider {
+  position: relative;
+  padding-bottom: 80px;  /* место для кнопок */
+}
+
+.catalog__slides {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* прячем скроллбар в WebKit */
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none;    /* Firefox */
+}
+.catalog__slides::-webkit-scrollbar {
+  display: none;
+}
+
+
+.catalog__slide {
+  flex: 0 0 278px;       /* ширина слайда */
+  aspect-ratio: 1 / 1.5; /* высота автоматически = ширина × 1.5 */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.catalog__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Навигационные стрелки */
+.catalog__controls {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  display: flex;
+  gap: 18px;
+}
+
+.catalog__controls .catalog__arrow {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  background: #FFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .2s;
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.catalog__arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+.catalog__controls .catalog__arrow:hover {
+  transform: scale(1.05);
+}
+
+
+/* Кнопка «Бесплатная консультация» */
+.catalog__btn {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  padding: 12px 24px;
+  background-color: #719C2E;
+  color: #fff;
+  font-family: Commissioner;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .2s, transform .2s;
+}
+
+.catalog__btn:hover {
+  background-color: #719C2E;
+}
+
+/* По умолчанию стрелки активны — стрелка цветом #412525 */
+.catalog__arrow img {
+  /* если у вас SVG‑иконки с прозрачным fill, можно и так: */
+  filter: none;
+}
+
+/* Поворачиваем «prev» на 180° */
+.catalog__arrow--prev img {
+  transform: rotate(180deg);
+}
+
+/* По умолчанию стрелки остаются тёмными */
+.catalog__arrow img {
+  filter: none;
+  transition: filter .2s, transform .2s;
+}
+
+/* Когда кнопка disabled — стрелка становится светло‑серой */
+.catalog__arrow:disabled img {
+  filter: grayscale(100%) brightness(80%);
+  opacity: 0.5;
+
+}
+
+/* И курсор меняется на «не‑кликабельный» */
+.catalog__arrow:disabled {
+  cursor: default;
+}
+
+
+
+
+/* Адаптив */
+@media (max-width: 768px) {
+
+  /* увеличиваем горизонтальные отступы у всего раздела */
+  .catalog {
+    padding: 40px 16px; /* сохраним вертикальные, но добавим по 16px слева/справа */
+  }
+
+  .catalog__header {
+    display: block;
+    font-family: You2013;
+
+  }
+  .catalog__subtitle {
+    margin-top: 8px;
+  }
+  .catalog__slide {
+    flex: 0 0 200px;
+    aspect-ratio: auto;
+    height: 240px;
+  }
+
+  /* Уменьшаем шрифты заголовка и подзаголовка */
+  .catalog__title {
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2%;
+
+  }
+  .catalog__subtitle {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  /* Уменьшаем кнопку и выравниваем её по нижней линии */
+  .catalog__btn {
+    font-size: 14px;
+    padding: 14px 16px;
+    bottom: 16px;    /* теперь на одну высоту с контролами */
+  }
+
+  /* Подгоняем стрелки контролов и тоже выравниваем по той же высоте */
+  .catalog__controls {
+    bottom: 16px;    /* совпадает с .catalog__btn */
+    gap: 12px;
+    align-items: center;
+  }
+
+  /* в мобильной версии убираем ручные переносы */
+  .catalog__title br,
+  .catalog__subtitle br {
+    display: none;
+  }
+
+  .catalog__btn {
+    padding: 16px 16px; /* 16px сверху и снизу → 14px (шрифт) + 32px = ~46px */
+  }
+
+  .catalog__inner {
+    padding: 0 8px;
+  }
+}

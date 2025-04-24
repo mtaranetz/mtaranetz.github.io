@@ -1,0 +1,181 @@
+/* === Секция «Услуги» === */
+.services {
+    padding: 60px 20px;
+    background-color: #FAF8F8;
+  }
+  
+  /* Заголовок */
+  .services__title {
+    font-family: "You2013", serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: #000;
+    text-align: left;
+  }
+  .services__subtitle {
+    color: #AAAAAA;
+    font-family: "You2013", sans-serif;
+    font-size: 42px;
+    margin-left: 0px;
+  }
+  
+  /* 1) Две колонки */
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  /* 2) Убираем нежелательный padding у .service */
+  .service {
+    display: flex;
+    align-items: flex-start;    /* контент прижмётся к верху */
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
+    
+    min-height: 116px;          /* или любое другое значение */
+  }
+  
+  /* 3) Картинка: квадратная «подложка», object‑fit: cover */
+  .service__img {
+    flex: none;
+    width: 95px;               /* ширина картинки в карточке */
+    aspect-ratio: 1;            /* сделает высоту = ширине */
+    overflow: hidden;
+    margin: 14px 0 14px 14px;
+    border-radius: 10px;
+  }
+  .service__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* обрежет по центру */
+  }
+  
+  /* 4) Контент: уменьшенный padding */
+  .service__info {
+    flex: 1;
+    padding: 16px;              /* вместо 24px */
+    display: flex;
+    flex-direction: column;
+  }
+  /* Новый flex‑контейнер: заголовок + ссылка */
+.service__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;  /* расстояние до описания */
+  }  
+  /* 5) Ссылка «Подробнее» */
+  .service__link {
+    margin: 0;           /* сбросили margin-top:auto */
+    font-size: 13px;     /* как было */
+    display: inline-flex;
+    align-items: center;
+  }
+  .service__link-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 6px;
+  }
+  
+  /* 6) Подгоняем заголовки и описания */
+  .service__name {
+    margin: 0 0 4px;            /* отступ до описания */
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .service__desc {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  
+  /* 7) Обновляем фон‑цвета, если нужно */
+  .service--design     { background-color: #257398; }
+  .service--center     { background-color: #6F8C9A; }
+  .service--gardener   { background-color: #6F8C9A; }
+  .service--irrigation { background-color: #6F8C9A; }
+  
+  @media (max-width: 768px) {
+    /* 1) Переключаем грид на одну колонку */
+    .services__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .services__title {
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: 2%;
+      text-align: left;
+    }
+    .services__subtitle {
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: 2%;
+    }
+  
+    /* 3) Уменьшаем шрифты */
+    .service__name {
+      font-family: Commissioner;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      padding-bottom: 8px;
+    }
+    .service__desc {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0%;
+    }
+    .service__link {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0%;
+    }
+  
+    /* делаем info «колонкой» */
+  .service__info {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  /* «распаковываем» header */
+  .service__header {
+    display: contents;
+  }
+
+  /* теперь у нас внутри .service__info три flex-элемента:
+     .service__name, .service__desc и .service__link */
+  .service__name {
+    order: 1;
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .service__desc {
+    order: 2;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .service__link {
+    order: 3;
+    font-size: 12px;
+    margin: 0;
+    align-self: flex-start; /* или stretch, в зависимости от желания */
+  }
+}
+  
+  
