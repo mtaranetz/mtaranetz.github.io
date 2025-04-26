@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ландшафтный дизайн — ЭкоСервис74</title>
+  <link rel="stylesheet" href="project-root/styles/main/header.css" />  
+  <link rel="stylesheet" href="project-root/styles/main/banner.css" />
+  <link rel="stylesheet" href="project-root/styles/main/popup.css" />
+  <link rel="stylesheet" href="project-root/styles/main/adventages.css" />
+  <link rel="stylesheet" href="project-root/styles/main/services.css" />
+  <link rel="stylesheet" href="project-root/styles/main/testimonials.css" />
+  <link rel="stylesheet" href="project-root/styles/main/catalog.css" />
+  <link rel="stylesheet" href="project-root/styles/main/team.css" />
+  <link rel="stylesheet" href="project-root/styles/main/contact.css" />
+  <link rel="stylesheet" href="project-root/styles/main/footer.css" />
+
+
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+  <section class="header">
+    <div class="header__inner container">
+
+      <!-- 1) Логотип (всегда виден) -->
+      <a href="/" class="header__logo">
+        <img src="project-root/images/logo.svg" alt="Экосервис74">
+      </a>
+
+      <!-- 4) Навигация (классику скрываем на мобилке) -->
+      <nav class="header__nav">
+        <ul class="menu">
+          <li class="has-submenu">
+            <a href="#services">Услуги</a>
+            <ul class="submenu">
+                <li class="has-submenu">
+                  <a href="/services/design">Ландшафтный дизайн</a>
+                  <!-- Второй уровень -->
+                  <ul class="submenu">
+                    <li><a href="/services/design/project">Заказ и реализация проекта</a></li>
+                    <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+                    <li><a href="/services/design/lawn">Устройство газона</a></li>
+                    <li><a href="/services/design/gardening">Уход за садом</a></li>
+                    <li><a href="/services/design/portfolio">Наши работы</a></li>
+                  </ul>
+                </li>
+                <li><a href="center.html">Садовый центр</a></li>
+                <li><a href="/services/gardener">Товары для сада</a></li>
+              </ul>
+          </li>
+          <li><a href="#portfolio">Галерея работ</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">О нас</a></li>
+        </ul>
+      </nav>
+
+      <!-- 2) Контакты: телефоны + мессенджеры -->
+      <div class="header__contacts">
+        <!-- телефоны: desktop-only -->
+        <a href="tel:+73517505524" class="header__contact-link phone">
+          <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 750-55-24
+        </a>
+        <a href="tel:+73517007724" class="header__contact-link phone">
+          <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 700-77-24
+        </a>
+
+        <!-- мессенджеры: mobile-only -->
+        <a href="https://t.me/your_telegram" class="header__contact-link messaging telegram" aria-label="Telegram">
+          <img src="project-root/images/icons/telegram.svg" class="header__contact-icon" alt="">
+        </a>
+        <a href="https://wa.me/73517505524" class="header__contact-link messaging whatsapp" aria-label="WhatsApp">
+          <img src="project-root/images/icons/whatsapp.svg" class="header__contact-icon" alt="">
+        </a>
+      </div>
+
+      <!-- 3) Бургер -->
+      <button class="header__toggle" aria-label="Открыть меню">
+        <img src="project-root/images/icons/burger.svg" class="header__burger-icon" alt="Меню">
+      </button>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="header__mobile-overlay">
+
+      <!-- Fullscreen меню -->
+      <nav class="header__mobile-menu" aria-hidden="true">
+        <!-- Верхний ряд: логотип + крестик -->
+        <div class="header__mobile-top">
+          <a href="/" class="header__mobile-logo">
+            <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+          </a>
+          <button class="header__mobile-close" aria-label="Закрыть меню">
+            <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
+          </button>
+        </div>
+
+        <!-- Пункты меню -->
+        <ul class="mobile-menu">
+          <li class="has-submenu">
+            <a href="/services/design">Ландшафтный дизайн</a>
+            <!-- кнопка-раскрыватель подменю -->
+            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+            <!-- Вложенное подменю -->
+            <ul class="submenu">
+              <li><a href="/services/design/project">Заказ и реализация проекта</a></li>
+              <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+              <li><a href="/services/design/lawn">Устройство газона</a></li>
+              <li><a href="/services/design/gardening">Уход за садом</a></li>
+              <li><a href="/services/design/portfolio">Наши работы</a></li>
+            </ul>
+          </li>
+          <li><a href="center.html">Садовый центр</a></li>
+          <li><a href="/services/gardener">Товары для сада</a></li>
+          <li><a href="#portfolio">Галерея работ</a></li>
+          <li><a href="#portfolio">Статьи</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">Контакты</a></li>
+        </ul>
+
+        <!-- Контакты -->
+        <div class="header__mobile-contacts">
+          <a href="https://t.me/your_telegram" class="messaging telegram " aria-label="Telegram">
+            <img src="project-root/images/icons/telegram.svg" alt="">
+          </a>
+          <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
+            <img src="project-root/images/icons/whatsapp.svg" alt="">
+          </a>
+          <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
+          <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
+        </div>
+      </nav>
+      
+    </div>
+  </section>
