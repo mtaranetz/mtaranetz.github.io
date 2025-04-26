@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ЭкоСервис74 — Главная</title>
-  <link rel="stylesheet" href="project-root/styles/header.css" />  
-  <link rel="stylesheet" href="project-root/styles/banner.css" />
-  <link rel="stylesheet" href="project-root/styles/adventages.css" />
-  <link rel="stylesheet" href="project-root/styles/services.css" />
-  <link rel="stylesheet" href="project-root/styles/testimonials.css" />
-  <link rel="stylesheet" href="project-root/styles/catalog.css" />
-  <link rel="stylesheet" href="project-root/styles/team.css" />
-  <link rel="stylesheet" href="project-root/styles/contact.css" />
-  <link rel="stylesheet" href="project-root/styles/footer.css" />
+  <link rel="stylesheet" href="project-root/styles/main/header.css" />  
+  <link rel="stylesheet" href="project-root/styles/main/banner.css" />
+  <link rel="stylesheet" href="project-root/styles/main/popup.css" />
+  <link rel="stylesheet" href="project-root/styles/main/adventages.css" />
+  <link rel="stylesheet" href="project-root/styles/main/services.css" />
+  <link rel="stylesheet" href="project-root/styles/main/testimonials.css" />
+  <link rel="stylesheet" href="project-root/styles/main/catalog.css" />
+  <link rel="stylesheet" href="project-root/styles/main/team.css" />
+  <link rel="stylesheet" href="project-root/styles/main/contact.css" />
+  <link rel="stylesheet" href="project-root/styles/main/footer.css" />
 
 
 </head>
@@ -44,7 +45,7 @@
                     <li><a href="/services/design/portfolio">Наши работы</a></li>
                   </ul>
                 </li>
-                <li><a href="/services/center">Садовый центр</a></li>
+                <li><a href="center.html">Садовый центр</a></li>
                 <li><a href="/services/gardener">Товары для сада</a></li>
               </ul>
           </li>
@@ -113,7 +114,7 @@
               <li><a href="/services/design/portfolio">Наши работы</a></li>
             </ul>
           </li>
-          <li><a href="/services/center">Садовый центр</a></li>
+          <li><a href="center.html">Садовый центр</a></li>
           <li><a href="/services/gardener">Товары для сада</a></li>
           <li><a href="#portfolio">Галерея работ</a></li>
           <li><a href="#portfolio">Статьи</a></li>
@@ -171,7 +172,7 @@
             Работаем в Челябинске и по всей РФ
           </p>
           <div class="banner__buttons">
-            <a href="#consult" class="button button--primary">
+            <a href="#consult" class="button button--primary open-modal">
               Оставить заявку
               <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon">              
             </a>
@@ -188,8 +189,34 @@
           </p>
         </div>
       </div>
-    </div>
+    </div>    
   </section>
+
+  <!-- Попап -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="container modal-wrapper">
+      <div class="modal">
+        <button class="modal__close" aria-label="Закрыть">&times;</button>
+        <h2 class="modal__title">Оставьте заявку на бесплатную консультацию</h2>
+        <p class="modal__subtitle">
+          Наш менеджер свяжется в ближайшее время для уточнения подробностей
+        </p>
+        <form class="modal__form">
+          <label>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+          </label>
+          <label>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+          </label>
+          <label class="modal__checkbox">
+            <input type="checkbox" name="agree" required>
+            Согласен с <a href="#">политикой конфиденциальности</a>
+          </label>
+          <button type="submit" class="btn modal__submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
   
 
   <section class="advantages container">
@@ -263,7 +290,7 @@
         <div class="service__info">
           <div class="service__header">
             <h3 class="service__name">Садовый центр</h3>
-            <a href="/services/center" class="service__link">
+            <a href="center.html" class="service__link">
               Подробнее
               <img src="project-root/images/icons/arrow-right.svg"
                    alt=""
@@ -757,6 +784,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/imask"></script>
   <script src="project-root/scripts/main.js"></script>
 </body>
 </html>

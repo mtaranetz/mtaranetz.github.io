@@ -16,21 +16,6 @@
   }
   
   /* ================================================
-     Шрифты
-     ================================================ */
-  @font-face {
-    font-family: 'You2013';
-    src: url('../fonts/you2013.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-
-    font-family: 'Commissioner';
-    src: url('../fonts/Commissioner.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  /* ================================================
      Базовая типографика
      ================================================ */
   body {

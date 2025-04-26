@@ -1,0 +1,298 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+/* ================================================
+   Шрифты
+   ================================================ */
+   @font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'You2013';
+    src: url('../fonts/you2013.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* ================================================
+     CSS-переменные
+     ================================================ */
+  :root {
+    --color-primary: #719C2E;
+    --dark-color-primary: #CFE2B1;
+    --red-color: #E62020;
+    --bg-page: #FAF8F8;
+    --font-base: 'Commissioner', sans-serif;
+    --font-heading: 'You2013', serif;
+  }
+  
+  /* ================================================
+     Базовые стили
+     ================================================ */
+  body {
+    background-color: var(--bg-page);
+    margin: 0;
+    font-family: var(--font-base);
+  }
+  
+  /* ================================================
+     Хедер
+     ================================================ */
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  .header__logo img { display: block; }
+  
+  /* Мобильные отступы в хедере */
+  @media (max-width: 768px) {
+    .header__inner {
+      padding: 0 16px;
+    }
+    .header__mobile-menu {
+      padding: 0 16px;
+    }
+  }
+  
+  /* ================================================
+     Каталог (фильтры + навигация)
+     ================================================ */
+  .catalog-nav.container {
+    padding: 16px;
+  }
+  .catalog-nav__title {
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 80px;
+    letter-spacing: 2%;
+    margin: 0 0 16px;
+  }
+  .catalog-nav__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    justify-content: space-between;
+  }
+  
+  /* Кнопки-фильтры */
+  .catalog-nav__btn {
+    flex: 0 0 200px;
+    height: 50px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+  .catalog-nav__btn--active {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .catalog-nav__btn:not(.catalog-nav__btn--active):hover {
+    background: #CFE2B1;
+    color: #000;
+  }
+  
+  /* ================================================
+     Сетка товаров
+     ================================================ */
+  .catalog-products__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 0 16px;
+  }
+  
+  /* ================================================
+     Карточка товара
+     ================================================ */
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+    /* Обёртка для картинки ‒ фиксированное соотношение сторон + обрезка */
+  .product-card__img {
+    position: relative;
+    aspect-ratio: 4 / 5;     /* или другое соотношение, нужное вам */
+    overflow: hidden;
+  }
+
+/* Само изображение растягиваем на весь контейнер и обрезаем */
+.product-card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+  .product-card__badge {
+    position: absolute;
+    top: 10px; right: 8px;
+    background: var(--red-color);
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+  .product-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 23px 0;
+  }
+  .product-card__title {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: #333;
+  }
+  .product-card__price {
+    font-family: Commissioner;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: auto;
+  }
+  .price {
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+  }
+  .price--new {
+    color: var(--red-color);
+  }
+  .price--old {
+    font-size: 16px;
+    text-decoration: line-through;
+  }
+  
+  /* Кнопки действий */
+  .product-card__actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .product-card__btn {
+    flex: 1;
+    padding: 10px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: .875rem;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .product-card__btn:hover {
+    background: var(--dark-color-primary);
+    color: #000;
+  }
+  
+  /* Избранное */
+  .product-card__wishlist {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .product-card__wishlist .heart-icon {
+    width: 20px;
+    height: 20px;
+    fill: #999;
+    transition: fill .2s;
+  }
+  .product-card__wishlist:hover { 
+    border-color: var(--color-primary);
+  }
+
+  .product-card__wishlist.active .heart-icon {
+    fill: #0066cc;
+  }
+  
+  /* ================================================
+     Адаптивные настройки
+     ================================================ */
+  @media (max-width: 768px) {
+    /* Заголовок каталога */
+    .catalog-nav__title {
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 2%;
+      margin-top: 76px;
+      margin-bottom: 37px;
+    }
+    /* Фильтры — 2 колонки */
+    .catalog-nav__filters {
+      font-family: Commissioner;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 10px;
+      margin-bottom: 58px;
+    }
+    .catalog-nav__btn {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+
+    /* Товары — 2 колонки */
+    .catalog-products__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 0 16px; /* чтобы не упираться в края */
+    }
+    /* Мелкие изменения в карточках */
+    .product-card__wishlist {
+      width: 38px;
+      height: 38px;
+    }
+    .product-card__wishlist .heart-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

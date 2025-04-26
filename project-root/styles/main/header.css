@@ -5,6 +5,21 @@
     --color-primary:      #719C2E;
     --dark-color-primary: #456C1D;
   }
+
+  /* Для всей главной страницы */
+  html {
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE 10+ */
+    -ms-overflow-style: none;
+  }
+
+/* WebKit-браузеры */
+html::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
   
   /* Сброс отступов и box-sizing */
   * {
@@ -26,10 +41,37 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 16px 0;
     min-height: 97px;
   }
   
+  /* ================================================
+     Шрифты
+     ================================================ */
+     @font-face {
+      font-family: 'Commissioner';
+      src: url('../fonts/Commissioner.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'You2013';
+      src: url('../fonts/you2013.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    :root {
+      --font-family-base: 'Commissioner', sans-serif;
+      --font-family-alt: 'You2013', serif;
+    
+      --font-size-base: 16px;
+      --font-size-lg: 1.25rem;
+      --font-size-xl: 2rem;
+    }
+    
+    
   
   /* ========================================
      Header
@@ -42,7 +84,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 0 16px;
   }
   
   /* Логотип */
@@ -93,8 +135,8 @@
   content: "";
   display: inline-block;
   width: 11px;
-  height: 10px;
-  background-image: url('../images/icons/arrow-down.svg');
+  height: 10px; 
+  background-image: url('../../images/icons/arrow-down.svg');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -126,7 +168,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url('../images/icons/arrow-down.svg');
+    background-image: url('../../images/icons/arrow-down.svg');
     background-repeat: no-repeat;
     background-size: contain;
     transition: transform 0.2s ease;
@@ -191,9 +233,14 @@
     color: #fff;
     padding: 8px 15px;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
     transition: background-color 0.3s;
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+
   }
   .header__contact-link:hover {
     background-color: var(--dark-color-primary);
@@ -315,7 +362,7 @@
     margin-left: 8px;        /* отступ между текстом и стрелкой */
     width: 11px;
     height: 10px;
-    background-image: url('../images/icons/arrow-down.svg');
+    background-image: url('../../images/icons/arrow-down.svg');
     background-repeat: no-repeat;
     background-size: contain;
     transition: transform .2s ease;

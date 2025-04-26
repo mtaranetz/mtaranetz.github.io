@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Садовый центр — ЭкоСервис74</title>
+  <link rel="stylesheet" href="project-root/styles/main/header.css">
+  <link rel="stylesheet" href="project-root/styles/center/catalog.css">
+  <link rel="stylesheet" href="project-root/styles/main/contact.css" />
+  <link rel="stylesheet" href="project-root/styles/main/footer.css" />
+
+</head>
+<body>
+
+        <!-- Шапка сайта -->
+  <section class="header">
+    <div class="header__inner container">
+
+      <!-- 1) Логотип (всегда виден) -->
+      <a href="/" class="header__logo">
+        <img src="project-root/images/logo.svg" alt="Экосервис74">
+      </a>
+
+      <!-- 4) Навигация (классику скрываем на мобилке) -->
+      <nav class="header__nav">
+        <ul class="menu">
+          <li class="has-submenu">
+            <a href="#services">Услуги</a>
+            <ul class="submenu">
+                <li class="has-submenu">
+                  <a href="/services/design">Ландшафтный дизайн</a>
+                  <!-- Второй уровень -->
+                  <ul class="submenu">
+                    <li><a href="/services/design/project">Заказ и реализация проекта</a></li>
+                    <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+                    <li><a href="/services/design/lawn">Устройство газона</a></li>
+                    <li><a href="/services/design/gardening">Уход за садом</a></li>
+                    <li><a href="/services/design/portfolio">Наши работы</a></li>
+                  </ul>
+                </li>
+                <li><a href="center.html">Садовый центр</a></li>
+                <li><a href="/services/gardener">Товары для сада</a></li>
+              </ul>
+          </li>
+          <li><a href="#portfolio">Галерея работ</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">О нас</a></li>
+        </ul>
+      </nav>
+
+      <!-- 2) Контакты: телефоны + мессенджеры -->
+      <div class="header__contacts">
+        <!-- телефоны: desktop-only -->
+        <a href="tel:+73517505524" class="header__contact-link phone">
+          <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 750-55-24
+        </a>
+        <a href="tel:+73517007724" class="header__contact-link phone">
+          <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 700-77-24
+        </a>
+
+        <!-- мессенджеры: mobile-only -->
+        <a href="https://t.me/your_telegram" class="header__contact-link messaging telegram" aria-label="Telegram">
+          <img src="project-root/images/icons/telegram.svg" class="header__contact-icon" alt="">
+        </a>
+        <a href="https://wa.me/73517505524" class="header__contact-link messaging whatsapp" aria-label="WhatsApp">
+          <img src="project-root/images/icons/whatsapp.svg" class="header__contact-icon" alt="">
+        </a>
+      </div>
+
+      <!-- 3) Бургер -->
+      <button class="header__toggle" aria-label="Открыть меню">
+        <img src="project-root/images/icons/burger.svg" class="header__burger-icon" alt="Меню">
+      </button>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="header__mobile-overlay">
+
+      <!-- Fullscreen меню -->
+      <nav class="header__mobile-menu" aria-hidden="true">
+        <!-- Верхний ряд: логотип + крестик -->
+        <div class="header__mobile-top">
+          <a href="/" class="header__mobile-logo">
+            <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+          </a>
+          <button class="header__mobile-close" aria-label="Закрыть меню">
+            <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
+          </button>
+        </div>
+
+        <!-- Пункты меню -->
+        <ul class="mobile-menu">
+          <li class="has-submenu">
+            <a href="/services/design">Ландшафтный дизайн</a>
+            <!-- кнопка-раскрыватель подменю -->
+            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+            <!-- Вложенное подменю -->
+            <ul class="submenu">
+              <li><a href="/services/design/project">Заказ и реализация проекта</a></li>
+              <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+              <li><a href="/services/design/lawn">Устройство газона</a></li>
+              <li><a href="/services/design/gardening">Уход за садом</a></li>
+              <li><a href="/services/design/portfolio">Наши работы</a></li>
+            </ul>
+          </li>
+          <li><a href="/services/center">Садовый центр</a></li>
+          <li><a href="/services/gardener">Товары для сада</a></li>
+          <li><a href="#portfolio">Галерея работ</a></li>
+          <li><a href="#portfolio">Статьи</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">Контакты</a></li>
+        </ul>
+
+        <!-- Контакты -->
+        <div class="header__mobile-contacts">
+          <a href="https://t.me/your_telegram" class="messaging telegram " aria-label="Telegram">
+            <img src="project-root/images/icons/telegram.svg" alt="">
+          </a>
+          <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
+            <img src="project-root/images/icons/whatsapp.svg" alt="">
+          </a>
+          <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
+          <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
+        </div>
+      </nav>
+      
+    </div>
+  </section>
+
+  <section class="catalog-nav container">
+    <h2 class="catalog-nav__title">Каталог товаров</h2>
+    <div class="catalog-nav__filters">
+      <button class="catalog-nav__btn catalog-nav__btn--active">Хвойные</button>
+      <button class="catalog-nav__btn">Лиственные</button>
+      <button class="catalog-nav__btn">Декоративные</button>
+      <button class="catalog-nav__btn">Сформированные</button>
+      <button class="catalog-nav__btn">Топиарные</button>
+      <button class="catalog-nav__btn">Ниваки</button>
+      <button class="catalog-nav__btn">Плодовые</button>
+      <button class="catalog-nav__btn">Кустарники</button>
+      <button class="catalog-nav__btn">Многолетние цветы</button>
+      <button class="catalog-nav__btn">Новогодние ели</button>
+    </div>
+  </section>
+
+  <section class="catalog-products container">
+    <div class="catalog-products__grid">
+      <!-- Карточка без скидки -->
+      <article 
+      class="product-card"
+      data-category="Хвойные"    
+      data-id="spruce-base"> 
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant1.svg" alt="Ель обыкновенная">
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+          <div class="product-card__price">
+            <span class="price">5 849 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>
+          </div>
+        </div>
+      </article>
+  
+      <!-- Карточка со скидкой -->
+      <article 
+        class="product-card"
+        data-category="Хвойные"
+        data-id="spruce-super-blue">
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant2.svg" alt="Ель колючая Супер Блю">
+          <span class="product-card__badge">% Акция</span>
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+          <div class="product-card__price">
+            <span class="price price--new">4 890 ₽</span>
+            <span class="price price--old">4 890 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>
+                      </div>
+        </div>
+      </article>
+
+      <!-- Карточка без скидки -->
+      <article 
+        class="product-card"
+        data-category="Хвойные"    
+        data-id="spruce-base"> 
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant1.svg" alt="Ель обыкновенная">
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+          <div class="product-card__price">
+            <span class="price">5 849 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+  
+      <!-- Карточка со скидкой -->
+        <article 
+        class="product-card"
+        data-category="Хвойные"
+        data-id="spruce-super-blue">
+              <div class="product-card__img">
+          <img src="project-root/images/plants/plant2.svg" alt="Ель колючая Супер Блю">
+          <span class="product-card__badge">% Акция</span>
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+          <div class="product-card__price">
+            <span class="price price--new">4 890 ₽</span>
+            <span class="price price--old">4 890 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+
+      <!-- Карточка без скидки -->
+      <article class="product-card"
+          data-category="Хвойные"
+         data-id="spruce-base">     
+         <div class="product-card__img">
+          <img src="project-root/images/plants/plant1.svg" alt="Ель обыкновенная">
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+          <div class="product-card__price">
+            <span class="price">5 849 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+  
+      <!-- Карточка со скидкой -->
+        <article 
+          class="product-card"
+          data-category="Хвойные"
+          data-id="spruce-super-blue">
+          <div class="product-card__img">
+          <img src="project-root/images/plants/plant2.svg" alt="Ель колючая Супер Блю">
+          <span class="product-card__badge">% Акция</span>
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+          <div class="product-card__price">
+            <span class="price price--new">4 890 ₽</span>
+            <span class="price price--old">4 890 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+
+      <!-- Карточка без скидки -->
+      <article class="product-card"
+          data-category="Хвойные"    
+         data-id="spruce-base"> 
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant1.svg" alt="Ель обыкновенная">
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+          <div class="product-card__price">
+            <span class="price">5 849 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+  
+      <!-- Карточка со скидкой -->
+        <article 
+        class="product-card"
+        data-category="Хвойные"
+        data-id="spruce-super-blue">
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant2.svg" alt="Ель колючая Супер Блю">
+          <span class="product-card__badge">% Акция</span>
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+          <div class="product-card__price">
+            <span class="price price--new">4 890 ₽</span>
+            <span class="price price--old">4 890 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+
+        <!-- Карточка без скидки -->
+        <article class="product-card"
+          data-category="Хвойные"    
+         data-id="spruce-base"> 
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant1.svg" alt="Ель обыкновенная">
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+          <div class="product-card__price">
+            <span class="price">5 849 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+  
+      <!-- Карточка со скидкой -->
+      <article 
+      class="product-card"
+      data-category="Хвойные"
+      data-id="spruce-super-blue">
+        <div class="product-card__img">
+          <img src="project-root/images/plants/plant2.svg" alt="Ель колючая Супер Блю">
+          <span class="product-card__badge">% Акция</span>
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+          <div class="product-card__price">
+            <span class="price price--new">4 890 ₽</span>
+            <span class="price price--old">4 890 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+
+      <!-- Карточка без скидки -->
+      <article class="product-card"
+          data-category="Хвойные"
+         data-id="spruce-base">
+         <div class="product-card__img">
+          <img src="project-root/images/plants/plant1.svg" alt="Ель обыкновенная">
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+          <div class="product-card__price">
+            <span class="price">5 849 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+  
+      <!-- Карточка со скидкой -->
+      <article 
+      class="product-card"
+      data-category="Хвойные"
+      data-id="spruce-super-blue">
+      <div class="product-card__img">
+          <img src="project-root/images/plants/plant2.svg" alt="Ель колючая Супер Блю">
+          <span class="product-card__badge">% Акция</span>
+        </div>
+        <div class="product-card__content">
+          <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+          <div class="product-card__price">
+            <span class="price price--new">4 890 ₽</span>
+            <span class="price price--old">4 890 ₽</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="product-card__btn">В корзину</button>
+            <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img src="project-root/images/icons/heart.svg">
+              </button>          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+
+  <!-- Контактный раздел -->
+  <section class="contact">
+    <div class="contact__inner">
+      <div class="contact__grid">
+        
+        <!-- Левая колонка -->
+        <div class="contact__left">
+          <!-- Заголовок -->
+          <h2 class="contact__title">Связаться с нами</h2>
+          
+          <!-- Список контактов -->
+          <ul class="contact__list">
+            <li class="contact__item">
+              <img src="project-root/images/icons/phone-icon-black.svg"
+                  alt="Телефон"
+                  class="icon icon--phone"
+                  width="16" height="16">
+              <span class="contact__phones">
+                <a href="tel:+73517505524">+7 351 750‑55‑24</a>,
+                <a href="tel:+73517007724">+7 351 700‑77‑24</a>
+              </span>
+            </li>
+            <li class="contact__item">
+              <img src="project-root/images/icons/mail.svg"
+                  alt="E‑mail"
+                  class="icon icon--mail"
+                  width="16" height="16">
+              <a href="mailto:ecoservice74@mail.ru" class="contact__link">
+                Ecoservice74@mail.ru
+              </a>
+            </li>
+            <li class="contact__item">
+              <img src="project-root/images/icons/location.svg"
+                  alt="Адрес"
+                  class="icon icon--map-marker"
+                  width="16" height="16">
+              г. Челябинск, ул. Кожзаводская, 10а, оф. 207
+            </li>
+          </ul>
+          
+          <!-- Блок «Оставить заявку» -->
+          <div class="contact__footer">
+            <p class="contact__note">
+              Остались вопросы? Хотите узнать стоимость?<br> 
+              Заполните форму и наш специалист свяжется <br>с вами для уточнения деталей!
+            </p>
+            <a href="#consult" class="contact__button">
+              Оставить заявку
+              <img 
+                src="project-root/images/icons/arrow-right.svg" 
+                alt="↑" 
+                class="contact__button-icon" 
+                width="36" 
+                height="36"
+              >
+            </a>        </div>
+        </div>
+        
+        <!-- Правая колонка: карта -->
+        <div class="map-container">
+          <a href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0">
+            Челябинск
+          </a>
+          <a href="https://yandex.ru/maps/56/chelyabinsk/house/kozhzavodskaya_ulitsa_10a/YkgYdQ5lSEQBQFtvfX14d3hrZA==/?ll=61.396560%2C55.195556&utm_medium=mapframe&utm_source=maps&z=15.66"
+            style="color:#eee;font-size:12px;position:absolute;top:14px">
+            Кожзаводская улица, 10А — Яндекс Карты
+          </a>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=61.396560%2C55.195556&mode=search"
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <a href="/" class="footer__logo">
+          <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+        </a>
+      </div>
+      <div class="footer__right">
+        <a href="/privacy" class="footer__policy">Политика конфиденциальности</a>
+        <div class="footer__company">
+          <p>
+            Общество с ограниченной<br class="mobile-only-break"> ответственностью
+            «ЭкоСервис74»
+          </p>
+          <p>
+            ИНН / КПП 7442721733 / 744201001<br class="mobile-only-break">
+            ОГРН 1177456026164
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="project-root/scripts/main.js"></script>
+</body>
+</html>

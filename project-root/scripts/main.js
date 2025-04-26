@@ -191,5 +191,107 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.header__mobile-close').addEventListener('click', () => {
     document.querySelector('.header__mobile-overlay').classList.remove('open');
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('modal-overlay');
+    const btnOpen = document.querySelector('.open-modal');
+    const btnClose = document.querySelector('.modal__close');
+  
+    btnOpen.addEventListener('click', () => {
+      overlay.classList.add('open');
+      // запретить прокрутку фона
+      document.body.style.overflow = 'hidden';
+    });
+  
+    btnClose.addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => {
+      // закрываем, только если клик по фону, а не по окну
+      if (e.target === overlay) closeModal();
+    });
+  
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.querySelector('input[name="phone"]');
+    IMask(phoneInput, {
+      mask: '+{7} (000) 000-00-00'
+    });
+  });
+
+  document.querySelectorAll('.product-card__wishlist').forEach(button => {
+    button.addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // ***** Фильтрация карточек *****
+    const filterButtons = document.querySelectorAll('.catalog-nav__btn');
+    const cardsContainer = document.querySelector('.catalog-products__grid');
+    const cards = cardsContainer.querySelectorAll('.product-card');
+  
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 1) Переключаем стили кнопок
+        filterButtons.forEach(b => b.classList.remove('catalog-nav__btn--active'));
+        btn.classList.add('catalog-nav__btn--active');
+  
+        // 2) Фильтруем карточки
+        const filter = btn.textContent.trim();
+        cards.forEach(card => {
+          const cat = card.dataset.category;
+          card.style.display = (filter === 'Все' || cat === filter)
+            ? ''   // показываем
+            : 'none'; // скрываем
+        });
+      });
+    });
+  
+    // ***** Избранное (localStorage) *****
+    const favButtons = document.querySelectorAll('.product-card__wishlist');
+    const STORAGE_KEY = 'favorites';
+  
+    // прочитать текущий список избранного из storage
+    function loadFavs() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+      } catch {
+        return [];
+      }
+    }
+    function saveFavs(arr) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    }
+  
+    let favs = loadFavs();
+  
+    favButtons.forEach(btn => {
+      const card = btn.closest('.product-card');
+      const id = card.dataset.id;
+  
+      // при загрузке, если уже в избранном — отметить
+      if (favs.includes(id)) {
+        btn.classList.add('active');
+      }
+  
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        if (btn.classList.contains('active')) {
+          // добавить
+          if (!favs.includes(id)) favs.push(id);
+        } else {
+          // убрать
+          favs = favs.filter(x => x !== id);
+        }
+        saveFavs(favs);
+      });
+    });
+  });
+  
+  
   
   
