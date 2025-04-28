@@ -1,7 +1,7 @@
 
 /* === Общие стили секции === */
 .team {
-    padding: 40px 0;
+    padding: 40px 0 80px 0;
     background: #FAF8F8;
 }
 
@@ -78,12 +78,13 @@
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
+    margin-bottom: 5px;
     color: #000;
 }
 
 .team__role {
     font-family: Commissioner;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -189,7 +190,7 @@
     .team__controls {
       right: 8px;
       bottom: 8px;  /* опустим чуть ниже */
-      gap: 8px;
+      gap: 12px;
     }
     .team__arrow {
       background-color: #F6F5F5;

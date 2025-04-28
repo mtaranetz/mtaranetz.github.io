@@ -99,6 +99,8 @@
   
   /* Отступ между текстом и иконкой */
   .contact__button-icon {
+    width: 10px;
+    height: 10px;
     margin-left: 8px;
     flex-shrink: 0;
   }
@@ -155,45 +157,42 @@
       margin-bottom: 15px;
     }
   
-    /* 5) Блок «Оставить заявку» */
+    /* 5) Блок «Оставить заявку» - увеличенные отступы */
     .contact__footer {
-      gap: 10px;
+      margin-top: 68px !important;
+      margin-bottom: 40px; /* Добавляем отступ снизу перед картой */
     }
+    
     .contact__note {
       font-family: Commissioner;
       font-weight: 400;
       font-size: 16px;
       line-height: 20px;
       letter-spacing: 0%;
-
+      margin-bottom: 20px; /* Дополнительный отступ после текста */
     }
+    
     .contact__button {
       font-size: 14px;
-      height: 48px;         /* растянуть по ширине */
+      height: 48px;
     }
   
-    /* 6) Карта — под форме, full-width и пониже */
+    /* 6) Карта — с увеличенным отступом сверху */
     .map-container {
       width: 100%;
-      height: 350px;         /* или любую удобную вам высоту */
+      height: 350px;
       border-radius: 12px;
     }
 
-      /* Убираем ручные переносы в тексте */
+    /* Убираем ручные переносы в тексте */
     .contact__note br {
       display: none;
     }
 
-    /* 0) Убираем фикс. высоту, чтобы margin-top работал нормально */
-  .contact__left {
-    height: auto;
-  }
-
-  /* 1) Задаём точно 68px между списком контактов и блоком «Остались вопросы» */
-  .contact__footer {
-    margin-top: 68px !important;
-    gap: 10px;       /* ваш существующий gap */
-  }
-  }
+    /* Убираем фикс. высоту, чтобы margin-top работал нормально */
+    .contact__left {
+      height: auto;
+    }
+}
   
   

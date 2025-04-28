@@ -135,7 +135,7 @@
     color: var(--color-primary);
     font-family: Commissioner;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
 
@@ -173,8 +173,11 @@
     margin-right: 8px;
   }
   .manager-card__name {
-    font-size: 12px;
+    font-family: Commissioner;
     font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
     /* margin-bottom: 4px; */
   }
   .manager-card__role {
@@ -234,8 +237,13 @@
     justify-content: center;
   }  
   .button__icon {
-    width: 36px;
-    height: 36px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .button__icon__primary {
+    width: 10px;
+    height: 10px;
   }
   
 /* ================================================
@@ -368,6 +376,7 @@
       right: auto;
       height: auto;
       padding: 5px;
+      padding-right: 10px;
     }
 
     .manager-card__photo {
@@ -381,6 +390,7 @@
       font-size: 12px;
       line-height: 100%;
       letter-spacing: 0%;
+      margin-bottom: 2px;
     }
 
     .manager-card__role {

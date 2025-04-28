@@ -95,7 +95,7 @@
     font-family: "You2013", serif;
     font-weight: 400;
     font-size: 42px;
-    margin-bottom: 24px;
+    margin-bottom: 60px;
     color: #000;
   }
   
@@ -108,60 +108,72 @@
   /* ================================================
    Мобильная адаптация для секции «Преимущества» (≤768px)
    ================================================ */
-@media (max-width: 768px) {
-  /* Делаем грид в две колонки вместо трёх */
-  .advantages__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;           /* можно подкорректировать отступ */
-  }
-
-  /* Заголовок секции — чуть меньше */
-  .advantages__title {
-    font-family: You2013;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 2%;
-    margin-bottom: 16px;
-  }
-
-  .advantages__item {
-      min-height: 130px; 
+   @media (max-width: 768px) {
+    /* Грид в две колонки */
+    .advantages__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      align-items: stretch; /* Выравниваем по высоте */
+    }
+  
+    /* Карточка преимущества */
+    .advantages__item {
+      min-height: 130px;
       padding: 15px;
+      height: 100%; /* Занимаем всю доступную высоту */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; /* Привязываем контент к низу */
+      position: relative; /* Для позиционирования номера */
+    }
+  
+    /* Номер в углу - позиционируем абсолютно */
+    .advantages__number {
+      font-family: Commissioner;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0.04;
+    }
+  
+    /* Контейнер для текста */
+    .advantages__item-content {
+      margin-top: auto; /* Прижимаем вниз */
+    }
+  
+    /* Заголовки карточек */
+    .advantages__item-title {
+      font-family: Commissioner;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
+      letter-spacing: 0%;
+      margin-bottom: 8px;
+    }
+  
+    /* Описания карточек */
+    .advantages__item-desc {
+      font-family: Commissioner;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0%;
+    }
+  
+    /* Остальные стили остаются без изменений */
+    .advantages__title {
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 2%;
+      margin-bottom: 60px;
+    }
   }
-
-  /* Номер в углу — уменьшаем и чуть подвигаем */
-  .advantages__number {
-    font-family: Commissioner;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    top: 10px;
-    right: 10px;
-    opacity: 0.04;      /* по-прежнему очень «бледный» */
-  }
-
-  /* Заголовки карточек */
-  .advantages__item-title {
-    font-family: Commissioner;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    margin-bottom: 5px;
-
-  }
-
-  /* Описания карточек */
-  .advantages__item-desc {    
-    font-family: Commissioner;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-  }
-}
 
   

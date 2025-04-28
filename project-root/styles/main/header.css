@@ -383,6 +383,10 @@ html::-webkit-scrollbar {
     display: inline-flex;
     align-items: center;
   }
+
+  .header__mobile-logo {
+    width: 90px;
+  }
   
   
   /* Псевдо-стрелка справа у каждого пункта (мобилка) */
@@ -431,12 +435,12 @@ html::-webkit-scrollbar {
 
 /* 1) Между пунктами первого уровня подменю — 17px */
 .header__nav .menu > li.has-submenu > .submenu > li + li {
-  margin-top: 17px !important;
+  margin-top: 30px !important;
 }
 
 /* 2) Между пунктами второго уровня подменю — 10px */
 .header__nav .menu .submenu > li.has-submenu > .submenu > li + li {
-  margin-top: 14px !important }  
+  margin-top: 17px !important }  
 
 
 
@@ -524,6 +528,11 @@ html::-webkit-scrollbar {
      ======================================== */
   @media (max-width: 768px) {
     /* Основная строка: лого, мессенджеры, бургер */
+    .header__mobile-logo img{
+      width: 80px;
+      height: auto;
+    }
+
     .header__inner {
       display: flex;
       align-items: center;
@@ -603,4 +612,39 @@ html::-webkit-scrollbar {
     .mobile-menu .submenu li > a::after {
       display: none !important;
     }
+
+      /* Стили для мобильного меню */
+    .mobile-menu > li {
+      margin-bottom: 30px; /* Большой отступ между основными пунктами */
+    }
+
+    /* Подменю первого уровня */
+    .mobile-menu .submenu > li {
+      margin-bottom: 17px; /* Средний отступ */
+    }
+
+    /* Подменю второго уровня */
+    .mobile-menu .submenu .submenu > li {
+      margin-bottom: 17px; /* Меньший отступ */
+    }
+
+    /* Для последнего элемента в каждом списке убираем отступ */
+    .mobile-menu > li:last-child,
+    .mobile-menu .submenu > li:last-child,
+    .mobile-menu .submenu .submenu > li:last-child {
+      margin-bottom: 0;
+    }
   } 
+
+  .header__mobile-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px; 
+    color: #000;
+    display: flex;
+    width: 13px;
+    height: 13px;
+    align-items: center; /* Центрируем крестик */
+}

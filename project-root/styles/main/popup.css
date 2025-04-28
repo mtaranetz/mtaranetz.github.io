@@ -63,9 +63,9 @@
   .modal__subtitle {
     margin: 0 0 24px;
     font-family: Commissioner;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 1.1;
     letter-spacing: 0%;
     color: #000;
   }
@@ -116,6 +116,11 @@
   margin: 0;                      /* убираем автоматические маргины */
   /* если нужно, добавьте margin-top: 16px для отступа сверху */
   text-align: center;
+  font-family: Commissioner;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
   .modal__checkbox {
@@ -137,21 +142,31 @@
   }
   
   /* 7) Кнопки (внутри модалки и основная) */
-  .btn {
-    display: inline-block;
-    background: var(--color-primary);
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-family: Commissioner;
-    font-weight: 100;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-  }
+.btn {
+  display: inline-flex; /* меняем на flex для выравнивания */
+  align-items: center; /* выравниваем по центру по вертикали */
+  justify-content: center; /* выравниваем по центру по горизонтали */
+  gap: 8px; /* отступ между текстом и иконкой */
+  background: var(--color-primary);
+  color: #fff;
+  padding: 12px 24px; /* исправляем padding (было 12px 0px 12px 24px) */
+  border-radius: 8px;
+  font-family: Commissioner;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Стили для иконки внутри кнопки */
+button__icon__popup {
+  width: 10px; /* задаем размер иконки */
+  height: 10px;
+  display: block; /* убираем лишнее пространство под иконкой */
+}
 
   @media (max-width: 768px) {
     /* уменьшаем отступы внутри модалки, если нужно */
@@ -169,7 +184,7 @@
     /* мобильный подзаголовок */
     .modal__subtitle {
       font-family: Commissioner;
-      font-weight: 400;
+      font-weight: 200;
       font-size: 20px;
       line-height: 100%;
       letter-spacing: 0%;

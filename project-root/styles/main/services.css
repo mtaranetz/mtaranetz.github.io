@@ -9,7 +9,7 @@
     font-family: "You2013", serif;
     font-size: 42px;
     font-weight: 400;
-    margin-bottom: 32px;
+    margin-bottom: 60px;
     color: #000;
     text-align: left;
   }
@@ -75,8 +75,8 @@
     align-items: center;
   }
   .service__link-icon {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     margin-left: 6px;
   }
   
@@ -195,6 +195,10 @@
     height: 100px;
     width: 95px;
     margin: 10px 0 10px 10px;
+  }
+  .service__link-icon {
+    width: 7px;
+    height: 7px;
   }
 }
   
