@@ -145,40 +145,36 @@ html::-webkit-scrollbar {
   transform: translateY(-50%);
   transition: transform 0.2s ease;
 }
-/* 3) поворот стрелки и серый цвет текста у открытого пункта */
+
+/* Изменяем стили для стрелок подменю */
+.header__nav .menu li a::after {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  margin-left: 7px; /* Добавляем отступ слева от стрелки */
+  background-image: url('../../images/icons/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle; /* Выравниваем по центру относительно текста */
+  position: static; /* Убираем абсолютное позиционирование */
+  transform: none; /* Сбрасываем трансформацию */
+}
+
+/* Стили для открытого состояния */
 .menu li.has-submenu.open > a::after {
-  transform: translateY(-50%) rotate(180deg);
-}
-.menu li.has-submenu.open > a {
-  color: #777;
+  transform: rotate(180deg); /* Только поворот без смещения */
 }
 
+/* Для мобильного меню */
+.mobile-menu li > a::after {
+  margin-left: 8px;
+  transform: none;
+}
 
-  .header__nav .menu li a:hover {
-    color: var(--color-primary);
-  }
-  
-  /* Вот секция для стрелочек слева от подпунктов */
-  .header__nav .menu li.has-submenu > a::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 11px;
-    height: 10px;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url('../../images/icons/arrow-down.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: transform 0.2s ease;
-  }
-  .header__nav .menu li.has-submenu.open > a::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .header__nav .menu li.has-submenu.open > a {
-    color: #777;
-  }
+.mobile-menu li.has-submenu.open > a::after {
+  transform: rotate(180deg);
+}
   
   /* Подменю */
   .menu .submenu {
@@ -189,7 +185,8 @@ html::-webkit-scrollbar {
     background: #FAF8F8;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border: 1px solid #D7D7D7;   /* <-- здесь */
+    border-width: 1px ;
     min-width: 200px;
     z-index: 10;
   }
@@ -198,7 +195,7 @@ html::-webkit-scrollbar {
   }
   .menu .submenu > li.has-submenu > .submenu {
     position: static;
-    margin: 10px 0 0 15px;
+    margin: 0px 0 0 15px;
     padding: 0;
     background: transparent;
     box-shadow: none;
@@ -209,16 +206,48 @@ html::-webkit-scrollbar {
   .menu .submenu > li.has-submenu > .submenu > li + li {
     margin-top: 10px;
   }
+
   .menu .submenu li a {
     display: block;
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 0px 16px;
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
     color: #333;
     white-space: nowrap;
   }
   .menu .submenu li a:hover {
     background-color: #f5f5f5;
   }
+
+  /* 1) Отступ слева 15px у пунктов первого уровня */
+.menu > li.has-submenu > .submenu > li > a {
+  padding-left: 0px;
+}
+
+/* 2) Стрелка у пунктов первого уровня: inline-элемент и отступ 7px */
+.menu > li.has-submenu > a::after {
+  /* сброс абсолютного позиционирования */
+  position: static;
+  /* делаем встроенным и даём отступ от текста */
+  display: inline-block;
+  margin-left: 7px;
+  /* оставляем background-изображение */
+}
+
+/* 3) Убираем стрелки у пунктов второго уровня */
+.menu .submenu > li.has-submenu > .submenu > li.has-submenu > a::after {
+  display: none;
+}
+
+/* 4) Пункты второго уровня продолжают иметь отступ от родителя */
+.menu .submenu > li.has-submenu > .submenu > li > a {
+  padding-left: 0px; /* или чуть больше, если нужно */
+}
+
   
   
   /* Контакты в шапке */
@@ -267,6 +296,7 @@ html::-webkit-scrollbar {
   .header__contact-link.whatsapp {
     background-color: #25D366;
   }
+  
   
   
 /* ========================================
@@ -388,6 +418,53 @@ html::-webkit-scrollbar {
     border: none;
     cursor: pointer;
   }
+
+    /* 1) Убираем стрелки у пунктов второго уровня */
+.header__nav .menu .submenu > li.has-submenu > .submenu > li > a::after {
+  display: none !important;
+}
+
+/* Убираем обводку у подменю второго уровня */
+.header__nav .menu .submenu > li.has-submenu > .submenu {
+  border: none;
+}
+
+/* 1) Между пунктами первого уровня подменю — 17px */
+.header__nav .menu > li.has-submenu > .submenu > li + li {
+  margin-top: 17px !important;
+}
+
+/* 2) Между пунктами второго уровня подменю — 10px */
+.header__nav .menu .submenu > li.has-submenu > .submenu > li + li {
+  margin-top: 14px !important }  
+
+
+
+/* 2) Уберём вертикальный margin у второго уровня */
+.header__nav .menu .submenu > li.has-submenu > .submenu {
+  margin: 13px 0 0 15px; /* только отступ влево, без margin-top */
+}
+
+
+/* Серый текст для открытого пункта */
+  .submenu li.has-submenu.open > a {
+    color: #777;
+  }
+
+  /* Удаляем стрелки у пунктов первого уровня без подменю */
+.header__nav .menu > li:not(.has-submenu) > a::after {
+  display: none !important;
+}
+
+/* Удаляем стрелки у пунктов первого уровня подменю без вложенного подменю */
+.header__nav .menu > li.has-submenu > .submenu > li:not(.has-submenu) > a::after {
+  display: none !important;
+}
+
+/* Удаляем стрелки у пунктов второго уровня подменю (если они есть) */
+.header__nav .menu .submenu > li.has-submenu > .submenu > li > a::after {
+  display: none !important;
+}
   
   /* Подменю (мобилка) */
   .mobile-menu .submenu {
@@ -439,11 +516,6 @@ html::-webkit-scrollbar {
     font-size: 18px;
     line-height: 120%;
     letter-spacing: -3%;
-}
-
-/* Убираем псевдо-стрелку у ссылок внутри подменю */
-.mobile-menu .submenu li > a::after {
-  display: none;
 }
 
   
@@ -521,4 +593,14 @@ html::-webkit-scrollbar {
       height: 18px;
       display: block;
     }
-  }
+
+    /* Убираем стрелки у пунктов без подменю в мобильном меню */
+    .mobile-menu li:not(.has-submenu) > a::after {
+      display: none !important;
+    }
+
+    /* Убираем стрелки у пунктов подменю в мобильном меню */
+    .mobile-menu .submenu li > a::after {
+      display: none !important;
+    }
+  } 

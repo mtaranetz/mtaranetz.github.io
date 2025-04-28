@@ -14,7 +14,7 @@
 /* === Шапка: 4 колонки с таким же gap, что и в слайдере === */
 .team__header {
     column-gap: 16px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     align-self: start;
     padding-left: 0px;
 
@@ -22,7 +22,7 @@
 
 .team__title {
     font-family: "You2013", serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 42px;
     line-height: 44.33px;
     color: #000;
@@ -218,3 +218,35 @@
         letter-spacing: 0%;        
     }
   }
+
+  /* === Унификация стрелок перелистывания === */
+/* Общие стили для всех кнопок-стрелок */
+.testimonials__nav,
+.catalog__arrow,
+.team__arrow {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0;
+  /* если у вас были border-radius или фон — они сохранятся */
+}
+
+/* Иконки внутри них */
+.testimonials__nav img,
+.catalog__arrow img,
+.team__arrow img {
+  width: 30px !important;
+  height: 30px !important;
+  /* убираем возможные лишние margin/padding */
+  margin: 0;
+  padding: 0;
+}
+
+/* Дополнительно, чтобы центрировать иконку внутри кнопки */
+.testimonials__nav,
+.catalog__arrow,
+.team__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

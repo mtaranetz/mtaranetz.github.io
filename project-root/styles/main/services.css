@@ -121,7 +121,7 @@
       line-height: 26px;
       letter-spacing: 2%;
     }
-  
+
     /* 3) Уменьшаем шрифты */
     .service__name {
       font-family: Commissioner;
@@ -129,7 +129,7 @@
       font-size: 18px;
       line-height: 24px;
       letter-spacing: 0%;
-      padding-bottom: 8px;
+      padding-bottom: 4px;
     }
     .service__desc {
       font-family: Commissioner;
@@ -163,7 +163,6 @@
   .service__name {
     order: 1;
     margin-bottom: 0px;
-    font-size: 20px;
   }
   .service__desc {
     order: 2;
@@ -175,6 +174,27 @@
     font-size: 12px;
     margin: 0;
     align-self: flex-start; /* или stretch, в зависимости от желания */
+  }
+
+  .service {
+    align-items: stretch; /* Растягиваем карточку по высоте */
+  }
+
+  .service__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service__link {
+    margin-top: auto; /* Прижимаем к низу */
+    align-self: flex-start; /* Выравниваем по левому краю */
+  }
+
+  .service__img{
+    height: 100px;
+    width: 95px;
+    margin: 10px 0 10px 10px;
   }
 }
   

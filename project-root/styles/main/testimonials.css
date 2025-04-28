@@ -74,14 +74,14 @@ html, body {
 
 /* слайдер и список */
 .testimonials__slider {
-  width: calc(280px * 3 + 32px * 2);
-  margin: 0 auto;
+  width: 1128px;
+  margin: 0 0;
   overflow: hidden;
 }
 .testimonials__list {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 280px;
+  grid-auto-columns: 354px;
   grid-template-rows: repeat(2, auto);
   gap: 32px;
   overflow-x: auto;
@@ -102,6 +102,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 355px;
 }
 .testimonial__text {
   font-family: "Commissioner", sans-serif;
@@ -109,6 +110,7 @@ html, body {
   line-height: 1.4;
   color: #333;
   margin: 0 0 16px;
+  margin-bottom: 45px;
 }
 .testimonial__footer {
   display: flex;
@@ -163,6 +165,16 @@ html, body {
   filter: grayscale(100%) brightness(60%);
   opacity: 0.4;
 }
+
+.testimonials__nav-wrapper {
+  order: 2;
+  display: flex;
+  gap: 12px; /* Уменьшаем gap только между кнопками навигации */
+}
+
+
+
+
 
 @media (max-width: 768px) {
   /* 1) Ёлки на всю ширину */
@@ -226,11 +238,17 @@ html, body {
 
   /* 7) Шрифты в карточках */
   .testimonial__text {
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: 16px;
+    margin-bottom: 86px;
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -2%;
+
   }
   .testimonial__author {
-    font-size: 12px;
+    font-size: 14px;
   }
   .testimonial__star {
     width: 12px;
@@ -268,7 +286,123 @@ html, body {
     left: auto;
     transform: none;
     padding: 8px 8px 44px; /* ваш текущий вертикальный, а горизонтальный — 16px */
+  }  
+
+  /* 6) По одному отзыву */
+  .testimonials__list {
+    /* вместо calc((100%−64px)/3) — просто «съедает» всю ширину */
+    grid-auto-columns: 100% !important;
+    /* уже был gap:16px; оставляем */
+    gap: 16px;  
+    /* и на всякий случай — одна строка */
+    grid-template-rows: 1fr;  
   }
 
+  .testimonial {
+    /* чтобы карточка не растягивалась сверх 100% */
+    min-width: 0;
+    /* и заняла всю ширину implicit grid-track */
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials__controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      gap: 8px; /* Общий gap между всеми элементами */
+    }
   
+    .testimonials__cta--mobile {
+      order: 1;
+      margin-right: auto; /* Прижимаем к левому краю */
+    }
+  
+    .testimonials__nav-wrapper {
+      order: 2;
+      display: flex;
+      gap: 12px; /* Уменьшаем gap только между кнопками навигации */
+    }
+  
+    .testimonials__nav {
+      width: 36px;
+      height: 36px;
+      margin: 0; /* Убираем возможные margin */
+    }
+  }
 }
+
+/* === Унификация стрелок перелистывания === */
+/* Общие стили для всех кнопок-стрелок */
+.testimonials__nav,
+.catalog__arrow,
+.team__arrow {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0;
+  /* если у вас были border-radius или фон — они сохранятся */
+}
+
+/* Иконки внутри них */
+.testimonials__nav img,
+.catalog__arrow img,
+.team__arrow img {
+  width: 30px !important;
+  height: 30px !important;
+  /* убираем возможные лишние margin/padding */
+  margin: 0;
+  padding: 0;
+}
+
+/* Дополнительно, чтобы центрировать иконку внутри кнопки */
+.testimonials__nav,
+.catalog__arrow,
+.team__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* во-первых, убедимся, что у всех элементов box-sizing: border-box */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+/* вместо width: 1128px; */
+.testimonials__slider {
+  width: 100%;
+  margin: 0 auto;      /* по центру в родителе */
+  overflow: hidden;
+}
+
+/* слайдер под ширину .testimonials__content */
+.testimonials__slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* делаем сетку «бесконечной» по горизонтали,
+   но с динамической шириной колонки */
+.testimonials__list {
+  display: grid;
+  grid-auto-flow: column;
+  /* теперь каждая колонка ровно (100% − 64px) / 3 */
+  grid-auto-columns: calc((100% - 64px) / 3);
+  gap: 32px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* убираем конфликтный min-width,
+   пусть сетка сама управляет размерами */
+.testimonial {
+  min-width: 0;
+  /* при желании можно явно задать width:100%,
+     чтобы карточка всегда растягивалась под grid-track */
+  /* width: 100%; */
+}
+
+

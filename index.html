@@ -45,14 +45,71 @@
                     <li><a href="/services/design/portfolio">Наши работы</a></li>
                   </ul>
                 </li>
-                <li><a href="center.html">Садовый центр</a></li>
-                <li><a href="/services/gardener">Товары для сада</a></li>
+                <li class="has-submenu">
+                  <a href="center.html">Садовый центр</a>
+                  <ul class="submenu">
+                    <li><a href="center.html">Хвойные</a></li>
+                    <li><a href="/center/deciduous">Лиственные</a></li>
+                    <li><a href="/center/shrubs">Кустарники</a></li>
+                    <li><a href="/center/niwaki">Ниваки</a></li>
+                    <li><a href="/center/topiary">Топиары</a></li>
+                    <li><a href="/center/xmas-trees">Новогодние ели</a></li>
+                    <li><a href="/center/planting-trees">Посадка деревьев</a></li>
+                    <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
+                  </ul>
+                </li>
+                
+                <li class="has-submenu">
+                  <a href="/services/gardener">Товары для сада</a>
+                  <ul class="submenu">
+                    <li><a href="/shop/tools">Инструменты</a></li>
+                    <li><a href="/shop/burlap">Мешковина</a></li>
+                    <li><a href="/shop/root-netting">Сетка для комов</a></li>
+                    <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+                    <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+                    <li><a href="/shop/aerolenta">Аэролента</a></li>
+                    <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+                    <li><a href="/shop/lawn">Газон</a></li>
+                    <li><a href="/shop/soils">Грунты</a></li>
+                    <li><a href="/shop/drainage">Дренаж</a></li>
+                    <li><a href="/shop/gloves">Перчатки</a></li>
+                    <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+                    <li><a href="/shop/fertilizers">Удобрения</a></li>
+                    <li><a href="/shop/stakes">Штур</a></li>
+                  </ul>
+                </li>
+                
               </ul>
           </li>
-          <li><a href="#portfolio">Галерея работ</a></li>
+          <!-- Галерея работ с подменю -->
+          <li class="has-submenu">
+            <a href="#portfolio">Галерея работ</a>
+            <ul class="submenu">
+              <li><a href="/portfolio/residential">Жилые участки</a></li>
+              <li><a href="/portfolio/commercial">Коммерческие объекты</a></li>
+              <li><a href="/portfolio/public">Общественные пространства</a></li>
+              <li><a href="/portfolio/water-features">Водоёмы и фонтаны</a></li>
+              <li><a href="/portfolio/special-projects">Спец-проекты</a></li>
+            </ul>
+          </li>          
           <li><a href="#prices">Цены</a></li>
-          <li><a href="#promos">Акции</a></li>
-          <li><a href="#about">О нас</a></li>
+          <!-- Акции -->
+          <li class="has-submenu">
+            <a href="#promos">Акции</a>
+            <ul class="submenu">
+              <li><a href="/promos/wholesale">Оптовая</a></li>
+              <li><a href="/promos/birthday">Именинникам</a></li>
+              <li><a href="/promos/seasonal">Сезонная</a></li>
+            </ul>
+          </li>          
+          <!-- О нас -->
+          <li class="has-submenu">
+            <a href="#about">О нас</a>
+            <ul class="submenu">
+              <li><a href="/about/articles">Статьи</a></li>
+              <li><a href="/about/contacts">Контакты</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -88,53 +145,129 @@
     <div class="header__mobile-overlay">
 
       <!-- Fullscreen меню -->
-      <nav class="header__mobile-menu" aria-hidden="true">
-        <!-- Верхний ряд: логотип + крестик -->
-        <div class="header__mobile-top">
-          <a href="/" class="header__mobile-logo">
-            <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
-          </a>
-          <button class="header__mobile-close" aria-label="Закрыть меню">
-            <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
-          </button>
-        </div>
+    <nav class="header__mobile-menu" aria-hidden="true">
+      <!-- Верхний ряд: логотип + крестик -->
+  <div class="header__mobile-top">
+    <a href="/" class="header__mobile-logo">
+      <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+    </a>
+    <button class="header__mobile-close" aria-label="Закрыть меню">
+      <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
+    </button>
+  </div>
 
-        <!-- Пункты меню -->
-        <ul class="mobile-menu">
-          <li class="has-submenu">
-            <a href="design.html">Ландшафтный дизайн</a>
-            <!-- кнопка-раскрыватель подменю -->
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <!-- Вложенное подменю -->
-            <ul class="submenu">
-              <li><a href="design.html">Заказ и реализация проекта</a></li>
-              <li><a href="/services/design/irrigation">Устройство автополива</a></li>
-              <li><a href="/services/design/lawn">Устройство газона</a></li>
-              <li><a href="/services/design/gardening">Уход за садом</a></li>
-              <li><a href="/services/design/portfolio">Наши работы</a></li>
-            </ul>
-          </li>
-          <li><a href="center.html">Садовый центр</a></li>
-          <li><a href="/services/gardener">Товары для сада</a></li>
-          <li><a href="#portfolio">Галерея работ</a></li>
-          <li><a href="#portfolio">Статьи</a></li>
-          <li><a href="#prices">Цены</a></li>
-          <li><a href="#promos">Акции</a></li>
-          <li><a href="#about">Контакты</a></li>
-        </ul>
+  <!-- Пункты меню -->
+  <ul class="mobile-menu">
+    <!-- Услуги -->
+    <li class="has-submenu">
+      <a href="design.html">Ландшафтный дизайн</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="design.html">Заказ и реализация проекта</a></li>
+        <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+        <li><a href="/services/design/lawn">Устройство газона</a></li>
+        <li><a href="/services/design/gardening">Уход за садом</a></li>
+        <li><a href="/services/design/portfolio">Наши работы</a></li>
+      </ul>
+    </li>
+       
+    <!-- Садовый центр -->
+    <li class="has-submenu">
+      <a href="center.html">Садовый центр</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/center/conifers">Хвойные</a></li>
+        <li><a href="/center/deciduous">Лиственные</a></li>
+        <li><a href="/center/shrubs">Кустарники</a></li>
+        <li><a href="/center/niwaki">Ниваки</a></li>
+        <li><a href="/center/topiary">Топиары</a></li>
+        <li><a href="/center/xmas-trees">Новогодние ели</a></li>
+        <li><a href="/center/planting-trees">Посадка деревьев</a></li>
+        <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
+      </ul>
+    </li>
+        
+    <!-- Товары для сада -->
+    <li class="has-submenu">
+      <a href="/services/gardener">Товары для сада</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/shop/tools">Инструменты</a></li>
+        <li><a href="/shop/burlap">Мешковина</a></li>
+        <li><a href="/shop/root-netting">Сетка для комов</a></li>
+        <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+        <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+        <li><a href="/shop/aerolenta">Аэролента</a></li>
+        <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+        <li><a href="/shop/lawn">Газон</a></li>
+        <li><a href="/shop/soils">Грунты</a></li>
+        <li><a href="/shop/drainage">Дренаж</a></li>
+        <li><a href="/shop/gloves">Перчатки</a></li>
+        <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+        <li><a href="/shop/fertilizers">Удобрения</a></li>
+        <li><a href="/shop/stakes">Штур</a></li>
+      </ul>
+    </li>
+    
+    <!-- Галерея работ -->
+    <li class="has-submenu">
+      <a href="#portfolio">Галерея работ</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+        <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+        <li><a href="/portfolio/public">Устройство автополива</a></li>
+        <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+        <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
+      </ul>
+    </li>
 
-        <!-- Контакты -->
-        <div class="header__mobile-contacts">
-          <a href="https://t.me/your_telegram" class="messaging telegram " aria-label="Telegram">
-            <img src="project-root/images/icons/telegram.svg" alt="">
-          </a>
-          <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
-            <img src="project-root/images/icons/whatsapp.svg" alt="">
-          </a>
-          <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
-          <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
-        </div>
-      </nav>
+    <!-- Статьи -->
+    <li class="has-submenu">
+      <a href="#portfolio">Статьи</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+        <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+        <li><a href="/portfolio/public">Устройство автополива</a></li>
+        <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+        <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
+      </ul>
+    </li>
+    
+    <!-- Цены -->
+    <li><a href="#prices">Цены</a></li>
+    
+    <!-- Акции -->
+    <li class="has-submenu">
+      <a href="#promos">Акции</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/promos/wholesale">Оптовая</a></li>
+        <li><a href="/promos/birthday">Именинникам</a></li>
+        <li><a href="/promos/seasonal">Сезонная</a></li>
+      </ul>
+    </li>
+    
+    <!-- О нас -->
+    <li>
+      <a href="#about">Контакты</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+    </li>
+  </ul>
+
+  <!-- Контакты -->
+  <div class="header__mobile-contacts">
+    <a href="https://t.me/your_telegram" class="messaging telegram" aria-label="Telegram">
+      <img src="project-root/images/icons/telegram.svg" alt="">
+    </a>
+    <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
+      <img src="project-root/images/icons/whatsapp.svg" alt="">
+    </a>
+    <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
+    <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
+  </div>
+</nav>
       
     </div>
   </section>
@@ -218,7 +351,7 @@
     </div>
   </div>
   
-
+  <!-- Преимущества -->
   <section class="advantages container">
     <h2 class="advantages__title">Преимущества компании</h2>
     <ul class="advantages__list">
@@ -367,7 +500,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -382,7 +515,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -397,7 +530,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -412,7 +545,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -427,7 +560,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -442,7 +575,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -457,7 +590,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -472,7 +605,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -487,7 +620,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -502,7 +635,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -517,7 +650,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -532,7 +665,7 @@
                 Хочется сказать большое спасибо за выполненную работу по посадке сосен и елей на дачном участке в поселке Кумкуль! Ребята – профессионалы своего дела, всё сделали чётко, быстро, качественно! Желаем компании успехов и процветания!
               </p>
               <div class="testimonial__footer">
-                <span class="testimonial__author">Лариса К.</span>
+                <span class="testimonial__author">Лариса К.</span>
                 <div class="testimonial__rating">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
                   <img src="project-root/images/icons/star.svg" alt="звезда" class="testimonial__star">
@@ -545,12 +678,14 @@
           </ul>
   
           <div class="testimonials__controls">
-            <button class="testimonials__nav testimonials__nav--prev" aria-label="Назад">
-              <img src="project-root/images/icons/arrow-forward.svg" alt="">
-            </button>
-            <button class="testimonials__nav testimonials__nav--next" aria-label="Вперёд">
-              <img src="project-root/images/icons/arrow-forward.svg" alt="">
-            </button>
+            <div class="testimonials__nav-wrapper">
+              <button class="testimonials__nav testimonials__nav--prev" aria-label="Назад">
+                <img src="project-root/images/icons/arrow-forward.svg" alt="">
+              </button>
+              <button class="testimonials__nav testimonials__nav--next" aria-label="Вперёд">
+                <img src="project-root/images/icons/arrow-forward.svg" alt="">
+              </button>
+            </div>
             <!-- новая кнопка, появится только на мобилке -->
             <a href="#consult" class="button button--primary testimonials__cta--mobile">
               Оставить заявку
@@ -562,16 +697,11 @@
     </div>
   </section>
 
-
-  
-  
-
   <section class="catalog">
     <div class="catalog__inner">
       <div class="catalog__header">
         <h2 class="catalog__title">
-          Каталог<br>
-          наших работ
+          Каталог наших работ
         </h2>
         <p class="catalog__subtitle">
           Реализованные нами<br>
@@ -614,7 +744,9 @@
               class="catalog__arrow-icon">
         </button>
         </div>
-        <button class="catalog__btn">Бесплатная консультация</button>
+        <button class="catalog__btn">Бесплатная консультация
+          <img src="project-root/images/icons/arrow-right.svg" alt="" class="catalog__btn-icon">
+        </button>
 
       </div>
     </div>

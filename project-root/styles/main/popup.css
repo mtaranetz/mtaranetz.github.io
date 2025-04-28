@@ -44,6 +44,9 @@
     font-size: 24px;
     line-height: 1;
     cursor: pointer;
+    padding-bottom: 16px;
+    color: #1D1D1B66;
+    opacity: 0.4;
   }
   
   /* 5) Заголовки и текст */
@@ -70,7 +73,7 @@
   /* 6) Форма */
   .modal__form label {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     background-color: transparent;
   }
   /* === Поля формы: прозрачный фон + только нижняя граница === */
@@ -141,7 +144,7 @@
     padding: 12px 24px;
     border-radius: 8px;
     font-family: Commissioner;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -154,6 +157,7 @@
     /* уменьшаем отступы внутри модалки, если нужно */
     .modal {
       padding: 24px 16px;
+      border-radius: 8px;
     }
   
     /* мобильный заголовок попапа */
@@ -164,14 +168,37 @@
   
     /* мобильный подзаголовок */
     .modal__subtitle {
-      font-size: 18px;  /* около 14px вместо 1rem (16px) */
-      margin-bottom: 16px;
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+
     }
   
     /* опционально: чуть уже инпуты */
     .modal__form input[type="text"],
     .modal__form input[type="tel"] {
       font-size: 0.95rem;
+    }
+
+    .modal__header {
+      position: relative;
+      margin-bottom: 20px;
+    }
+  
+    .modal__close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      width: 24px;
+      height: 24px;
+      color: #1D1D1B66;
+      opacity: 0.4;
+    }
+  
+    .modal__title {
+      padding-right: 30px;
     }
   }
   

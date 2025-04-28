@@ -1,0 +1,145 @@
+/* ===== Глобальный контейнер ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* ===== Секция «Наши услуги» ===== */
+  .features-section {
+    /* только вертикальные отступы */
+    padding: 60px 0;
+    background-color: var(--bg-page);
+  }
+ 
+
+  /* === Шапка, как в каталоге === */
+  .features-section__header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    align-items: center;
+    margin-bottom: 33px;
+  }
+  
+  .features-section__title {
+    font-family: You2013, serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 80px;
+    letter-spacing: 2%;
+    margin: 0;
+    /* растягиваем на первые три колонки */
+    grid-column: 1 / span 3;
+  }
+  
+  .features-section__subtitle {
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: #333;
+    margin: 0;
+    /* выводим в четвёртой колонке */
+    grid-column: 4 / 5;
+  }
+  
+  /* Сетка карточек */
+  .features-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Карточка услуги */
+  .features-section__card {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Номер карточки */
+  .features-section__card-number {
+    position: absolute;
+    top: 25px;
+    right: 22px;
+    font-family: Commissioner;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    opacity: 0.1;
+  }
+  
+  /* Заголовок внутри карточки */
+  .features-section__card-title {
+    font-family: Commissioner;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-primary);
+    margin: 0 0 16px;
+  }
+  
+  /* Список возможностей */
+  .features-section__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .features-section__list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333;
+  }
+  
+  /* маркер-черточка */
+  .features-section__list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #333;
+  }
+  
+  /* ===== Адаптив ===== */
+  @media (max-width: 768px) {
+    .features-section__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .features-section__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* —————————————————————————— */
+/* Общие обёртки */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .features-section {
+    padding: 40px 0;            /* только вертикальные отступы */
+    background: var(--bg-page);
+  }
+  
+  
+  
+  
+  
+  
+  
