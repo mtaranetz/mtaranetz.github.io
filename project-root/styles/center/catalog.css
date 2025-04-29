@@ -42,26 +42,6 @@ html, body {
     font-family: var(--font-base);
   }
   
-  /* ================================================
-     Хедер
-     ================================================ */
-  .header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-  }
-  .header__logo img { display: block; }
-  
-  /* Мобильные отступы в хедере */
-  @media (max-width: 768px) {
-    .header__inner {
-      padding: 0 16px;
-    }
-    .header__mobile-menu {
-      padding: 0 16px;
-    }
-  }
   
   /* ================================================
    Каталог (фильтры + навигация)
@@ -95,7 +75,7 @@ html, body {
   height: 50px;
   background: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 7px;
   padding: 8px 15px;
   font-family: Commissioner, sans-serif;
   font-weight: 400;
@@ -178,16 +158,15 @@ html, body {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-
+    margin-bottom: 8px;
     color: #333;
   }
   .product-card__price {
     font-family: Commissioner;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
-
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
     display: flex;
     align-items: baseline;
     gap: 8px;
@@ -207,26 +186,39 @@ html, body {
   }
   
   /* Кнопки действий */
-  .product-card__actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 16px;
-  }
-  .product-card__btn {
-    flex: 1;
-    padding: 10px;
-    background: var(--color-primary);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: .875rem;
-    cursor: pointer;
-    transition: background .2s;
-  }
-  .product-card__btn:hover {
-    background: var(--dark-color-primary);
-    color: #000;
-  }
+.product-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.product-card__btn {
+  display: inline-flex;           /* чтобы gap работал */
+  align-items: center;            /* выравнивание текста и иконки по центру */
+  justify-content: center;        /* кнопка растягивается равномерно */
+  flex: 1;
+  padding: 10px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  gap: 12px;                       /* расстояние между текстом и стрелкой */
+  border-radius: 7px;
+  font-size: .875rem;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.product-card__btn:hover {
+  background: var(--dark-color-primary);
+  color: #000;
+}
+
+.button__icon__primary {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
   
   /* Избранное */
   .product-card__wishlist {
