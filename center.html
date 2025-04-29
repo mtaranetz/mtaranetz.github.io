@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="project-root/styles/center/catalog.css">
   <link rel="stylesheet" href="project-root/styles/main/contact.css" />
   <link rel="stylesheet" href="project-root/styles/main/footer.css" />
+  <link rel="stylesheet" href="project-root/styles/main/overlay-menu.css">
+
 
 </head>
 <body>
@@ -41,7 +43,7 @@
                 <li class="has-submenu">
                   <a href="center.html">Садовый центр</a>
                   <ul class="submenu">
-                    <li><a href="/center/conifers">Хвойные</a></li>
+                    <li><a href="center.html">Хвойные</a></li>
                     <li><a href="/center/deciduous">Лиственные</a></li>
                     <li><a href="/center/shrubs">Кустарники</a></li>
                     <li><a href="/center/niwaki">Ниваки</a></li>
@@ -138,8 +140,8 @@
     <div class="header__mobile-overlay">
 
       <!-- Fullscreen меню -->
-<nav class="header__mobile-menu" aria-hidden="true">
-  <!-- Верхний ряд: логотип + крестик -->
+    <nav class="header__mobile-menu" aria-hidden="true">
+      <!-- Верхний ряд: логотип + крестик -->
   <div class="header__mobile-top">
     <a href="/" class="header__mobile-logo">
       <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
@@ -153,59 +155,52 @@
   <ul class="mobile-menu">
     <!-- Услуги -->
     <li class="has-submenu">
-      <a href="#services">Услуги</a>
+      <a href="design.html">Ландшафтный дизайн</a>
       <button class="submenu-toggle" aria-label="Открыть подменю"></button>
       <ul class="submenu">
-        <!-- Ландшафтный дизайн -->
-        <li class="has-submenu">
-          <a href="design.html">Ландшафтный дизайн</a>
-          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-          <ul class="submenu">
-            <li><a href="design.html">Заказ и реализация проекта</a></li>
-            <li><a href="/services/design/irrigation">Устройство автополива</a></li>
-            <li><a href="/services/design/lawn">Устройство газона</a></li>
-            <li><a href="/services/design/gardening">Уход за садом</a></li>
-            <li><a href="/services/design/portfolio">Наши работы</a></li>
-          </ul>
-        </li>
+        <li><a href="design.html">Заказ и реализация проекта</a></li>
+        <li><a href="/services/design/irrigation">Устройство автополива</a></li>
+        <li><a href="/services/design/lawn">Устройство газона</a></li>
+        <li><a href="/services/design/gardening">Уход за садом</a></li>
+        <li><a href="/services/design/portfolio">Наши работы</a></li>
+      </ul>
+    </li>
         
-        <!-- Садовый центр -->
-        <li class="has-submenu">
-          <a href="center.html">Садовый центр</a>
-          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-          <ul class="submenu">
-            <li><a href="/center/conifers">Хвойные</a></li>
-            <li><a href="/center/deciduous">Лиственные</a></li>
-            <li><a href="/center/shrubs">Кустарники</a></li>
-            <li><a href="/center/niwaki">Ниваки</a></li>
-            <li><a href="/center/topiary">Топиары</a></li>
-            <li><a href="/center/xmas-trees">Новогодние ели</a></li>
-            <li><a href="/center/planting-trees">Посадка деревьев</a></li>
-            <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
-          </ul>
-        </li>
+    <!-- Садовый центр -->
+    <li class="has-submenu">
+      <a href="center.html">Садовый центр</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/center/conifers">Хвойные</a></li>
+        <li><a href="/center/deciduous">Лиственные</a></li>
+        <li><a href="/center/shrubs">Кустарники</a></li>
+        <li><a href="/center/niwaki">Ниваки</a></li>
+        <li><a href="/center/topiary">Топиары</a></li>
+        <li><a href="/center/xmas-trees">Новогодние ели</a></li>
+        <li><a href="/center/planting-trees">Посадка деревьев</a></li>
+        <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
+      </ul>
+    </li>
         
-        <!-- Товары для сада -->
-        <li class="has-submenu">
-          <a href="/services/gardener">Товары для сада</a>
-          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-          <ul class="submenu">
-            <li><a href="/shop/tools">Инструменты</a></li>
-            <li><a href="/shop/burlap">Мешковина</a></li>
-            <li><a href="/shop/root-netting">Сетка для комов</a></li>
-            <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
-            <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
-            <li><a href="/shop/aerolenta">Аэролента</a></li>
-            <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
-            <li><a href="/shop/lawn">Газон</a></li>
-            <li><a href="/shop/soils">Грунты</a></li>
-            <li><a href="/shop/drainage">Дренаж</a></li>
-            <li><a href="/shop/gloves">Перчатки</a></li>
-            <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
-            <li><a href="/shop/fertilizers">Удобрения</a></li>
-            <li><a href="/shop/stakes">Штур</a></li>
-          </ul>
-        </li>
+    <!-- Товары для сада -->
+    <li class="has-submenu">
+      <a href="/services/gardener">Товары для сада</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/shop/tools">Инструменты</a></li>
+        <li><a href="/shop/burlap">Мешковина</a></li>
+        <li><a href="/shop/root-netting">Сетка для комов</a></li>
+        <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+        <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+        <li><a href="/shop/aerolenta">Аэролента</a></li>
+        <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+        <li><a href="/shop/lawn">Газон</a></li>
+        <li><a href="/shop/soils">Грунты</a></li>
+        <li><a href="/shop/drainage">Дренаж</a></li>
+        <li><a href="/shop/gloves">Перчатки</a></li>
+        <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+        <li><a href="/shop/fertilizers">Удобрения</a></li>
+        <li><a href="/shop/stakes">Штур</a></li>
       </ul>
     </li>
     
@@ -214,11 +209,24 @@
       <a href="#portfolio">Галерея работ</a>
       <button class="submenu-toggle" aria-label="Открыть подменю"></button>
       <ul class="submenu">
-        <li><a href="/portfolio/residential">Жилые участки</a></li>
-        <li><a href="/portfolio/commercial">Коммерческие объекты</a></li>
-        <li><a href="/portfolio/public">Общественные пространства</a></li>
-        <li><a href="/portfolio/water-features">Водоёмы и фонтаны</a></li>
-        <li><a href="/portfolio/special-projects">Спец-проекты</a></li>
+        <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+        <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+        <li><a href="/portfolio/public">Устройство автополива</a></li>
+        <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+        <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
+      </ul>
+    </li>
+
+    <!-- Статьи -->
+    <li class="has-submenu">
+      <a href="#portfolio">Статьи</a>
+      <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      <ul class="submenu">
+        <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+        <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+        <li><a href="/portfolio/public">Устройство автополива</a></li>
+        <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+        <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
       </ul>
     </li>
     
@@ -237,13 +245,9 @@
     </li>
     
     <!-- О нас -->
-    <li class="has-submenu">
-      <a href="#about">О нас</a>
+    <li>
+      <a href="#about">Контакты</a>
       <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-      <ul class="submenu">
-        <li><a href="/about/articles">Статьи</a></li>
-        <li><a href="/about/contacts">Контакты</a></li>
-      </ul>
     </li>
   </ul>
 

@@ -247,8 +247,6 @@ html::-webkit-scrollbar {
 .menu .submenu > li.has-submenu > .submenu > li > a {
   padding-left: 0px; /* или чуть больше, если нужно */
 }
-
-  
   
   /* Контакты в шапке */
   .header__contacts {
@@ -299,58 +297,7 @@ html::-webkit-scrollbar {
   
   
   
-/* ========================================
-   Off-canvas меню (базовые стили)
-   ======================================== */
-   .header__mobile-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s;
-    z-index: 999;
-  }
-  .header__mobile-overlay.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .header__mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: #fff;
-    transform: translateY(-100%);
-    transition: transform .3s ease;
-    z-index: 1000;
-  
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  .header__mobile-menu.open {
-    transform: translateY(0);
-  }
-  
-  /* Верхний ряд: логотип и кнопка закрытия */
-  .header__mobile-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header__mobile-close {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    line-height: 1;
-    cursor: pointer;
-    margin: 0;
-    height: 14px;
-    width: 14px;
-  }
-  
+
   /* Список пунктов меню (мобилка) */
   .mobile-menu {
     flex: 1;
@@ -615,12 +562,12 @@ html::-webkit-scrollbar {
 
       /* Стили для мобильного меню */
     .mobile-menu > li {
-      margin-bottom: 30px; /* Большой отступ между основными пунктами */
+      margin-bottom: 20px; /* Большой отступ между основными пунктами */
     }
 
     /* Подменю первого уровня */
     .mobile-menu .submenu > li {
-      margin-bottom: 17px; /* Средний отступ */
+      margin-bottom: 10px; /* Средний отступ */
     }
 
     /* Подменю второго уровня */

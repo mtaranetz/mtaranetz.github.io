@@ -8,7 +8,7 @@
 .footer__inner {
   display: grid;
   grid-template-columns: max-content 1fr;
-  column-gap: 32px;
+  column-gap: 435px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -31,7 +31,6 @@
   text-align: left;
   font-family: Commissioner, sans-serif;
   font-size: 14px;
-  margin-left: 420px;
   color: #333;
 }
 
@@ -50,15 +49,17 @@
 @media (max-width: 768px) {
   .footer {
     background: #FFF;
-    padding: 20px 16px; /* Добавляем боковые отступы */
+    padding: 20px 16px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .footer__inner {
     display: flex;
-    align-items: flex-start; /* Выравниваем по верхнему краю */
-    gap: 16px;
+    flex-direction: row; /* Оставляем горизонтальное расположение */
+    align-items: flex-start;
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    gap: 90px;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -69,14 +70,13 @@
 
   .footer__logo img {
     height: auto;
-    width: 100px;
+    width: 100px; /* Уменьшаем лого для мобилок */
   }
 
   .footer__right {
     flex: 1;
-    text-align: left;
-    padding-top: 4px; /* Небольшая корректировка выравнивания */
-    padding-left: 84px;
+    text-align: left; /* Выравниваем текст по правому краю */
+    padding-top: 4px;
     margin-left: 0;
   }
 
@@ -97,6 +97,7 @@
     font-size: 12px;
     line-height: 1.4;
     color: #333;
+    text-align: left; /* Выравниваем реквизиты по правому краю */
   }
 
   .footer__company p {

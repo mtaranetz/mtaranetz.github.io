@@ -1,0 +1,165 @@
+/* ========================================
+   Off-canvas меню (overlay)
+   ======================================== */
+   .header__mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    z-index: 999;
+  }
+  .header__mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Само панель-меню */
+  .header__mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+    z-index: 1000;
+  
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .header__mobile-menu.open {
+    transform: translateY(0);
+  }
+  
+  /* Верхний ряд внутри оверлея: логотип + крестик */
+  .header__mobile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__mobile-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Основное вертикальное меню */
+  .mobile-menu {
+    flex: 1;
+    margin: 0;
+    padding: 50px 0 0;        /* отступ над первым пунктом */
+    list-style: none;
+    font-family: Commissioner, sans-serif;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -3%;
+  }
+  .mobile-menu li {
+    position: relative;
+  }
+  .mobile-menu > li {
+    margin-bottom: 20px;      /* отступ между пунктами */
+  }
+  .mobile-menu a {
+    display: inline-flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 0;
+  }
+  
+  /* Стрелка-псевдоэлемент */
+  .mobile-menu li > a::after {
+    content: "";
+    display: inline-block;
+    margin-left: 8px;
+    width: 11px;
+    height: 10px;
+    background-image: url('../../images/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform .2s ease;
+  }
+  .mobile-menu li.has-submenu.open > a::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .mobile-menu li.has-submenu.open > a {
+    color: #777;
+  }
+  
+  /* Кнопка-раскрыватель вторых уровней */
+  .submenu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Вложенные списки */
+  .mobile-menu .submenu {
+    display: none;
+    margin: 8px 0 0 16px;
+    padding: 0;
+  }
+  .mobile-menu .submenu li {
+    margin-bottom: 10px;
+  }
+  .mobile-menu li.has-submenu.open .submenu {
+    display: block;
+  }
+  
+  /* Контакты внизу оверлея */
+  .header__mobile-contacts {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-family: Commissioner, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .header__mobile-contacts .messaging {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    padding: 7px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__mobile-contacts .messaging.telegram {
+    background: #29AEEC;
+  }
+  .header__mobile-contacts .messaging.whatsapp {
+    background: #6AD567;
+  }
+  .header__mobile-contacts .messaging img {
+    width: 18px;
+    height: 18px;
+  }
+  .header__mobile-contacts .phone {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Мелкие до-настройки для вложенных ссылок */
+  .mobile-menu .submenu li > a {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -3%;
+  }
+  
