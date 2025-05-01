@@ -112,7 +112,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     color: #8F8F8F;
-    margin-bottom: 6px;
+    margin-bottom: 9px;
   }
   
   /* маркер-черточка */
@@ -157,23 +157,9 @@
     /* 1) Убираем промежутки между карточками */
   .features-section__grid {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 8px;
   }
 
-  /* 2) Сброс скруглений у всех карточек */
-  .features-section__card {
-    border-radius: 0;
-  }
-
-  /* 3) Восстанавливаем скругления только у первой и последней */
-  .features-section__card:first-child {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .features-section__card:last-child {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
 
   .features-section__title{
     font-family: You2013;
@@ -223,16 +209,13 @@
 
   .features-section__card-number {
     font-weight: 100;
+    top: 10px
   }
 
-  .features-section__card:last-child {
-    padding-top: 0;    
+  .features-section__card {
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
-
-  .features-section__card:nth-child(2) .features-section__card-number {
-    top: -4px;
-  }
-  
 }
 
 

@@ -176,6 +176,11 @@ html, body {
   gap: 12px; /* Уменьшаем gap только между кнопками навигации */
 }
 
+.container__testimonials {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
 
 @media (max-width: 768px) {
   /* 1) Ёлки на всю ширину */
