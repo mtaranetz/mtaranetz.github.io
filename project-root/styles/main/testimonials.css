@@ -154,8 +154,7 @@ html, body {
 .testimonials__nav:hover {
   transform: scale(1.05);
 }
-
-.button__icon {
+.button__icon__primary{
   width: 10px;
   height: 10px;
 }
