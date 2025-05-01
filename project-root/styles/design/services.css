@@ -1,0 +1,222 @@
+/* Общие контейнеры */
+.services {
+    padding: 60px 20px 90px ;
+    background-color: var(--bg-page);
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Заголовок */
+  .services__title {
+    font-family: You2013;
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 2%;
+    margin-bottom: 66px;
+    color: #000;
+  }
+  
+  /* Сетка карточек */
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  /* Карточка услуги */
+  .service-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    min-width: 520px;
+
+  }
+  
+  /* 1. Вертикальное центрирование цифры */
+.service-card__number {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: #000;
+    opacity: 0.1;
+  }
+  
+  /* 2. Кнопка как элемент сетки, шириной в одну «ячейку» */
+  .services__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    /* кнопка внутри — не нужен margin-bottom */
+  }
+  
+  .services__btn--grid {
+    grid-column: 2;     /* правая колонка */
+    width: 100%;        /* растянуть на всю ширину колонки */
+    justify-self: start;
+    margin: 0;          /* сбросим отступы, если были */
+    margin-top: 16px;
+  }
+  
+  /* 1) Кнопка — флекс-контейнер на всю ширину */
+.btn__send {
+    display: flex;       /* или inline-flex, как удобно */
+    align-items: center;
+    width: 100%;         /* уже есть на services__btn--grid, можно не повторять */
+    padding: 29px 25px 29px 29px;
+    background-color: #719C2E;
+    border-radius: 8px;
+  }
+  
+  /* 2) Текст слева, а иконка «уталкивается» вправо */
+  .btn__text {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: #fff;
+  }
+  
+  /* убираем прежний margin-left и заменяем на auto */
+  .btn__icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    /* теперь иконка всегда будет вплотную к правому внутреннему полю кнопки */
+  }
+  
+  
+  
+  /* Название услуги */
+  .service-card__title {
+    font-family: Commissioner;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000;
+    margin: 35px 25px;
+  }
+  
+  /* Кнопка */
+  .services__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 29px 25px;
+    background-color: #719C2E;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .btn__arrow {
+    margin-left: 8px;
+    font-size: 20px;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .services__grid {
+      grid-template-columns: 1fr;
+    }
+    .services__btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* 1) Общие отступы секции */
+    .services {
+      padding: 40px 0 60px; /* поменьше сверху/снизу и по бокам */
+    }
+  
+    /* 2) Заголовок */
+    .services__title {
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 2%;
+      margin-bottom: 24px;
+      text-align: start;
+    }
+  
+    /* 3) Сетка — одна колонка, больше gap */
+    .services__grid {
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+    }
+  
+    /* 4) Карточки */
+    .service-card {
+      min-width: auto;       /* убираем жесткую ширину */
+      padding: 16px;         /* поменьше внутренних отступов */
+      border-radius: 8px;
+    }
+  
+    /* 5) Номер услуги — чуть меньше и ближе к правому краю */
+    .service-card__number {
+      font-family: Commissioner;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      right: 12px;
+    }
+  
+    /* 6) Название услуги */
+    .service-card__title {
+      font-family: Commissioner;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin: 16px 0;
+    }
+  
+    /* 7) Кнопка — под карточками, на всю ширину */
+    .services__btn--grid {
+      grid-column: 1;       /* теперь всегда первая (и единственная) колонка */
+    }
+    .btn__send {
+      border-radius: 6px;
+    }
+    .btn__text {
+      font-size: 16px;
+    }
+    .btn__icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .services__btn{
+      padding: 20px 10px
+    }
+  
+    /* 8) Центрируем кнопку, если нужно */
+    .services__btn--grid,
+    .services__btn {
+      justify-self: center;
+    }
+  }
+  
+  

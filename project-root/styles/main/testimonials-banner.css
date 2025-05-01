@@ -1,0 +1,17 @@
+/* --- Секция-баннер с ёлками --- */
+.testimonials-banner {
+    background-color: #FAF8F8;  /* тот же фон, что был у .testimonials */
+    overflow: hidden;
+    padding-top: 0;            /* можно скорректировать по макету */
+    margin-bottom: -65px;
+  }
+  .testimonials-banner .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .testimonials-banner__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }

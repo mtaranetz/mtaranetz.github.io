@@ -49,6 +49,10 @@
     letter-spacing: 2%;
     color: #000;
   }
+  .mobile-only-break {
+    display: none;
+  }
+  
   .banner__title .accent {
     color: var(--color-primary);
   }
@@ -67,7 +71,7 @@
 
   /* именно второй <p> с этим классом */
     .banner__content > p.banner__location:nth-of-type(2) {
-    margin: 8px 0 133px; /* 8px сверху, 133px снизу */
+    margin: 0 0 133px; /* 8px сверху, 133px снизу */
   }  
   
   .banner__location-icon {
@@ -140,43 +144,53 @@
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
+    white-space: normal;
+  }
 
+  .banner__note br {
+    /* обязательно показываем сам разрыв строки */
+    display: block;
+    /* при желании можно чуть увеличить отступ между строками */
+    margin: 0.2em 0;
   }
   
   /* ================================================
      Менеджерская карточка
      ================================================ */
-  .manager-card {
-    position: absolute;
-    top: -150px;
-    right: 0px;
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    background: #fff;
-    border-radius: 8px;
-    z-index: 2;
-  }
-  .manager-card__photo {
-    /* width: 40px;
-    height: 40px; */
-    /* border-radius: 50%; */
-    object-fit: cover;
-    margin-right: 8px;
-  }
-  .manager-card__name {
-    font-size: 12px;
+     .manager-card {
+      position: absolute;
+      top: -150px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+      padding: 8px 8px;
+      background: #fff;
+      border-radius: 8px;
+      z-index: 2;
+    }
+    .manager-card__photo {
+      /* width: 40px;
+      height: 40px; */
+      /* border-radius: 50%; */
+      object-fit: cover;
+      margin-right: 8px;
+    }
+    .manager-card__name {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 4px; 
+    }
+    .manager-card__role {
+      font-family: Commissioner;
     font-weight: 400;
-    /* margin-bottom: 4px; */
-  }
-  .manager-card__role {
-    font-family: Commissioner;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0%;
-
-  }
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  
+    }
   
   /* ================================================
      Кнопки общего назначения
@@ -189,8 +203,7 @@
     font-weight: 400;
     font-size: 16px;
     text-decoration: none;
-    height: 52px;
-    
+    height: 52px;    
   }
   .button--primary {
     background: var(--color-primary);
@@ -227,6 +240,14 @@
    Адаптив для баннера (≤768px)
    ================================================ */
    @media (max-width: 768px) {
+    .desktop-only-break{
+      display: none;
+    }
+
+    .banner {
+      padding: 40px 0;
+  }
+
     /* 1) Заголовок */
     .banner__title {
       font-family: 'You2013', serif;
@@ -252,7 +273,7 @@
       margin-right: 8px;
     }
   
-    /* 3) Кнопка «Оставить заявку» и прячем мессенджеры */
+    /* 3) Кнопка  и прячем мессенджеры */
     .banner__buttons {
       margin-bottom: 0;
       display: flex;
@@ -272,7 +293,6 @@
     .banner__content {
       display: flex;
       align-items: start;
-      gap: 8px;
       flex-wrap: nowrap;
     }
     /* кнопка по размеру контента */
@@ -284,13 +304,14 @@
     .banner__content > .banner__note, .banner__note--sub {
       order: 3;
       flex: 1 1 auto;
-      font-size: px;
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0%;
       line-height: 1.2;
       white-space: nowrap;
       margin: 0;
-    }
-    .banner__note br {
-      display: none;
     }
 
     .banner__note {
@@ -348,6 +369,13 @@
       left: 20px;
       right: auto;
       height: auto;
+      padding: 5px;
+      padding-right: 10px;
+    }
+
+    .manager-card__photo {
+      width: 38px;
+      height: 41px;
     }
 
     .manager-card__name {
@@ -356,6 +384,7 @@
       font-size: 12px;
       line-height: 100%;
       letter-spacing: 0%;
+      margin-bottom: 2px;
     }
 
     .manager-card__role {
@@ -364,8 +393,27 @@
       font-size: 10px;
       line-height: 100%;
       letter-spacing: 0%;
-
     }
+
+    .banner__content > p.banner__location:nth-of-type(2) {
+      margin: 0 0 43px;
+  }
+
+  /* 2) Уменьшаем отступы у пунктов локации */
+  /* первый пункт: чуть ниже заголовка */
+  .banner__content > p.banner__location:first-of-type {
+    margin: 4px 0 4px;  /* 4px сверху и снизу */
+  }
+  /* второй пункт: небольшое пространство перед кнопками */
+  .banner__content > p.banner__location:last-of-type {
+    margin: 4px 0 12px; /* 4px сверху, 12px снизу */
+  }
+
+  /* 3) Поднимем кнопки чуть выше */
+  .banner__buttons {
+    margin-top: 0;      /* сбрасываем прежние */
+    margin-bottom: 16px;/* небольшой зазор после кнопок, если понадобится */
+  }
   }
   
     

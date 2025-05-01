@@ -9,12 +9,14 @@ html, body {
   display: none;
 }
 
-/* сама секция */
 .testimonials {
   position: relative;
   overflow: hidden;
-  background-color: #FAF8F8;
-  padding: 60px 0;
+  background-color: #FFF;     /* теперь фон белого блока делаем сразу у .testimonials */
+  border-radius: 30px 30px 0 0;
+  /* переносим padding из .testimonials__content вверх: */
+  padding: 24px 60px 60px;
+  margin-top: 0px;          /* «заезжаем» на баннер на 30px, чтобы сохранить тот же изгиб */
 }
 
 /* фоновые ёлки */
@@ -35,14 +37,12 @@ html, body {
 
 /* белый блок под картинкой */
 .testimonials__content {
-  position: relative;
-  z-index: 2;
-  width: 100vw;
-  left: 50%; transform: translateX(-50%);
-  margin-top: 500px;
-  background-color: #FFF;
-  border-radius: 30px 30px 0 0;
-  padding: 24px 60px 60px;
+  /* убираем ширину 100vw и сдвиг */
+  width: auto;
+  left: auto;
+  transform: none;
+  margin-top: 0;
+  padding: 0;                 /* padding перенесли в сам .testimonials */
 }
 
 /* header: заголовок + десктоп-кнопка */
@@ -154,6 +154,11 @@ html, body {
 .testimonials__nav:hover {
   transform: scale(1.05);
 }
+
+.button__icon {
+  width: 10px;
+  height: 10px;
+}
 .testimonials__nav--prev img {
   transform: rotate(180deg);
   transition: transform .2s, filter .2s;
@@ -173,9 +178,6 @@ html, body {
 }
 
 
-
-
-
 @media (max-width: 768px) {
   /* 1) Ёлки на всю ширину */
   .testimonials__image {
@@ -185,8 +187,8 @@ html, body {
 
   /* 2) Белый блок — ниже и компактнее */
   .testimonials__content {
-    margin-top: 140px;
-    padding: 8px 16px 44px;
+    padding: 0;
+    padding-bottom:44px;
     border-radius: 20px 20px 0 0;
   }
 
@@ -285,7 +287,6 @@ html, body {
     width: auto;
     left: auto;
     transform: none;
-    padding: 8px 8px 44px; /* ваш текущий вертикальный, а горизонтальный — 16px */
   }  
 
   /* 6) По одному отзыву */
@@ -305,7 +306,6 @@ html, body {
     width: 100%;
   }
 
-  @media (max-width: 768px) {
     .testimonials__controls {
       display: flex;
       justify-content: space-between;
@@ -330,8 +330,17 @@ html, body {
       height: 36px;
       margin: 0; /* Убираем возможные margin */
     }
+
+    .testimonials-banner {
+      padding: 0px 0;
+    }
+    .testimonials {
+      margin-top: 30px;
+      padding: 8px 20px 44px;
+      border-radius: 20px 20px 0 0;
+    }
   }
-}
+
 
 /* === Унификация стрелок перелистывания === */
 /* Общие стили для всех кнопок-стрелок */
