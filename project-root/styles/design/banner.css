@@ -134,7 +134,7 @@
   .banner__buttons {
     display: flex;
     gap: 8px;                        /* кнопки чуть ближе */
-    margin-bottom: 19.75px;
+    margin-bottom: 15px;
   }
   
   /* Заметка под кнопками */
@@ -145,6 +145,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     white-space: normal;
+    margin-top: -5px; /* заметка поднимется вверх на 5px */
   }
 
   .banner__note br {
@@ -232,10 +233,9 @@
     /* центрируем единственный flex‑элемент — иконку */
     justify-content: center;
   }  
-  .button__icon {
-    width: 36px;
-    height: 36px;
-  }
+
+
+
 /* ================================================
    Адаптив для баннера (≤768px)
    ================================================ */
@@ -267,6 +267,7 @@
       line-height: 1.2;
       margin-bottom: 72px;
     }
+
     .banner__location-icon {
       width: 16px;
       height: 16px;
@@ -320,6 +321,8 @@
       font-size: 14px;
       line-height: 100%;
       letter-spacing: 0%;
+      margin-top: -115px; /* заметка поднимется вверх на 5px */
+
     }
 
     .banner__note--sub {
@@ -412,9 +415,15 @@
   /* 3) Поднимем кнопки чуть выше */
   .banner__buttons {
     margin-top: 0;      /* сбрасываем прежние */
-    margin-bottom: 16px;/* небольшой зазор после кнопок, если понадобится */
+    margin-bottom: 8px;/* небольшой зазор после кнопок, если понадобится */
   }
   }
+
+    /* Сделать иконку локации чуть больше — только у первого <p> */
+.banner__content > p.banner__location:first-of-type .banner__location-icon {
+  width: 20px;
+  height: 20px;
+}
   
     
   

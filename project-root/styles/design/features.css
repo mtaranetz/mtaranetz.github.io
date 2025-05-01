@@ -153,6 +153,7 @@
       grid-template-columns: 1fr;
     }
 
+    
     /* 1) Убираем промежутки между карточками */
   .features-section__grid {
     grid-template-columns: 1fr;
@@ -218,9 +219,22 @@
   .features-section {
     padding: 100px 0;
     background: var(--bg-page);
+  }
+
+  .features-section__card-number {
+    font-weight: 100;
+  }
+
+  .features-section__card:last-child {
+    padding-top: 0;    
+  }
+
+  .features-section__card:nth-child(2) .features-section__card-number {
+    top: -4px;
+  }
+  
 }
 
-  }
 
   /* —————————————————————————— */
 /* Общие обёртки */

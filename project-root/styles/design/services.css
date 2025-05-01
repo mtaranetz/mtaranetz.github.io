@@ -163,7 +163,7 @@
     /* 3) Сетка — одна колонка, больше gap */
     .services__grid {
       grid-template-columns: 1fr;
-      grid-gap: 16px;
+      grid-gap: 12px;
     }
   
     /* 4) Карточки */
@@ -209,7 +209,7 @@
     }
 
     .services__btn{
-      padding: 20px 10px
+      padding: 20px 16px
     }
   
     /* 8) Центрируем кнопку, если нужно */
