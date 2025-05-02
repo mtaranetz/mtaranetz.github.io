@@ -12,7 +12,6 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -49,7 +48,7 @@
 @media (max-width: 768px) {
   .footer {
     background: #FFF;
-    padding: 20px 16px;
+    padding: 20px 0px;
     width: 100%;
     box-sizing: border-box;
   }

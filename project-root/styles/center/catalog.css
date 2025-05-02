@@ -46,9 +46,10 @@ html, body {
   /* ================================================
    Каталог (фильтры + навигация)
    ================================================ */
-.catalog-nav.container {
-  padding: 16px;
-}
+
+   .catalog-nav {
+    padding: 70px 0 30px; /* ваш верхний/нижний маргин */
+  }
 
 .catalog-nav__title {
   font-family: You2013;
@@ -105,7 +106,6 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
-    padding: 0 16px;
     margin-bottom: 123px;
   }
   
@@ -293,7 +293,7 @@ html, body {
     .catalog-products__grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      padding: 0 16px; /* чтобы не упираться в края */
+      padding: 0 0; /* чтобы не упираться в края */
     }
     /* Мелкие изменения в карточках */
     .product-card__wishlist {

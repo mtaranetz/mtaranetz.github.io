@@ -1,13 +1,7 @@
-/* ===== Глобальный контейнер ===== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-  
+ 
   /* ===== Секция «Наши услуги» ===== */
   .features-section {
-    padding: 100px 40px ;            /* только вертикальные отступы */
+    padding: 100px 0px ;            /* только вертикальные отступы */
     background: var(--bg-page);
   }
  
@@ -217,15 +211,6 @@
     padding-top: 15px;
   }
 }
-
-
-  /* —————————————————————————— */
-/* Общие обёртки */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   
   
   

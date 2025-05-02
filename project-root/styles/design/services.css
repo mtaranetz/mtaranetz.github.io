@@ -1,11 +1,7 @@
 /* Общие контейнеры */
 .services {
-    padding: 60px 20px 90px ;
+    padding: 60px 0px 90px ;
     background-color: var(--bg-page);
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
   }
   
   /* Заголовок */
