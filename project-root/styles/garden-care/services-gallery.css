@@ -1,0 +1,99 @@
+.services-gallery {
+    padding: 80px 0;
+  }
+  
+  .services-gallery__title {
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 80px;
+    letter-spacing: 2%;
+    text-align: start;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-photo {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .service-caption {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: start;
+    padding: 32px 0;
+    margin: 0;
+    color: var(--color-primary);
+  }
+  
+  /* Планшетная версия (992px и меньше) */
+  @media (max-width: 992px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Мобильная версия (576px и меньше) */
+  @media (max-width: 576px) {
+    .services-gallery {
+      padding: 50px 0;
+    }
+    
+    .services-gallery__title {
+      font-size: 32px;
+      line-height: 1.3;
+      margin-bottom: 30px;
+    }
+    
+    /* Оставляем ДВА столбца в мобильной версии */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .service-photo {
+      height: 160px; /* Уменьшаем высоту фото для мобилок */
+    }
+    
+    .service-caption {
+      padding: 16px 0;
+      font-size: 18px; /* Уменьшаем размер шрифта для мобилок */
+    }
+  }
+  
+  /* Дополнительный брейкпоинт для очень маленьких экранов */
+  @media (max-width: 400px) {
+    .services-grid {
+      gap: 10px;
+    }
+    
+    .service-photo {
+      height: 140px;
+    }
+    
+    .service-caption {
+      font-size: 16px;
+      padding: 12px 0;
+    }
+  }
