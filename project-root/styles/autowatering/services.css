@@ -1,0 +1,226 @@
+/* ===== Секция «Наши услуги» ===== */
+.services-section {
+    padding: 80px 0;
+    background: #FAF8F8;
+}
+
+.services-section__title {
+    font-family: 'You2013', serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    letter-spacing: 2%;
+    margin: 0 0 50px;
+    color: #000;
+    text-align: start;
+}
+
+/* Двухколоночный макет */
+.services-section__columns {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch; /* Выравниваем по высоте */
+}
+
+.services-section__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.services-section__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяем пространство */
+}
+
+/* Карточка услуги */
+.services-section__card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 23px;
+    position: relative;
+}
+
+/* Номер карточки */
+.services-section__card-number {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1;
+    color: rgba(113, 156, 46, 0.1);
+}
+
+/* Заголовок внутри карточки */
+.services-section__card-title {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #719C2E;
+    margin: 0 0 15px;
+    padding-bottom: 115px;
+    padding-right: 40px;
+}
+
+.services-section__card-subtitle {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #8F8F8F;
+    margin-bottom: 6px;
+}
+
+/* Список возможностей */
+.services-section__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-section__list li {
+    position: relative;
+    padding-left: 20px;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* маркер-черточка */
+.services-section__list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+/* Блок с кнопкой */
+.services-section__action {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 30px; /* Отступ от карточки */
+    height: 100%; /* Занимает всю доступную высоту */
+    justify-content: flex-end; /* Выравниваем кнопку внизу */
+}
+
+.services-section__footer-text {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Кнопка */
+.button--auto--primary {
+    background: #719C2E;
+    color: #fff;
+    padding: 29px 23px 29px 23px;
+    border-radius: 8px;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    min-height: 92px;
+}
+
+
+.button__icon__autowatering{
+    width: 18px;
+    height: 18px;
+}
+
+.button--primary:hover {
+    background: #5a7f25;
+}
+
+.button--primary:hover::after {
+    transform: translateY(-50%) translateX(3px);
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 0;
+    }
+    
+    .services-section__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .services-section__columns {
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+    .services-section__left {
+        gap: 3px;
+    }
+    
+    .services-section__right {
+        gap: 30px;
+    }
+    
+    .services-section__card,
+    .services-section__action {
+        padding: 15px;
+    }
+    
+    .services-section__card-number {
+        top: 25px;
+        right: 25px;
+        font-size: 24px;
+    }
+    
+    .services-section__card-title {
+        font-size: 18px;
+        padding-right: 35px;
+        padding-bottom: 40px;
+    }
+    
+    .services-section__list li {
+        font-size: 16px;
+    }
+    
+    .services-section__footer-text {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .button--auto--primary {
+        font-size: 18px;
+        padding: 19px 15px;
+        min-height: 60px;
+    }
+
+    .services-section__card {
+        border-radius: 8px;
+    }
+
+    
+}

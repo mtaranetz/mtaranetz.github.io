@@ -1,0 +1,209 @@
+/* Секция автополива */
+.irrigation-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .irrigation-section__title {
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 2%;
+    margin-bottom: 90px;
+    color: #000;
+  }
+  
+  /* Общие стили для карточек */
+  .irrigation-card {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    min-height: 400px; /* Фиксированная высота для выравнивания */
+  }
+  
+  /* Первая карточка (текст слева, фото справа) */
+  .irrigation-card:first-of-type {
+    flex-direction: row;
+  }
+  
+  /* Вторая карточка (фото слева, текст справа) */
+  .irrigation-card:last-of-type {
+    flex-direction: row-reverse;
+  }
+  
+  .irrigation-card__content {
+    flex: 1;
+    padding: 25px 23px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .irrigation-card__image {
+    flex: 1;
+    min-height: 300px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    aspect-ratio: 1.8/1; /* Новое соотношение сторон (шире, чем квадрат) */
+
+  }
+  
+  .irrigation-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 19px;
+  }
+  
+  .irrigation-card__title {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 11px;
+  }
+  
+  .irrigation-card__text {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+    color: #333;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Занимает все доступное пространство */
+  }
+  
+  .irrigation-card__link-wrapper {
+    margin-top: auto; /* Прижимаем к низу */
+    padding-top: 20px;
+  }
+  
+  .irrigation-card__link {
+    display: inline-flex; /* Используем flex для идеального выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 8px; /* Отступ между текстом и стрелкой */
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .irrigation-card__arrow {
+    width: 7px;
+    height: 7px;
+    /* Если стрелка белая - добавляем фильтр для черного цвета */
+    filter: brightness(0) saturate(100%);
+    transition: transform 0.3s, filter 0.3s;
+    margin-left: 7px;
+    margin-bottom: 2px;
+  }
+  
+  .irrigation-card__link:hover {
+    color: #5a7f25;
+  }
+  
+  .irrigation-card__link:hover .irrigation-card__arrow {
+    transform: translateX(3px); /* Эффект движения при наведении */
+  }
+  
+/* Секция автополива - мобильная версия */
+@media (max-width: 768px) {
+    .irrigation-section {
+      padding: 40px 0;
+    }    
+    .irrigation-section__title {
+        font-family: You2013;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 2%;
+        margin-bottom: 30px;
+        text-align: start;
+    }
+    
+    /* Сбрасываем все flex-настройки для карточек */
+    .irrigation-card {
+      display: block; /* Меняем flex на block */
+      margin-bottom: 10px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    /* Полностью убираем реверс и flex-направление */
+    .irrigation-card:first-of-type,
+    .irrigation-card:last-of-type {
+      flex-direction: unset;
+    }
+    
+    /* Изображение на всю ширину */
+    .irrigation-card__image {
+      width: 100%;
+      height: auto;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 0;
+      display: block;
+    }
+    
+    .irrigation-card__image img {
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    
+    /* Контентная часть */
+    .irrigation-card__content {
+      padding: 20px;
+      margin-top: -90px;
+      display: block;
+    }
+    
+    .irrigation-card__title {
+      font-size: 22px;
+      margin: 0 0 12px 0;
+      color: var(--color-primary);
+    }
+    
+    .irrigation-card__text {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .irrigation-card__link-wrapper {
+      margin-top: 15px;
+    }
+    
+    .irrigation-card__link {
+      display: inline-flex;
+      align-items: center;
+      font-size: 15px;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .irrigation-card__arrow {
+      width: 7px;
+      height: 7px;
+      margin-left: 6px;
+      transition: transform 0.3s;
+    }
+    
+    .irrigation-card__link:hover .irrigation-card__arrow {
+      transform: translateX(3px);
+    }
+  }
