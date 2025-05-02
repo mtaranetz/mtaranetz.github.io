@@ -175,11 +175,11 @@
     
     .services-section__columns {
         flex-direction: column;
-        gap: 3px;
+        gap: 10px;
     }
     
     .services-section__left {
-        gap: 3px;
+        gap: 10px;
     }
     
     .services-section__right {
