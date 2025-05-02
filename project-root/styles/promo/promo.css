@@ -1,0 +1,117 @@
+.promo-section {
+    padding: 80px 0;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  
+  .promo-section__title {
+    font-family: 'You2013', sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: start;
+    margin-bottom: 60px;
+    color: #000;
+  }
+  
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .promo-card {
+    background: #6F8C9A;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .promo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .promo-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 10%;
+  }
+  
+  .promo-content {
+    margin-top: auto; /* Прижимаем контент к низу */
+  }
+  
+  .promo-percent {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .promo-period, .promo-desc {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 18px;
+    line-height: 1.1;
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+  }
+  
+  /* Адаптив */
+  @media (max-width: 992px) {
+    .promo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .promo-card {
+      min-height: 240px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .promo-section {
+      padding: 50px 0;
+    }
+    
+    .promo-section__title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .promo-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    
+    .promo-card {
+      padding: 15px;
+      min-height: 120px;
+    }
+    
+    .promo-percent {
+        font-family: Commissioner;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0%;
+    }
+    
+    .promo-period, .promo-desc {
+      font-size: 14px;
+    }
+    
+    .promo-number {
+      font-size: 24px;
+      top: 15px;
+      right: 15px;
+    }
+  }

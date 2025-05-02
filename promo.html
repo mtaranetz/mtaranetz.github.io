@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Акции — ЭкоСервис74</title>
+  <link rel="stylesheet" href="project-root/styles/main/reset.css" />    
+  <link rel="stylesheet" href="project-root/styles/main/header.css" />  
+  <link rel="stylesheet" href="project-root/styles/main/banner.css" />
+  <link rel="stylesheet" href="project-root/styles/main/popup.css" />
+  <link rel="stylesheet" href="project-root/styles/promo/promo.css" />
+  <link rel="stylesheet" href="project-root/styles/promo/testimonials-banner.css" />
+  <link rel="stylesheet" href="project-root/styles/main/testimonials.css" />
+  <link rel="stylesheet" href="project-root/styles/main/contact.css" />
+  <link rel="stylesheet" href="project-root/styles/main/footer.css" />
+  <link rel="stylesheet" href="project-root/styles/main/overlay-menu.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+  <section class="header">
+    <div class="container">
+      <div class="header__inner">
+      <!-- 1) Логотип (всегда виден) -->
+      <a href="/" class="header__logo">
+        <img src="project-root/images/logo.svg" alt="Экосервис74">
+      </a>
+
+      <!-- 4) Навигация (классику скрываем на мобилке) -->
+      <nav class="header__nav">
+        <ul class="menu">
+          <li class="has-submenu">
+            <a href="#services">Услуги</a>
+            <ul class="submenu">
+                <li class="has-submenu">
+                  <a href="design.html">Ландшафтный дизайн</a>
+                  <!-- Второй уровень -->
+                  <ul class="submenu">
+                    <li><a href="design.html">Заказ и реализация проекта</a></li>
+                    <li><a href="autowatering.html">Устройство автополива</a></li>
+
+                    <li><a href="/services/design/lawn">Устройство газона</a></li>
+                    <li><a href="garden_care.html">Уход за садом</a></li>
+                    <li><a href="/services/design/portfolio">Наши работы</a></li>
+                  </ul>
+                </li>
+                <li class="has-submenu">
+                  <a href="center.html">Садовый центр</a>
+                  <ul class="submenu">
+                    <li><a href="center.html">Хвойные</a></li>
+                    <li><a href="/center/deciduous">Лиственные</a></li>
+                    <li><a href="/center/shrubs">Кустарники</a></li>
+                    <li><a href="/center/niwaki">Ниваки</a></li>
+                    <li><a href="/center/topiary">Топиары</a></li>
+                    <li><a href="/center/xmas-trees">Новогодние ели</a></li>
+                    <li><a href="/center/planting-trees">Посадка деревьев</a></li>
+                    <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
+                  </ul>
+                </li>
+                
+                <li class="has-submenu">
+                  <a href="/services/gardener">Товары для сада</a>
+                  <ul class="submenu">
+                    <li><a href="/shop/tools">Инструменты</a></li>
+                    <li><a href="/shop/burlap">Мешковина</a></li>
+                    <li><a href="/shop/root-netting">Сетка для комов</a></li>
+                    <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+                    <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+                    <li><a href="/shop/aerolenta">Аэролента</a></li>
+                    <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+                    <li><a href="/shop/lawn">Газон</a></li>
+                    <li><a href="/shop/soils">Грунты</a></li>
+                    <li><a href="/shop/drainage">Дренаж</a></li>
+                    <li><a href="/shop/gloves">Перчатки</a></li>
+                    <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+                    <li><a href="/shop/fertilizers">Удобрения</a></li>
+                    <li><a href="/shop/stakes">Штур</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+          </li>
+          <!-- Галерея работ с подменю -->
+          <li class="has-submenu">
+            <a href="#portfolio">Галерея работ</a>
+            <ul class="submenu">
+              <li><a href="/portfolio/residential">Жилые участки</a></li>
+              <li><a href="/portfolio/commercial">Коммерческие объекты</a></li>
+              <li><a href="/portfolio/public">Общественные пространства</a></li>
+              <li><a href="/portfolio/water-features">Водоёмы и фонтаны</a></li>
+              <li><a href="/portfolio/special-projects">Спец-проекты</a></li>
+            </ul>
+          </li>          
+          <li><a href="#prices">Цены</a></li>
+          <!-- Акции -->
+          <li class="has-submenu">
+            <a href="#promos">Акции</a>
+            <ul class="submenu">
+              <li><a href="/promos/wholesale">Оптовая</a></li>
+              <li><a href="/promos/birthday">Именинникам</a></li>
+              <li><a href="/promos/seasonal">Сезонная</a></li>
+            </ul>
+          </li>          
+          <!-- О нас -->
+          <li class="has-submenu">
+            <a href="#about">О нас</a>
+            <ul class="submenu">
+              <li><a href="/about/articles">Статьи</a></li>
+              <li><a href="/about/contacts">Контакты</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 2) Контакты: телефоны + мессенджеры -->
+      <div class="header__contacts">
+        <!-- телефоны: desktop-only -->
+        <a href="tel:+73517505524" class="header__contact-link phone">
+          <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 750-55-24
+        </a>
+        <a href="tel:+73517007724" class="header__contact-link phone">
+          <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+          +7 (351) 700-77-24
+        </a>
+
+        <!-- мессенджеры: mobile-only -->
+        <a href="https://t.me/your_telegram" class="header__contact-link messaging telegram" aria-label="Telegram">
+          <img src="project-root/images/icons/telegram.svg" class="header__contact-icon" alt="">
+        </a>
+        <a href="https://wa.me/73517505524" class="header__contact-link messaging whatsapp" aria-label="WhatsApp">
+          <img src="project-root/images/icons/whatsapp.svg" class="header__contact-icon" alt="">
+        </a>
+      </div>
+
+      <!-- 3) Бургер -->
+      <button class="header__toggle" aria-label="Открыть меню">
+        <img src="project-root/images/icons/burger.svg" class="header__burger-icon" alt="Меню">
+      </button>
+    </div>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="header__mobile-overlay">
+
+        <!-- Fullscreen меню -->
+      <nav class="header__mobile-menu" aria-hidden="true">
+        <!-- Верхний ряд: логотип + крестик -->
+    <div class="header__mobile-top">
+      <a href="/" class="header__mobile-logo">
+        <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+      </a>
+      <button class="header__mobile-close" aria-label="Закрыть меню">
+        <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
+      </button>
+    </div>
+
+    <!-- Пункты меню -->
+    <ul class="mobile-menu">
+      <!-- Услуги -->
+      <li class="has-submenu">
+        <a href="design.html">Ландшафтный дизайн</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        <ul class="submenu">
+          <li><a href="design.html">Заказ и реализация проекта</a></li>
+          <li><a href="autowatering.html">Устройство автополива</a></li>
+
+          <li><a href="/services/design/lawn">Устройство газона</a></li>
+          <li><a href="/services/design/gardening">Уход за садом</a></li>
+          <li><a href="/services/design/portfolio">Наши работы</a></li>
+        </ul>
+      </li>
+        
+      <!-- Садовый центр -->
+      <li class="has-submenu">
+        <a href="center.html">Садовый центр</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        <ul class="submenu">
+          <li><a href="center.html">Хвойные</a></li>
+          <li><a href="/center/deciduous">Лиственные</a></li>
+          <li><a href="/center/shrubs">Кустарники</a></li>
+          <li><a href="/center/niwaki">Ниваки</a></li>
+          <li><a href="/center/topiary">Топиары</a></li>
+          <li><a href="/center/xmas-trees">Новогодние ели</a></li>
+          <li><a href="/center/planting-trees">Посадка деревьев</a></li>
+          <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
+        </ul>
+      </li>
+          
+      <!-- Товары для сада -->
+      <li class="has-submenu">
+        <a href="/services/gardener">Товары для сада</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        <ul class="submenu">
+          <li><a href="/shop/tools">Инструменты</a></li>
+          <li><a href="/shop/burlap">Мешковина</a></li>
+          <li><a href="/shop/root-netting">Сетка для комов</a></li>
+          <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+          <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+          <li><a href="/shop/aerolenta">Аэролента</a></li>
+          <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+          <li><a href="/shop/lawn">Газон</a></li>
+          <li><a href="/shop/soils">Грунты</a></li>
+          <li><a href="/shop/drainage">Дренаж</a></li>
+          <li><a href="/shop/gloves">Перчатки</a></li>
+          <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+          <li><a href="/shop/fertilizers">Удобрения</a></li>
+          <li><a href="/shop/stakes">Штур</a></li>
+        </ul>
+      </li>
+      
+      <!-- Галерея работ -->
+      <li class="has-submenu">
+        <a href="#portfolio">Галерея работ</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        <ul class="submenu">
+          <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+          <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+          <li><a href="/portfolio/public">Устройство автополива</a></li>
+          <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+          <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
+        </ul>
+      </li>
+
+      <!-- Статьи -->
+      <li class="has-submenu">
+        <a href="#portfolio">Статьи</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        <ul class="submenu">
+          <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+          <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+          <li><a href="/portfolio/public">Устройство автополива</a></li>
+          <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+          <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
+        </ul>
+      </li>
+      
+      <!-- Цены -->
+      <li><a href="#prices">Цены</a></li>
+      
+      <!-- Акции -->
+      <li class="has-submenu">
+        <a href="#promos">Акции</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        <ul class="submenu">
+          <li><a href="/promos/wholesale">Оптовая</a></li>
+          <li><a href="/promos/birthday">Именинникам</a></li>
+          <li><a href="/promos/seasonal">Сезонная</a></li>
+        </ul>
+      </li>
+      
+      <!-- О нас -->
+      <li>
+        <a href="#about">Контакты</a>
+        <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+      </li>
+    </ul>
+
+    <!-- Контакты -->
+    <div class="header__mobile-contacts">
+      <a href="https://t.me/your_telegram" class="messaging telegram" aria-label="Telegram">
+        <img src="project-root/images/icons/telegram.svg" alt="">
+      </a>
+      <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
+        <img src="project-root/images/icons/whatsapp.svg" alt="">
+      </a>
+      <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
+      <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
+    </div>
+      </nav>
+      
+    </div>
+  </section>
+  
+  <section class="banner">
+    <div class="container">
+      <!-- Заголовок и локация -->
+      <h1 class="banner__title">
+        Создаем <span class="accent">живое</span>
+        <span class="accent accent--block">пространство</span>
+      </h1>  
+      <!-- Карточка баннера -->
+      <div class="banner__card">
+        <!-- Менеджер -->
+        <div class="manager-card">
+          <img src="project-root/images/manager.svg" alt="Максим Молоков" class="manager-card__photo">
+          <div class="manager-card__info">
+            <p class="manager-card__name">Максим Молоков</p>
+            <p class="manager-card__role">Руководитель компании</p>
+            <p class="manager-card__role">«ЭкоСервис74»</p>
+          </div>
+        </div>
+  
+        <!-- Картинка -->
+        <div class="banner__img-wrapper">
+          <img src="project-root/images/banner.png" alt="Живое пространство">
+        </div>
+  
+        <!-- Контент с кнопками -->
+        <div class="banner__content">
+          <p class="banner__location">
+            <img src="project-root/images/icons/location.svg"
+                 alt=""
+                 class="banner__location-icon">
+            Работаем в Челябинске и по всей РФ
+          </p>
+          <div class="banner__buttons">
+            <a href="#consult" class="button button--primary open-modal">
+              Оставить заявку
+              <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">              
+            </a>
+            <a href="https://t.me/your_telegram" class="button button--tg">
+              <img src="project-root/images/icons/telegram.svg" alt="" class="button__icon">
+            </a>
+            <a href="https://wa.me/73517505524" class="button button--wa">
+              <img src="project-root/images/icons/whatsapp.svg" alt="" class="button__icon">
+            </a>
+          </div>
+          <p class="banner__note">
+            <span class="accent">Бесплатная консультация</span><br>
+            <span class="banner__note--sub">нашего специалиста</span>
+          </p>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <!-- Попап -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="container modal-wrapper">
+      <div class="modal">
+        <button class="modal__close" aria-label="Закрыть">&times;</button>
+        <h2 class="modal__title">Оставьте заявку на бесплатную консультацию</h2>
+        <p class="modal__subtitle">
+          Наш менеджер свяжется в ближайшее время для уточнения подробностей
+        </p>
+        <form class="modal__form">
+          <label>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+          </label>
+          <label>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+          </label>
+          <label class="modal__checkbox">
+            <input type="checkbox" name="agree" required>
+            Согласен с <a href="#">политикой конфиденциальности</a>
+          </label>
+          <button type="submit" class="btn modal__submit">
+            Отправить заявку
+            <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__popup">     
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+   <!-- Акции -->
+   <section class="promo-section">
+    <div class="container">
+      <h2 class="promo-section__title">Действующие акции</h2>
+      
+      <div class="promo-grid">
+        <!-- Первая акция -->
+        <div class="promo-card">
+          <span class="promo-number">01</span>
+          <div class="promo-content">
+            <div class="promo-percent">До 30%</div>
+            <p class="promo-desc">Сезонная скидка<br class="desktop-only"> с 01.02 по 30.03</p>
+          </div>
+        </div>
+        
+        <!-- Вторая акция -->
+        <div class="promo-card">
+          <span class="promo-number">02</span>
+          <div class="promo-content">
+            <div class="promo-percent">До 25%</div>
+            <p class="promo-desc">Оптовая скидка для ландшафтных<br>и строительных компаний</p>
+          </div>
+        </div>
+        
+        <!-- Третья акция -->
+        <div class="promo-card">
+          <span class="promo-number">03</span>
+          <div class="promo-content">
+            <div class="promo-percent">До 25%</div>
+            <p class="promo-desc">Скидка именинникам: 7 дней до и 7 дней<br class="mobile-only"> после дня рождения</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1) Отдельная секция для баннера с ёлками -->
+  <section class="testimonials-banner">
+    <div class="container">
+      <img
+        src="project-root/images/banner2.svg"
+        alt="Елки"
+        class="testimonials-banner__image">
+    </div>
+  </section>
+
+  <!-- Контактный раздел -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact__grid">
+        
+        <!-- Левая колонка -->
+        <div class="contact__left">
+          <!-- Заголовок -->
+          <h2 class="contact__title">Связаться с нами</h2>
+          
+          <!-- Список контактов -->
+          <ul class="contact__list">
+            <li class="contact__item">
+              <img src="project-root/images/icons/phone-icon-black.svg"
+                  alt="Телефон"
+                  class="icon icon--phone"
+                  width="16" height="16">
+              <span class="contact__phones">
+                <a href="tel:+73517505524">+7 351 750‑55‑24</a>,
+                <a href="tel:+73517007724">+7 351 700‑77‑24</a>
+              </span>
+            </li>
+            <li class="contact__item">
+              <img src="project-root/images/icons/mail.svg"
+                  alt="E‑mail"
+                  class="icon icon--mail"
+                  width="16" height="16">
+              <a href="mailto:ecoservice74@mail.ru" class="contact__link">
+                Ecoservice74@mail.ru
+              </a>
+            </li>
+            <li class="contact__item">
+              <img src="project-root/images/icons/location.svg"
+                  alt="Адрес"
+                  class="icon icon--map-marker"
+                  width="16" height="16">
+              г. Челябинск, ул. Кожзаводская, 10а, оф. 207
+            </li>
+          </ul>
+          
+          <!-- Блок «Оставить заявку» -->
+          <div class="contact__footer">
+            <p class="contact__note">
+              Остались вопросы? Хотите узнать стоимость?<br> 
+              Заполните форму и наш специалист свяжется <br>с вами для уточнения деталей!
+            </p>
+            <a href="#consult" class="contact__button">
+              Оставить заявку
+              <img 
+                src="project-root/images/icons/arrow-right.svg" 
+                alt="↑" 
+                class="contact__button-icon"
+              >
+            </a>        </div>
+        </div>
+        
+        <!-- Правая колонка: карта -->
+        <div class="map-container"style="position:relative;overflow:hidden;">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A823b7c220f8bbc507eac46c99a13b4ebc038dbb29c2213358aabb70ea0dc22ce&amp;source=constructor" width="520" height="510" frameborder="0"></iframe>
+        </div>     
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <a href="/" class="footer__logo">
+          <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+        </a>
+      </div>
+      <div class="footer__right">
+        <a href="/privacy" class="footer__policy">Политика конфиденциальности</a>
+        <div class="footer__company">
+          <p>
+            Общество с ограниченной<br class="mobile-only-break"> ответственностью
+            «ЭкоСервис74»
+          </p>
+          <p>
+            ИНН / КПП 7442721733 / 744201001<br class="mobile-only-break">
+            ОГРН 1177456026164
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/imask"></script>
+  <script src="project-root/scripts/main.js"></script>
+</body>
+</html>
