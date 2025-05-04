@@ -83,7 +83,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-bottom: 18px;
   }
+
   
   .stage-item {
     display: flex;
@@ -165,7 +167,7 @@
     color: #ffffff;
     text-decoration: none;
     padding: 30px 25px;
-    border-radius: 6px;
+    border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
     transition: opacity 0.2s ease;
