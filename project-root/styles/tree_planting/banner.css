@@ -1,0 +1,435 @@
+/* ================================================
+   Переменные
+   ================================================ */
+   :root {
+    --color-primary: #719C2E;
+    --dark-color-primary: #456C1D;
+  }
+  
+  /* ================================================
+     Сброс
+     ================================================ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ================================================
+     Базовая типографика
+     ================================================ */
+  body {
+    font-family: "Commissioner", sans-serif;
+    background-color: #FAF8F8;
+    color: #000;
+  }
+
+  
+  /* ================================================
+     Баннер
+     ================================================ */
+  .banner {
+    padding: 60px 0;
+  }
+  
+  /* Заголовок */
+  .banner__title {
+    font-family: 'You2013', serif;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 62.35px;
+    letter-spacing: 2%;
+    color: #000;
+  }
+  .mobile-only-break {
+    display: none;
+  }
+  
+  .banner__title .accent {
+    color: var(--color-primary);
+  }
+  .banner__title .accent--block {
+    display: block;
+  }
+  
+  /* Локация внутри баннера */
+  .banner__location {
+    display: flex;
+    align-items: center;
+    margin: 0;           /* обнуляем маргины */
+    font-size: 18px;
+    font-family: 'Commissioner';
+  }
+
+  /* именно второй <p> с этим классом */
+    .banner__content > p.banner__location:nth-of-type(2) {
+    margin: 0 0 133px; /* 8px сверху, 133px снизу */
+  }  
+  
+  .banner__location-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  /* ================================================
+     Карточка баннера
+     ================================================ */
+  .banner__card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 40px 0 0;
+    margin-top: 40px;
+    min-height: 332px;              
+    background-color: #fff;
+    border-radius: 23.38px;
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+    overflow: visible;
+  }
+  
+  /* Выступающая картинка */
+  .banner__img-wrapper {
+    order: 2;
+    position: absolute;
+    top: -180px;                     /* величина выступа */
+    right: 0;
+    bottom: 0;
+    width: 70%;                      /* доля карточки */
+    overflow: hidden;
+    border-top-right-radius: 23.38px;
+    border-bottom-right-radius: 23.38px;
+    z-index: 1;
+  }
+  .banner__img-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Блок с контентом и кнопками */
+  .banner__content {
+    order: 1;
+    flex: 1 1 70%;
+    z-index: 2;
+  
+    /* 1) теперь контент прижмётся к верху */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    /* 2) отступ сверху ровно 27px, по бокам 20px, снизу 40px */
+    padding: 27px 20px 40px 23px;
+  }
+  
+  .banner__buttons {
+    display: flex;
+    gap: 8px;                        /* кнопки чуть ближе */
+    margin-bottom: 15px;
+  }
+  
+  /* Заметка под кнопками */
+  .banner__note {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    white-space: normal;
+    margin-top: -5px; /* заметка поднимется вверх на 5px */
+  }
+
+  .banner__note br {
+    /* обязательно показываем сам разрыв строки */
+    display: block;
+    /* при желании можно чуть увеличить отступ между строками */
+    margin: 0.2em 0;
+  }
+  
+  /* ================================================
+     Менеджерская карточка
+     ================================================ */
+     .manager-card {
+      position: absolute;
+      top: -150px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+      padding: 8px 8px;
+      background: #fff;
+      border-radius: 8px;
+      z-index: 2;
+    }
+    .manager-card__photo {
+      /* width: 40px;
+      height: 40px; */
+      /* border-radius: 50%; */
+      object-fit: cover;
+      margin-right: 8px;
+    }
+    .manager-card__name {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 4px; 
+    }
+    .manager-card__role {
+      font-family: Commissioner;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  
+    }
+  
+  /* ================================================
+     Кнопки общего назначения
+     ================================================ */
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8.85px;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    height: 52px;    
+  }
+  .button--primary {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 12px 24px 12px 24px; /* Топ/право/низ/лево */
+  }
+  .button--tg {
+    background: #29AEEC;
+    color: #fff;
+    width: 52px;
+
+  }
+  .button--wa {
+    background: #6AD567;
+    color: #fff;    
+  }
+  .button--tg,
+  .button--wa {
+    /* квадратный размер: иконка 36px + 2×7px отступа = 50px */
+    width: 50px;
+    height: 50px;
+  
+    /* равные отступы вокруг иконки */
+    padding: 7px;
+  
+    /* центрируем единственный flex‑элемент — иконку */
+    justify-content: center;
+  }  
+
+  /* Заголовок баннера */
+.banner__title {
+  font-family: 'You2013', serif;
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 62.35px;
+  letter-spacing: 2%;
+  color: #000;
+  position: relative; /* Добавляем позиционирование */
+  z-index: 3; /* Устанавливаем выше чем у изображения (z-index: 1) */
+  margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+
+/* ================================================
+   Адаптив для баннера (≤768px)
+   ================================================ */
+   @media (max-width: 768px) {
+    .desktop-only-break{
+      display: none;
+    }
+
+    .banner {
+      padding: 0px 0 40px;
+  }
+
+    /* 1) Заголовок */
+    .banner__title {
+      font-family: 'You2013', serif;
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 42px;
+      letter-spacing: 2%;
+    }
+  
+    /* 2) Локация */
+    .banner__location {
+      display: flex;
+      align-items: center;
+      font-family: 'Commissioner', sans-serif;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 72px;
+    }
+
+    .banner__location-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  
+    /* 3) Кнопка  и прячем мессенджеры */
+    .banner__buttons {
+      margin-bottom: 0;
+      display: flex;
+      gap: 8px;
+    }
+    .button--primary {
+      font-size: 14px;
+      height: 44px;
+      padding: 10px 20px;
+    }
+    .banner__buttons .button--tg,
+    .banner__buttons .button--wa {
+      display: none;
+    }
+  
+    /* 4) Выстраиваем кнопку + заметку в одну линию */
+    .banner__content {
+      display: flex;
+      align-items: start;
+      flex-wrap: nowrap;
+    }
+    /* кнопка по размеру контента */
+    .banner__content > .banner__buttons {
+      order: 2;
+      flex: 0 0 auto;
+    }
+    /* заметка занимает всё оставшееся пространство */
+    .banner__content > .banner__note, .banner__note--sub {
+      order: 3;
+      flex: 1 1 auto;
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0%;
+      line-height: 1.2;
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    .banner__note {
+      font-family: Commissioner;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-top: -115px; /* заметка поднимется вверх на 5px */
+
+    }
+
+    .banner__note--sub {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+  
+    /* 5) Картинка растягивается от левого края карточки */
+    .banner__card {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 20px;
+      min-height: auto;
+    }
+    .banner__img-wrapper {
+      position: relative;
+      order: 2;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+      right: auto;
+      bottom: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+    .banner__img-wrapper img {
+      display: block;
+      width: 130%;
+      height: auto;
+      object-fit: cover;
+      object-position: left center;
+      margin: 0;
+      margin-left: -95px;
+    }
+  
+    /* 6) Карточка менеджера — в левом нижнем углу */
+    .manager-card {
+      position: absolute;
+      top: auto;
+      bottom: 12px;
+      left: 20px;
+      right: auto;
+      height: auto;
+      padding: 5px;
+      padding-right: 10px;
+    }
+
+    .manager-card__photo {
+      width: 38px;
+      height: 41px;
+    }
+
+    .manager-card__name {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 2px;
+    }
+
+    .manager-card__role {
+      font-family: Commissioner;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+
+    .banner__content > p.banner__location:nth-of-type(2) {
+      margin: 0 0 43px;
+  }
+
+  /* 2) Уменьшаем отступы у пунктов локации */
+  /* первый пункт: чуть ниже заголовка */
+  .banner__content > p.banner__location:first-of-type {
+    margin: 4px 0 4px;  /* 4px сверху и снизу */
+  }
+  /* второй пункт: небольшое пространство перед кнопками */
+  .banner__content > p.banner__location:last-of-type {
+    margin: 4px 0 12px; /* 4px сверху, 12px снизу */
+  }
+
+  /* 3) Поднимем кнопки чуть выше */
+  .banner__buttons {
+    margin-top: 0;      /* сбрасываем прежние */
+    margin-bottom: 8px;/* небольшой зазор после кнопок, если понадобится */
+  }
+  }
+
+    /* Сделать иконку локации чуть больше — только у первого <p> */
+.banner__content > p.banner__location:first-of-type .banner__location-icon {
+  width: 20px;
+  height: 20px;
+}
+  
+    
+  
+  
+  

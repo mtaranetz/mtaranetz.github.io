@@ -1,0 +1,286 @@
+/* ==================== */
+/* 1. Общие стили секции */
+/* ==================== */
+.services {
+    padding: 60px 0px;
+    font-family: Commissioner;
+    color: #000;
+    background: #FAF8F8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ==================== */
+  /* 2. Стили заголовка */
+  /* ==================== */
+  .services__header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    align-items: baseline;
+    margin-bottom: 60px;
+  }
+  
+  .services__title {
+    font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 44.33px;
+    letter-spacing: 2%;
+    margin: 0;
+    grid-column: 1 / span 3;
+  }
+  
+  .services__note--header {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333;
+    margin: 0;
+    grid-column: 4 / 5;
+    padding-bottom: 5px;
+  }
+  
+  /* ==================== */
+  /* 3. Основная сетка */
+  /* ==================== */
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  
+  /* ==================== */
+  /* 4. Общие стили карточек */
+  /* ==================== */
+  .services__card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+  }
+  
+  .services__subtitle {
+    font-family: Commissioner;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #719C2E;
+    margin-bottom: 40px;
+  }
+  
+  /* ==================== */
+  /* 5. Левая карточка (Этапы посадки) */
+  /* ==================== */
+  .stages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .stage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+  }
+  
+  .stage-number {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    opacity: 10%;
+    margin-bottom: 8px;
+  }
+  
+  .stage-title {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  
+  /* ==================== */
+  /* 6. Правая карточка (Стоимость) */
+  /* ==================== */
+  .services__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .pricing-grid {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .pricing-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pricing-percent {
+    font-family: Commissioner;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #719C2E;
+    margin-bottom: 8px;
+  }
+  
+  .pricing-title {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  
+  /* ==================== */
+  /* 7. Кнопка */
+  /* ==================== */
+  .services__btn {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #719C2E;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 30px 25px;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.2s ease;
+  }
+  
+  .services__btn:hover {
+    opacity: 0.9;
+  }
+  
+  .services__btn-icon img {
+    height: 18px;
+    width: 18px;
+  }
+  
+@media (max-width: 768px) {
+    .services {
+      padding: 40px 0;
+    }
+
+    .services__card {
+        padding: 15px;
+    }
+  
+    /* 1. Заголовок и подзаголовок */
+    .services__header {
+      display: block;
+      margin-bottom: 30px;
+    }
+  
+    .services__title {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      grid-column: auto;
+    }
+  
+    .services__note--header {
+      font-size: 16px;
+      grid-column: auto;
+      padding-bottom: 0;
+    }
+  
+    /* 2. Основная сетка - одна колонка */
+    .services__wrapper {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  
+    /* 3. Левая карточка (Этапы посадки) - 2 колонки */
+    .stages-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      row-gap: 20px;
+    }
+
+    .services__subtitle {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+  
+    /* Распределение пунктов:
+       1 | 2
+       3 | 4
+       5 | 6
+       7 | 8
+       9 | 
+    */
+
+    .stage-item:nth-child(odd) {
+      grid-column: 1;
+    }
+    .stage-item:nth-child(even) {
+      grid-column: 2;
+    }
+  
+    .stage-number {
+      font-size: 24px;
+    }
+  
+    .stage-title {
+      font-size: 16px;
+    }
+  
+    /* 4. Правая карточка (Стоимость) - 2 колонки */
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    /* Распределение пунктов стоимости:
+       1 | 2
+       3 |
+    */
+    .pricing-item:nth-child(odd) {
+      grid-column: 1;
+    }
+    .pricing-item:nth-child(even) {
+      grid-column: 2;
+    }
+  
+    .pricing-percent {
+      font-size: 24px;
+    }
+  
+    .pricing-title {
+      font-size: 16px;
+    }
+  
+    /* 5. Кнопка */
+    .services__btn {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
+  
+  
+
+  
