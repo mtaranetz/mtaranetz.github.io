@@ -134,10 +134,10 @@
     font-family: Commissioner;
     font-weight: 400;
     font-size: 18px;
-    line-height: 100%;
+    line-height: 1.1;
     letter-spacing: 0%;
     white-space: normal;
-    margin-top: -5px; /* заметка поднимется вверх на 5px */
+    margin-top: 5px;
   }
 
   .banner__note br {

@@ -18,6 +18,6 @@
 
   @media (max-width: 576px) {
     .testimonials-banner{
-        margin-bottom: -65px;
+        margin-bottom: 0px;
     }    
   }

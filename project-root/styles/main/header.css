@@ -71,6 +71,7 @@ html::-webkit-scrollbar {
   .header {
     background-color: transparent;
     min-height: 97px;
+    margin-top: 10px;
 
   }
   

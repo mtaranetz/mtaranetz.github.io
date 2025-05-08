@@ -64,7 +64,6 @@
     margin-top: auto;  /* занимает всё свободное пространство сверху */
     display: flex;
     flex-direction: column;
-    gap: 21px;
   }
   .contact__note {
     font-family: Commissioner;
