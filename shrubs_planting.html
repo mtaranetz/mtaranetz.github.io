@@ -24,261 +24,262 @@
 
     <body>
 
-      <!-- Шапка сайта -->
-      <section class="header">
-        <div class="container">
-          <div class="header__inner">
-          <!-- 1) Логотип (всегда виден) -->
-          <a href="/" class="header__logo">
-            <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+    <!-- Шапка сайта -->
+    <section class="header">
+      <div class="container">
+        <div class="header__inner">
+        <!-- 1) Логотип (всегда виден) -->
+        <a href="/" class="header__logo">
+          <img src="project-root/images/logo.svg" alt="Экосервис74">
+        </a>
+  
+        <!-- 4) Навигация (классику скрываем на мобилке) -->
+        <nav class="header__nav">
+          <ul class="menu">
+            <li class="has-submenu">
+              <a href="">Услуги</a>
+              <ul class="submenu">
+                  <li class="has-submenu">
+                    <a href="design.html">Ландшафтный дизайн</a>
+                    <!-- Второй уровень -->
+                    <ul class="submenu">
+                      <li><a href="design.html">Заказ и реализация проекта</a></li>
+                      <li><a href="autowatering.html">Устройство автополива</a></li>
+  
+                      <li><a href="">Устройство газона</a></li>
+                      <li><a href="garden_care.html">Уход за садом</a></li>
+                      <li><a href="/services/design/portfolio">Наши работы</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-submenu">
+                    <a href="center.html">Садовый центр</a>
+                    <ul class="submenu">
+                      <li><a href="center.html">Хвойные</a></li>
+                      <li><a href="center.html">Лиственные</a></li>
+                      <li><a href="center.html">Кустарники</a></li>
+  
+                      <li><a href="center.html">Ниваки</a></li>
+                      <li><a href="center.html">Топиары</a></li>
+                      <li><a href="center.html">Новогодние ели</a></li>
+                      <li><a href="tree_planting.html">Посадка деревьев</a></li>
+                      <li><a href="large_plantings.html">Посадка крупномеров</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="has-submenu">
+                    <a href="/services/gardener">Товары для сада</a>
+                    <ul class="submenu">
+                      <li><a href="/shop/tools">Инструменты</a></li>
+                      <li><a href="/shop/burlap">Мешковина</a></li>
+                      <li><a href="/shop/root-netting">Сетка для комов</a></li>
+                      <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+                      <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+                      <li><a href="/shop/aerolenta">Аэролента</a></li>
+                      <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+                      <li><a href="/shop/lawn">Газон</a></li>
+                      <li><a href="/shop/soils">Грунты</a></li>
+                      <li><a href="/shop/drainage">Дренаж</a></li>
+                      <li><a href="/shop/gloves">Перчатки</a></li>
+                      <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+                      <li><a href="/shop/fertilizers">Удобрения</a></li>
+                      <li><a href="/shop/stakes">Штур</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+            </li>
+            <!-- Галерея работ с подменю -->
+            <li class="has-submenu">
+              <a href="#">Галерея работ</a>
+              <ul class="submenu">
+                <li><a href="/portfolio/residential">Жилые участки</a></li>
+                <li><a href="/portfolio/commercial">Коммерческие объекты</a></li>
+                <li><a href="/portfolio/public">Общественные пространства</a></li>
+                <li><a href="/portfolio/water-features">Водоёмы и фонтаны</a></li>
+                <li><a href="/portfolio/special-projects">Спец-проекты</a></li>
+              </ul>
+            </li>          
+            <li><a href="#">Цены</a></li>
+            <!-- Акции -->
+            <li class="has-submenu">
+              <a href="#">Акции</a>
+              <ul class="submenu">
+                <li><a href="promo.html">Оптовая</a></li>
+                <li><a href="promo.html">Именинникам</a></li>
+                <li><a href="promo.html">Сезонная</a></li>
+              </ul>
+            </li>          
+            <!-- О нас -->
+            <li class="has-submenu">
+              <a href="#about">О нас</a>
+              <ul class="submenu">
+                <li><a href="/about/articles">Статьи</a></li>
+                <li><a href="/about/contacts">Контакты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+  
+        <!-- 2) Контакты: телефоны + мессенджеры -->
+        <div class="header__contacts">
+          <!-- телефоны: desktop-only -->
+          <a href="tel:+73517505524" class="header__contact-link phone">
+            <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+            +7 (351) 750-55-24
           </a>
-
-          <!-- 4) Навигация (классику скрываем на мобилке) -->
-          <nav class="header__nav">
-            <ul class="menu">
-              <li class="has-submenu">
-                <a href="#services">Услуги</a>
-                <ul class="submenu">
-                    <li class="has-submenu">
-                      <a href="design.html">Ландшафтный дизайн</a>
-                      <!-- Второй уровень -->
-                      <ul class="submenu">
-                        <li><a href="design.html">Заказ и реализация проекта</a></li>
-                        <li><a href="autowatering.html">Устройство автополива</a></li>
-
-                        <li><a href="/services/design/lawn">Устройство газона</a></li>
-                        <li><a href="/services/design/gardening">Уход за садом</a></li>
-                        <li><a href="/services/design/portfolio">Наши работы</a></li>
-                      </ul>
-                    </li>
-                    <li class="has-submenu">
-                      <a href="center.html">Садовый центр</a>
-                      <ul class="submenu">
-                        <li><a href="center.html">Хвойные</a></li>
-                        <li><a href="/center/deciduous">Лиственные</a></li>
-                        <li><a href="/center/shrubs">Кустарники</a></li>
-                        <li><a href="/center/niwaki">Ниваки</a></li>
-                        <li><a href="/center/topiary">Топиары</a></li>
-                        <li><a href="/center/xmas-trees">Новогодние ели</a></li>
-                        <li><a href="/center/planting-trees">Посадка деревьев</a></li>
-                        <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
-                      </ul>
-                    </li>
-                    
-                    <li class="has-submenu">
-                      <a href="/services/gardener">Товары для сада</a>
-                      <ul class="submenu">
-                        <li><a href="/shop/tools">Инструменты</a></li>
-                        <li><a href="/shop/burlap">Мешковина</a></li>
-                        <li><a href="/shop/root-netting">Сетка для комов</a></li>
-                        <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
-                        <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
-                        <li><a href="/shop/aerolenta">Аэролента</a></li>
-                        <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
-                        <li><a href="/shop/lawn">Газон</a></li>
-                        <li><a href="/shop/soils">Грунты</a></li>
-                        <li><a href="/shop/drainage">Дренаж</a></li>
-                        <li><a href="/shop/gloves">Перчатки</a></li>
-                        <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
-                        <li><a href="/shop/fertilizers">Удобрения</a></li>
-                        <li><a href="/shop/stakes">Штур</a></li>
-                      </ul>
-                    </li>
-                    
-                  </ul>
-              </li>
-              <!-- Галерея работ с подменю -->
-              <li class="has-submenu">
-                <a href="#portfolio">Галерея работ</a>
-                <ul class="submenu">
-                  <li><a href="/portfolio/residential">Жилые участки</a></li>
-                  <li><a href="/portfolio/commercial">Коммерческие объекты</a></li>
-                  <li><a href="/portfolio/public">Общественные пространства</a></li>
-                  <li><a href="/portfolio/water-features">Водоёмы и фонтаны</a></li>
-                  <li><a href="/portfolio/special-projects">Спец-проекты</a></li>
-                </ul>
-              </li>          
-              <li><a href="#prices">Цены</a></li>
-              <!-- Акции -->
-              <li class="has-submenu">
-                <a href="#promos">Акции</a>
-                <ul class="submenu">
-                  <li><a href="/promos/wholesale">Оптовая</a></li>
-                  <li><a href="/promos/birthday">Именинникам</a></li>
-                  <li><a href="/promos/seasonal">Сезонная</a></li>
-                </ul>
-              </li>          
-              <!-- О нас -->
-              <li class="has-submenu">
-                <a href="#about">О нас</a>
-                <ul class="submenu">
-                  <li><a href="/about/articles">Статьи</a></li>
-                  <li><a href="/about/contacts">Контакты</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- 2) Контакты: телефоны + мессенджеры -->
-          <div class="header__contacts">
-            <!-- телефоны: desktop-only -->
-            <a href="tel:+73517505524" class="header__contact-link phone">
-              <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
-              +7 (351) 750-55-24
-            </a>
-            <a href="tel:+73517007724" class="header__contact-link phone">
-              <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
-              +7 (351) 700-77-24
-            </a>
-
-            <!-- мессенджеры: mobile-only -->
-            <a href="https://t.me/your_telegram" class="header__contact-link messaging telegram" aria-label="Telegram">
-              <img src="project-root/images/icons/telegram.svg" class="header__contact-icon" alt="">
-            </a>
-            <a href="https://wa.me/73517505524" class="header__contact-link messaging whatsapp" aria-label="WhatsApp">
-              <img src="project-root/images/icons/whatsapp.svg" class="header__contact-icon" alt="">
-            </a>
-          </div>
-
-          <!-- 3) Бургер -->
-          <button class="header__toggle" aria-label="Открыть меню">
-            <img src="project-root/images/icons/burger.svg" class="header__burger-icon" alt="Меню">
-          </button>
-        </div>
-
-        </div>
-
-        <!-- Overlay -->
-        <div class="header__mobile-overlay">
-
-            <!-- Fullscreen меню -->
-          <nav class="header__mobile-menu" aria-hidden="true">
-            <!-- Верхний ряд: логотип + крестик -->
-        <div class="header__mobile-top">
-          <a href="/" class="header__mobile-logo">
-            <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+          <a href="tel:+73517007724" class="header__contact-link phone">
+            <img src="project-root/images/icons/phone-icon.svg" alt="" class="header__contact-icon">
+            +7 (351) 700-77-24
           </a>
-          <button class="header__mobile-close" aria-label="Закрыть меню">
-            <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
-          </button>
+  
+          <!-- мессенджеры: mobile-only -->
+          <a href="https://t.me/your_telegram" class="header__contact-link messaging telegram" aria-label="Telegram">
+            <img src="project-root/images/icons/telegram.svg" class="header__contact-icon" alt="">
+          </a>
+          <a href="https://wa.me/73517505524" class="header__contact-link messaging whatsapp" aria-label="WhatsApp">
+            <img src="project-root/images/icons/whatsapp.svg" class="header__contact-icon" alt="">
+          </a>
         </div>
-
-        <!-- Пункты меню -->
-        <ul class="mobile-menu">
-          <!-- Услуги -->
-          <li class="has-submenu">
-            <a href="design.html">Ландшафтный дизайн</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <ul class="submenu">
-              <li><a href="design.html">Заказ и реализация проекта</a></li>
-              <li><a href="autowatering.html">Устройство автополива</a></li>
-
-              <li><a href="/services/design/lawn">Устройство газона</a></li>
-              <li><a href="/services/design/gardening">Уход за садом</a></li>
-              <li><a href="/services/design/portfolio">Наши работы</a></li>
-            </ul>
-          </li>
+  
+        <!-- 3) Бургер -->
+        <button class="header__toggle" aria-label="Открыть меню">
+          <img src="project-root/images/icons/burger.svg" class="header__burger-icon" alt="Меню">
+        </button>
+      </div>
+  
+      </div>
+  
+      <!-- Overlay -->
+      <div class="header__mobile-overlay">
+  
+          <!-- Fullscreen меню -->
+        <nav class="header__mobile-menu" aria-hidden="true">
+          <!-- Верхний ряд: логотип + крестик -->
+      <div class="header__mobile-top">
+        <a href="/" class="header__mobile-logo">
+          <img src="project-root/images/logo.svg" alt="ЭкоСервис74">
+        </a>
+        <button class="header__mobile-close" aria-label="Закрыть меню">
+          <img src="project-root/images/icons/close.svg" alt="Закрыть меню">
+        </button>
+      </div>
+  
+      <!-- Пункты меню -->
+      <ul class="mobile-menu">
+        <!-- Услуги -->
+        <li class="has-submenu">
+          <a href="design.html">Ландшафтный дизайн</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+          <ul class="submenu">
+            <li><a href="design.html">Заказ и реализация проекта</a></li>
+            <li><a href="autowatering.html">Устройство автополива</a></li>
+  
+            <li><a href="/services/design/lawn">Устройство газона</a></li>
+            <li><a href="garden_care.html">Уход за садом</a></li>
+            <li><a href="/services/design/portfolio">Наши работы</a></li>
+          </ul>
+        </li>
+          
+        <!-- Садовый центр -->
+        <li class="has-submenu">
+          <a href="center.html">Садовый центр</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+          <ul class="submenu">
+            <li><a href="center.html">Хвойные</a></li>
+            <li><a href="center.html">Лиственные</a></li>
+            <li><a href="center.html">Кустарники</a></li>
+            <li><a href="center.html">Ниваки</a></li>
+            <li><a href="center.html">Топиары</a></li>
+            <li><a href="center.html">Новогодние ели</a></li>
+            <li><a href="tree_planting.html">Посадка деревьев</a></li>
+            <li><a href="large_plantings.html">Посадка крупномеров</a></li>
+          </ul>
+        </li>
             
-          <!-- Садовый центр -->
-          <li class="has-submenu">
-            <a href="center.html">Садовый центр</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <ul class="submenu">
-              <li><a href="center.html">Хвойные</a></li>
-              <li><a href="/center/deciduous">Лиственные</a></li>
-              <li><a href="/center/shrubs">Кустарники</a></li>
-              <li><a href="/center/niwaki">Ниваки</a></li>
-              <li><a href="/center/topiary">Топиары</a></li>
-              <li><a href="/center/xmas-trees">Новогодние ели</a></li>
-              <li><a href="/center/planting-trees">Посадка деревьев</a></li>
-              <li><a href="/center/large-specimens">Посадка крупномеров</a></li>
-            </ul>
-          </li>
-              
-          <!-- Товары для сада -->
-          <li class="has-submenu">
-            <a href="/services/gardener">Товары для сада</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <ul class="submenu">
-              <li><a href="/shop/tools">Инструменты</a></li>
-              <li><a href="/shop/burlap">Мешковина</a></li>
-              <li><a href="/shop/root-netting">Сетка для комов</a></li>
-              <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
-              <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
-              <li><a href="/shop/aerolenta">Аэролента</a></li>
-              <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
-              <li><a href="/shop/lawn">Газон</a></li>
-              <li><a href="/shop/soils">Грунты</a></li>
-              <li><a href="/shop/drainage">Дренаж</a></li>
-              <li><a href="/shop/gloves">Перчатки</a></li>
-              <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
-              <li><a href="/shop/fertilizers">Удобрения</a></li>
-              <li><a href="/shop/stakes">Штур</a></li>
-            </ul>
-          </li>
-          
-          <!-- Галерея работ -->
-          <li class="has-submenu">
-            <a href="#portfolio">Галерея работ</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <ul class="submenu">
-              <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
-              <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
-              <li><a href="/portfolio/public">Устройство автополива</a></li>
-              <li><a href="/portfolio/water-features">Устройтво газона</a></li>
-              <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
-            </ul>
-          </li>
-
-          <!-- Статьи -->
-          <li class="has-submenu">
-            <a href="#portfolio">Статьи</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <ul class="submenu">
-              <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
-              <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
-              <li><a href="/portfolio/public">Устройство автополива</a></li>
-              <li><a href="/portfolio/water-features">Устройтво газона</a></li>
-              <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
-            </ul>
-          </li>
-          
-          <!-- Цены -->
-          <li><a href="#prices">Цены</a></li>
-          
-          <!-- Акции -->
-          <li class="has-submenu">
-            <a href="#promos">Акции</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-            <ul class="submenu">
-              <li><a href="/promos/wholesale">Оптовая</a></li>
-              <li><a href="/promos/birthday">Именинникам</a></li>
-              <li><a href="/promos/seasonal">Сезонная</a></li>
-            </ul>
-          </li>
-          
-          <!-- О нас -->
-          <li>
-            <a href="#about">Контакты</a>
-            <button class="submenu-toggle" aria-label="Открыть подменю"></button>
-          </li>
-        </ul>
-
-        <!-- Контакты -->
-        <div class="header__mobile-contacts">
-          <a href="https://t.me/your_telegram" class="messaging telegram" aria-label="Telegram">
-            <img src="project-root/images/icons/telegram.svg" alt="">
-          </a>
-          <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
-            <img src="project-root/images/icons/whatsapp.svg" alt="">
-          </a>
-          <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
-          <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
-        </div>
-          </nav>
-          
-        </div>
-      </section>
+        <!-- Товары для сада -->
+        <li class="has-submenu">
+          <a href="/services/gardener">Товары для сада</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+          <ul class="submenu">
+            <li><a href="/shop/tools">Инструменты</a></li>
+            <li><a href="/shop/burlap">Мешковина</a></li>
+            <li><a href="/shop/root-netting">Сетка для комов</a></li>
+            <li><a href="/shop/crown-wrap">Сетка для упаковки кроны</a></li>
+            <li><a href="/shop/geotextile">Геотекстиль «Дорнит»</a></li>
+            <li><a href="/shop/aerolenta">Аэролента</a></li>
+            <li><a href="/shop/balm-etisso">Бальзам ETISSO для обработки</a></li>
+            <li><a href="/shop/lawn">Газон</a></li>
+            <li><a href="/shop/soils">Грунты</a></li>
+            <li><a href="/shop/drainage">Дренаж</a></li>
+            <li><a href="/shop/gloves">Перчатки</a></li>
+            <li><a href="/shop/growth-stimulants">Стимуляторы роста</a></li>
+            <li><a href="/shop/fertilizers">Удобрения</a></li>
+            <li><a href="/shop/stakes">Штур</a></li>
+          </ul>
+        </li>
+        
+        <!-- Галерея работ -->
+        <li class="has-submenu">
+          <a href="">Галерея работ</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+          <ul class="submenu">
+            <li><a href="">Ландшафтный дизайн</a></li>
+            <li><a href="">Посадка крупномеров</a></li>
+            <li><a href="">Устройство автополива</a></li>
+            <li><a href="">Устройтво газона</a></li>
+            <li><a href="">Новогодние ели</a></li>
+          </ul>
+        </li>
+  
+        <!-- Статьи -->
+        <li class="has-submenu">
+          <a href="">Статьи</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+          <ul class="submenu">
+            <li><a href="/portfolio/residential">Ландшафтный дизайн</a></li>
+            <li><a href="/portfolio/commercial">Посадка крупномеров</a></li>
+            <li><a href="/portfolio/public">Устройство автополива</a></li>
+            <li><a href="/portfolio/water-features">Устройтво газона</a></li>
+            <li><a href="/portfolio/special-projects">Новогодние ели</a></li>
+          </ul>
+        </li>
+        
+        <!-- Цены -->
+        <li><a href="#prices">Цены</a></li>
+        
+        <!-- Акции -->
+        <li class="has-submenu">
+          <a href="">Акции</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+          <ul class="submenu">
+            <li><a href="promo.html">Оптовая</a></li>
+            <li><a href="promo.html">Именинникам</a></li>
+            <li><a href="promo.html">Сезонная</a></li>
+          </ul>
+        </li>
+        
+        <!-- О нас -->
+        <li>
+          <a href="">Контакты</a>
+          <button class="submenu-toggle" aria-label="Открыть подменю"></button>
+        </li>
+      </ul>
+  
+      <!-- Контакты -->
+      <div class="header__mobile-contacts">
+        <a href="https://t.me/your_telegram" class="messaging telegram" aria-label="Telegram">
+          <img src="project-root/images/icons/telegram.svg" alt="">
+        </a>
+        <a href="https://wa.me/73517505524" class="messaging whatsapp" aria-label="WhatsApp">
+          <img src="project-root/images/icons/whatsapp.svg" alt="">
+        </a>
+        <a href="tel:+73517505524" class="phone">+7 (351) 750-55-24</a>
+        <a href="tel:+73517007724" class="phone">+7 (351) 700-77-24</a>
+      </div>
+        </nav>
+        
+      </div>
+    </section>
         
 
         <section class="banner">
@@ -290,7 +291,7 @@
             <div class="banner__card">
             <!-- Менеджер -->
             <div class="manager-card">
-                <img src="project-root/images/manager.svg" alt="Максим Молоков" class="manager-card__photo">
+                <img src="project-root/images/manager.png" alt="Максим Молоков" class="manager-card__photo">
                 <div class="manager-card__info">
                 <p class="manager-card__name">Максим Молоков</p>
                 <p class="manager-card__role">Руководитель компании</p>
@@ -300,7 +301,7 @@
 
             <!-- Картинка -->
             <div class="banner__img-wrapper">
-                <img src="project-root/images/banner6.svg" alt="Живое пространство">
+                <img src="project-root/images/banners/banner6.png" alt="Живое пространство">
             </div>
 
             <!-- Контент с кнопками -->
@@ -498,19 +499,19 @@
             <div class="catalog__slider">
               <div class="catalog__slides">
                 <div class="catalog__slide">
-                  <img src="project-root/images/catalog1.svg" alt="" loading="lazy">
+                  <img src="project-root/images/catalog/catalog1.png" alt="" loading="lazy">
                 </div>
                 <div class="catalog__slide">
-                  <img src="project-root/images/catalog2.svg" alt="" loading="lazy">
+                  <img src="project-root/images/catalog/catalog2.png" alt="" loading="lazy">
                 </div>
                 <div class="catalog__slide">
-                  <img src="project-root/images/catalog3.svg" alt="" loading="lazy">
+                  <img src="project-root/images/catalog/catalog3.png" alt="" loading="lazy">
                 </div>
                 <div class="catalog__slide">
-                  <img src="project-root/images/catalog4.svg" alt="" loading="lazy">
+                  <img src="project-root/images/catalog/catalog4.png" alt="" loading="lazy">
                 </div>
                 <div class="catalog__slide">
-                  <img src="project-root/images/catalog4.svg" alt="" loading="lazy">
+                  <img src="project-root/images/catalog/catalog4.png" alt="" loading="lazy">
                 </div>
               </div>
               <div class="catalog__controls">
@@ -770,14 +771,14 @@
             <div class="team__slider">
               <div class="team__slides">
                 <div class="team__slide">
-                  <img src="project-root/images/team1.svg" alt="Менеджер" loading="lazy">
+                  <img src="project-root/images/team1.png" alt="Менеджер" loading="lazy">
                   <div class="team__info">
                     <h3 class="team__name">Максим Молоков</h3>
                     <p class="team__role">Руководитель проекта</p>
                   </div>
                 </div>
                 <div class="team__slide">
-                  <img src="project-root/images/team2.svg" alt="Менеджер" loading="lazy">
+                  <img src="project-root/images/team2.png" alt="Менеджер" loading="lazy">
                   <div class="team__info">
                     <h3 class="team__name">Наталья Молокова</h3>
                     <p class="team__role">Заместитель руководителя</p>
