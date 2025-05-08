@@ -249,7 +249,7 @@
     }
 
     .banner {
-      padding: 40px 0;
+      padding: 20px 0;
   }
 
     /* 1) Заголовок */
@@ -311,7 +311,7 @@
       flex: 1 1 auto;
       font-family: Commissioner;
       font-weight: 400;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 16px;
       letter-spacing: 0%;
       line-height: 1.2;

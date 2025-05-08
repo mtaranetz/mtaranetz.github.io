@@ -15,6 +15,11 @@
     text-align: start;
 }
 
+/* По умолчанию (десктоп) дублированная карточка спрятана */
+.card--mobile-only {
+    display: none;
+  }
+
 /* Двухколоночный макет */
 .services-section__columns {
     display: flex;
@@ -167,6 +172,17 @@
     .services-section {
         padding: 60px 0;
     }
+
+    
+
+    /* Показываем клон карточки 02 между 01 и 03 */
+    .card--mobile-only {
+        display: block;
+    }
+    /* Прячем оригинальную карточку 02 в правом столбце */
+    .services-section__right > .services-section__card {
+        display: none;
+    }
     
     .services-section__title {
         font-size: 24px;
@@ -221,6 +237,8 @@
     .services-section__card {
         border-radius: 8px;
     }
+
+    
 
     
 }

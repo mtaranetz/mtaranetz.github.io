@@ -1,6 +1,6 @@
 /* --- Секция-баннер с ёлками --- */
 .testimonials-banner {
-    background-color: #FAF8F8;  /* тот же фон, что был у .testimonials */
+    background-color: #FFF;  /* тот же фон, что был у .testimonials */
     overflow: hidden;
     padding-top: 0;            /* можно скорректировать по макету */
     margin-bottom: 80px;

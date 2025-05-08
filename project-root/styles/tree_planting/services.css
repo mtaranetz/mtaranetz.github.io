@@ -7,6 +7,10 @@
     color: #000;
     background: #FAF8F8;
   }
+
+  .mobile-only{
+    display: none;
+  }
   
   .container {
     max-width: 1200px;
@@ -22,7 +26,7 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     align-items: baseline;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   
   .services__title {
@@ -106,10 +110,9 @@
   
   .stage-title {
     font-family: Commissioner;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1.2;
   }
   
   /* ==================== */
@@ -146,7 +149,7 @@
     font-family: Commissioner;
     font-weight: 400;
     font-size: 18px;
-    line-height: 100%;
+    line-height: 1.2;
     letter-spacing: 0%;
   }
   
@@ -185,6 +188,10 @@
 @media (max-width: 768px) {
     .services {
       padding: 40px 0;
+    }
+
+    .mobile-only{
+      display: block;
     }
 
     .services__card {

@@ -3,6 +3,10 @@
     background-color: #fff;
     border-radius: 20px;
   }
+
+  .mobile-only {
+    display: none;
+  }
   
   .promo-section__title {
     font-family: 'You2013', sans-serif;
@@ -31,9 +35,6 @@
     flex-direction: column;
   }
   
-  .promo-card:hover {
-    transform: translateY(-5px);
-  }
   
   .promo-number {
     position: absolute;
@@ -80,6 +81,10 @@
   @media (max-width: 576px) {
     .promo-section {
       padding: 50px 0;
+    }
+
+    .mobile-only {
+      display: block;
     }
     
     .promo-section__title {
