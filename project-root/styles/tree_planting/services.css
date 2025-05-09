@@ -87,7 +87,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 18px;
   }
 
   
@@ -122,6 +121,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .services__card.services__pricing {
+    padding-bottom: 46px;
   }
   
   .pricing-grid {
@@ -188,6 +191,10 @@
 @media (max-width: 768px) {
     .services {
       padding: 40px 0;
+    }
+
+    .services__card.services__pricing {
+      padding-bottom: 25px;
     }
 
     .mobile-only{
