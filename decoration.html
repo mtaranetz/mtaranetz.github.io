@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="project-root/styles/main/header.css" />  
   <link rel="stylesheet" href="project-root/styles/decoration/banner.css" />
   <link rel="stylesheet" href="project-root/styles/main/popup.css" />
-  <link rel="stylesheet" href="project-root/styles/main/adventages.css" />
+  <link rel="stylesheet" href="project-root/styles/decoration/adventages.css" />
+  <link rel="stylesheet" href="project-root/styles/decoration/about.css" />
+  <link rel="stylesheet" href="project-root/styles/decoration/catalog.css" />
   <link rel="stylesheet" href="project-root/styles/main/services.css" />
   <link rel="stylesheet" href="project-root/styles/main/testimonials-banner.css" />
   <link rel="stylesheet" href="project-root/styles/main/testimonials.css" />
@@ -17,10 +19,6 @@
   <link rel="stylesheet" href="project-root/styles/main/contact.css" />
   <link rel="stylesheet" href="project-root/styles/main/footer.css" />
   <link rel="stylesheet" href="project-root/styles/main/overlay-menu.css">
-
-
-
-
 </head>
 <body>
 
@@ -365,133 +363,539 @@
     </div>
   </div>
   
-  <!-- Преимущества -->
+
   <section class="advantages">
     <div class="container">
-    <h2 class="advantages__title">Преимущества компании</h2>
-    <ul class="advantages__list">
-      <li class="advantages__item">
-        <span class="advantages__number">01</span>
-        <h3 class="advantages__item-title">Гарантия 2 года</h3>
-        <p class="advantages__item-desc">на наши работы</p>
-      </li>
-      <li class="advantages__item">
-        <span class="advantages__number">02</span>
-        <h3 class="advantages__item-title">Более 10 лет</h3>
-        <p class="advantages__item-desc">опыт работы</p>
-      </li>
-      <li class="advantages__item">
-        <span class="advantages__number">03</span>
-        <h3 class="advantages__item-title">Сдаем в срок</h3>
-        <p class="advantages__item-desc">все объекты</p>
-      </li>
-      <li class="advantages__item">
-        <span class="advantages__number">04</span>
-        <h3 class="advantages__item-title">Свой садовый центр</h3>
-        <p class="advantages__item-desc">работает ежедневно</p>
-      </li>
-      <li class="advantages__item">
-        <span class="advantages__number">05</span>
-        <h3 class="advantages__item-title">Любой способ оплаты</h3>
-        <p class="advantages__item-desc">платите чем угодно</p>
-      </li>
-      <li class="advantages__item">
-        <span class="advantages__number">06</span>
-        <h3 class="advantages__item-title">Свои бригады</h3>
-        <p class="advantages__item-desc">только проверенные рабочие</p>
-      </li>
-    </ul>
-  </div>
+      <h2 class="advantages__title">Преимущества компании</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <span class="advantages__number">01</span>
+          <h3 class="advantages__item-title">15 лет</h3>
+          <p class="advantages__item-desc">на рынке</p>
+        </li>      
+        <li class="advantages__item">
+          <span class="advantages__number">02</span>
+          <h3 class="advantages__item-title">Сдаем в срок</h3>
+          <p class="advantages__item-desc">все объекты</p>
+        </li>
+        <li class="advantages__item">
+          <span class="advantages__number">03</span>
+          <h3 class="advantages__item-title">Любой способ оплаты</h3>
+          <p class="advantages__item-desc">платите чем угодно</p>
+        </li>
+        <li class="advantages__item">
+          <span class="advantages__number">04</span>
+          <h3 class="advantages__item-title">Свои бригады</h3>
+          <p class="advantages__item-desc">только проверенные рабочие</p>
+        </li>
+        <!-- Это LI вместо двух удалённых карточек -->
+        <li class="advantages__item advantages__item--image">
+          <img src="project-root/images/decoration/decoration-adventages.png" alt="Преимущество компании">
+        </li>
+      </ul>
+    </div>
   </section>
-  
 
-  <section class="services" id="services">
-    <div class="container">
+  <section class="about">
+    <div class="container about__grid">
+      <!-- Заголовок на всю ширину -->
+      <h2 class="about__title">
+        Создаем атмосферу<br class="mobile-only"> 
+        волшебства<br class="desktop-only"> 
+        и праздничного<br class="mobile-only"> 
+        настроения!
+      </h2>
 
-    <h2 class="services__title">
-      Наши услуги
-      <span class="services__subtitle">/ от проекта до реализации</span>
-    </h2>
-  
-    <div class="services__grid">
-      <!-- Ландшафтный дизайн -->
-      <div class="service service--design">
-        <div class="service__img">
-          <img src="project-root/images/services-main/service-design.png" alt="Ландшафтный дизайн">
-        </div>
-        <div class="service__info">
-          <div class="service__header">
-            <h3 class="service__name">Ландшафтный дизайн</h3>
-            <a href="/services/design" class="service__link">
-              Подробнее
-              <img src="project-root/images/icons/arrow-right.svg"
-                   alt=""
-                   class="service__link-icon">
-            </a>
-          </div>
-          <p class="service__desc">Заказ и реализация проекта</p>
-        </div>
+      <!-- Левый блок-резюме -->
+      <div class="about__summary">
+        <p>
+          <span class="about__highlight">Мы занимаемся комплексным оформлением</span>
+          баз отдыха, отелей,
+          ресторанов, кафе, загородных домов и коттеджей 
+          <span class="about__highlight">к Новому Году
+          при помощи хвойных деревьев и иллюминации</span>
+        </p>
       </div>
-  
-      <!-- Садовый центр -->
-      <div class="service service--center">
-        <div class="service__img">
-          <img src="project-root/images/services-main/service-center.png" alt="Садовый центр">
-        </div>
-        <div class="service__info">
-          <div class="service__header">
-            <h3 class="service__name">Садовый центр</h3>
-            <a href="center.html" class="service__link">
-              Подробнее
-              <img src="project-root/images/icons/arrow-right.svg"
-                   alt=""
-                   class="service__link-icon">
-            </a>
-          </div>
-          <p class="service__desc">Продажа и посадка растений</p>
-        </div>
+
+      <!-- Правый блок-список -->
+      <div class="about__list">
+        <h3 class="about__list-title">
+          Что включает в себя оформление<br class="desktop-only"> дома к Новому году:
+        </h3>
+        <ul class="about__list-items">
+          <li><span class="about__list-number">01</span> Установка гирлянд на<br class="desktop-only"> фасад и входную группу</li>
+          <li><span class="about__list-number">02</span> Оформление живыми<br class="desktop-only"> новогодними елями<br class="desktop-only"> в горшках</li>
+          <li><span class="about__list-number">03</span> Подсветка деревьев<br class="desktop-only"> и кустарников</li>
+          <li><span class="about__list-number">04</span> Подсветка окон<br class="desktop-only"> и дорожек</li>
+        </ul>
       </div>
-  
-      <!-- Услуги садовника -->
-      <div class="service service--gardener">
-        <div class="service__img">
-          <img src="project-root/images/services-main/service-gardener.png" alt="Услуги садовника">
+
+      <!-- Галерея из двух фото, занимающая первые два столбца третьей строки -->
+      <div class="about__gallery">
+        <div class="about__gallery-item">
+          <img src="project-root/images/decoration/about1.png" alt="Зимний дом с подсветкой">
         </div>
-        <div class="service__info">
-          <div class="service__header">
-            <h3 class="service__name">Услуги садовника</h3>
-            <a href="/services/gardener" class="service__link">
-              Подробнее
-              <img src="project-root/images/icons/arrow-right.svg"
-                   alt=""
-                   class="service__link-icon">
-            </a>
-          </div>
-          <p class="service__desc">Комплексный уход за вашим участком</p>
-        </div>
-      </div>
-  
-      <!-- Автополив -->
-      <div class="service service--irrigation">
-        <div class="service__img">
-          <img src="project-root/images/services-main/service-irrigation.png" alt="Автополив">
-        </div>
-        <div class="service__info">
-          <div class="service__header">
-            <h3 class="service__name">Автополив</h3>
-            <a href="/services/irrigation" class="service__link">
-              Подробнее
-              <img src="project-root/images/icons/arrow-right.svg"
-                   alt=""
-                   class="service__link-icon">
-            </a>
-          </div>
-          <p class="service__desc">
-            Проектирование, установка,<br>пуско-наладочные и сезонные работы
-          </p>
+        <div class="about__gallery-item">
+          <img src="project-root/images/decoration/about2.png" alt="Коттедж со световыми украшениями">
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="catalog-products">
+    <div class="container">
+      <!-- 1) Заголовок -->
+      <div class="catalog__header">
+        <h2 class="catalog__title">
+          Виды елей и цены
+        </h2>
+        <p class="catalog__subtitle">
+          Новогодние ели в горшках<br class="desktop-only"> 
+          можно купить отдельно и<br class="desktop-only"> 
+          украсить ими участок        
+        </p>
+      </div>
+      <div class="catalog-products__grid">
+        <!-- Карточка без скидки -->
+        <article 
+        class="product-card"
+        data-category="Хвойные"    
+        data-id="spruce-base"> 
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant3.png" alt="Ель обыкновенная">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+            <div class="product-card__price">
+              <span class="price">5 849 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>
+                      
+            </div>
+          </div>
+        </article>
+    
+        <!-- Карточка со скидкой -->
+        <article 
+          class="product-card"
+          data-category="Хвойные"
+          data-id="spruce-super-blue">
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant4.png" alt="Ель колючая Супер Блю">
+            <span class="product-card__badge">% Акция</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+            <div class="product-card__price">
+              <span class="price price--new">4 890 ₽</span>
+              <span class="price price--old">4 890 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>
+                        </div>
+          </div>
+        </article>
+
+        <!-- Карточка без скидки -->
+        <article 
+          class="product-card"
+          data-category="Хвойные"    
+          data-id="spruce-base"> 
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant3.png" alt="Ель обыкновенная">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+            <div class="product-card__price">
+              <span class="price">5 849 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+    
+        <!-- Карточка со скидкой -->
+          <article 
+          class="product-card"
+          data-category="Хвойные"
+          data-id="spruce-super-blue">
+                <div class="product-card__img">
+            <img src="project-root/images/plants/plant4.png" alt="Ель колючая Супер Блю">
+            <span class="product-card__badge">% Акция</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+            <div class="product-card__price">
+              <span class="price price--new">4 890 ₽</span>
+              <span class="price price--old">4 890 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+
+        <!-- 5) Спрятанные по умолчанию карточки -->
+      <div class="catalog-products__more">
+        <!-- Карточка без скидки -->
+        <article class="product-card"
+            data-category="Хвойные"
+          data-id="spruce-base">     
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant3.png" alt="Ель обыкновенная">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+            <div class="product-card__price">
+              <span class="price">5 849 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+    
+        <!-- Карточка со скидкой -->
+          <article 
+            class="product-card"
+            data-category="Хвойные"
+            data-id="spruce-super-blue">
+            <div class="product-card__img">
+            <img src="project-root/images/plants/plant4.png" alt="Ель колючая Супер Блю">
+            <span class="product-card__badge">% Акция</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+            <div class="product-card__price">
+              <span class="price price--new">4 890 ₽</span>
+              <span class="price price--old">4 890 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+
+        <!-- Карточка без скидки -->
+        <article class="product-card"
+            data-category="Хвойные"    
+          data-id="spruce-base"> 
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant3.png" alt="Ель обыкновенная">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+            <div class="product-card__price">
+              <span class="price">5 849 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+    
+        <!-- Карточка со скидкой -->
+          <article 
+          class="product-card"
+          data-category="Хвойные"
+          data-id="spruce-super-blue">
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant4.png" alt="Ель колючая Супер Блю">
+            <span class="product-card__badge">% Акция</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+            <div class="product-card__price">
+              <span class="price price--new">4 890 ₽</span>
+              <span class="price price--old">4 890 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+
+          <!-- Карточка без скидки -->
+          <article class="product-card"
+            data-category="Хвойные"    
+          data-id="spruce-base"> 
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant3.png" alt="Ель обыкновенная">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+            <div class="product-card__price">
+              <span class="price">5 849 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+    
+        <!-- Карточка со скидкой -->
+        <article 
+        class="product-card"
+        data-category="Хвойные"
+        data-id="spruce-super-blue">
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant4.png" alt="Ель колючая Супер Блю">
+            <span class="product-card__badge">% Акция</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+            <div class="product-card__price">
+              <span class="price price--new">4 890 ₽</span>
+              <span class="price price--old">4 890 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+
+        <!-- Карточка без скидки -->
+        <article class="product-card"
+            data-category="Хвойные"
+          data-id="spruce-base">
+          <div class="product-card__img">
+            <img src="project-root/images/plants/plant3.png" alt="Ель обыкновенная">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель обыкновенная C7,5/125/150</h3>
+            <div class="product-card__price">
+              <span class="price">5 849 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          </div>
+          </div>
+        </article>
+    
+        <!-- Карточка со скидкой -->
+        <article 
+        class="product-card"
+        data-category="Хвойные"
+        data-id="spruce-super-blue">
+        <div class="product-card__img">
+            <img src="project-root/images/plants/plant4.png" alt="Ель колючая Супер Блю">
+            <span class="product-card__badge">% Акция</span>
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Ель колючая Супер Блю C20/100–120</h3>
+            <div class="product-card__price">
+              <span class="price price--new">4 890 ₽</span>
+              <span class="price price--old">4 890 ₽</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__btn">В корзину
+                <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon__primary">
+              </button>
+              <button class="product-card__wishlist" aria-label="Добавить в избранное">
+                <img
+                  class="heart-icon"
+                  src="project-root/images/icons/heart.svg"
+                  data-outline="project-root/images/icons/heart.svg"
+                  data-filled="project-root/images/icons/heart-filled.svg"
+                  alt="Избранное"
+                >
+              </button>          
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 4) Кнопка «Показать ещё» -->
+        <button class="catalog-products__load-more">
+          Показать ещё
+        </button>
+      </div>
+
+      <div class="catalog__cta">
+        <div class="catalog__cta-text">
+          <p>
+            <span class="catalog__cta-title">
+              Стоимость работы рассчитывается индивидуально
+            </span>
+            Оставьте заявку, с вами свяжется наш специалист и составит смету
+          </p>
+        </div>
+        <a href="#contacts" class="button catalog__cta-btn open-modal">
+          Оставить заявку
+          <img src="project-root/images/icons/arrow-right.svg" alt="" class="button__icon">
+        </a>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <section class="catalog">
+    <div class="container">
+      <div class="catalog__header">
+        <h2 class="catalog__title">
+          Каталог наших работ
+        </h2>
+        <p class="catalog__subtitle">
+          Реализованные нами<br>
+          проекты
+        </p>
+      </div>
+  
+      <div class="catalog__slider">
+        <div class="catalog__slides">
+          <div class="catalog__slide">
+            <img src="project-root/images/catalog/catalog5.png" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="project-root/images/catalog/catalog6.png" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="project-root/images/catalog/catalog7.png" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="project-root/images/catalog/catalog8.png" alt="" loading="lazy">
+          </div>
+          <div class="catalog__slide">
+            <img src="project-root/images/catalog/catalog8.png" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="catalog__controls">
+          <button type="button"
+          class="catalog__arrow catalog__arrow--prev"
+          aria-label="Предыдущий слайд">
+          <!-- вместо arrow-back.svg используем arrow-forward.svg и повернём его CSS‑ом -->
+          <img src="project-root/images/icons/arrow-forward.svg"
+              alt=""
+              class="catalog__arrow-icon">
+          </button>
+          <button type="button"
+                class="catalog__arrow catalog__arrow--next"
+                aria-label="Следующий слайд">
+                <img src="project-root/images/icons/arrow-forward.svg"
+              alt=""
+              class="catalog__arrow-icon">
+        </button>
+        </div>
+        <button class="catalog__btn">Бесплатная консультация
+          <img src="project-root/images/icons/arrow-right.svg" alt="" class="catalog__btn-icon">
+        </button>
+
+      </div>
     </div>
   </section>
 
@@ -726,61 +1130,6 @@
     </div>
   </section>
 
-  <section class="catalog">
-    <div class="container">
-      <div class="catalog__header">
-        <h2 class="catalog__title">
-          Каталог наших работ
-        </h2>
-        <p class="catalog__subtitle">
-          Реализованные нами<br>
-          проекты
-        </p>
-      </div>
-  
-      <div class="catalog__slider">
-        <div class="catalog__slides">
-          <div class="catalog__slide">
-            <img src="project-root/images/catalog/catalog1.png" alt="" loading="lazy">
-          </div>
-          <div class="catalog__slide">
-            <img src="project-root/images/catalog/catalog2.png" alt="" loading="lazy">
-          </div>
-          <div class="catalog__slide">
-            <img src="project-root/images/catalog/catalog3.png" alt="" loading="lazy">
-          </div>
-          <div class="catalog__slide">
-            <img src="project-root/images/catalog/catalog4.png" alt="" loading="lazy">
-          </div>
-          <div class="catalog__slide">
-            <img src="project-root/images/catalog/catalog4.png" alt="" loading="lazy">
-          </div>
-        </div>
-        <div class="catalog__controls">
-          <button type="button"
-          class="catalog__arrow catalog__arrow--prev"
-          aria-label="Предыдущий слайд">
-          <!-- вместо arrow-back.svg используем arrow-forward.svg и повернём его CSS‑ом -->
-          <img src="project-root/images/icons/arrow-forward.svg"
-              alt=""
-              class="catalog__arrow-icon">
-          </button>
-          <button type="button"
-                class="catalog__arrow catalog__arrow--next"
-                aria-label="Следующий слайд">
-                <img src="project-root/images/icons/arrow-forward.svg"
-              alt=""
-              class="catalog__arrow-icon">
-        </button>
-        </div>
-        <button class="catalog__btn">Бесплатная консультация
-          <img src="project-root/images/icons/arrow-right.svg" alt="" class="catalog__btn-icon">
-        </button>
-
-      </div>
-    </div>
-  </section>
-
   <section class="team">
     <div class="container">
       <div class="team__header">
@@ -905,7 +1254,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Футер -->
   <footer class="footer">

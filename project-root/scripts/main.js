@@ -194,3 +194,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const grid    = document.querySelector('.catalog-products__grid');
+  const loadBtn = document.querySelector('.catalog-products__load-more');
+  const more    = document.querySelector('.catalog-products__more');
+
+  loadBtn.addEventListener('click', () => {
+    const isExpanded = more.classList.toggle('visible');
+    grid.classList.toggle('all-visible', isExpanded);
+
+    // переключаем текст кнопки
+    loadBtn.textContent = isExpanded ? 'Свернуть' : 'Показать ещё';
+
+    // при сворачивании можно скроллить вверх к кнопке
+    if (!isExpanded) {
+      loadBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+
+

@@ -1,0 +1,598 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+/* ================================================
+   Шрифты
+   ================================================ */
+   @font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'You2013';
+    src: url('../fonts/you2013.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* ================================================
+     CSS-переменные
+     ================================================ */
+  :root {
+    --color-primary: #719C2E;
+    --dark-color-primary: #CFE2B1;
+    --red-color: #E62020;
+    --bg-page: #FAF8F8;
+    --font-base: 'Commissioner', sans-serif;
+    --font-heading: 'You2013', serif;
+  }
+  
+  /* ================================================
+     Базовые стили
+     ================================================ */
+  body {
+    background-color: var(--bg-page);
+    margin: 0;
+    font-family: var(--font-base);
+  }
+  
+  
+  /* ================================================
+   Каталог (фильтры + навигация)
+   ================================================ */
+
+   .catalog-nav {
+    padding: 70px 0 30px; /* ваш верхний/нижний маргин */
+  }
+
+.catalog-nav__title {
+  font-family: You2013;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 80px;
+  letter-spacing: 2%;
+  margin: 70px 0 30px;
+}
+
+/* Сетка кнопок-фильтров */
+.catalog-nav__filters {
+  display: grid;
+  /* колонки не шире 200px, растягиваются равномерно */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+/* Кнопки-фильтры */
+.catalog-nav__btn {
+  /* убираем фиксированный flex/fixed width */
+  flex: unset;
+  min-width: 120px;
+  height: 50px;
+  background: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 15px;
+  font-family: Commissioner, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.catalog-nav__btn--active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.catalog-nav__btn:not(.catalog-nav__btn--active):hover {
+  background: #CFE2B1;
+  color: #000;
+}
+
+  
+  /* ================================================
+     Сетка товаров
+     ================================================ */
+  .catalog-products__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  /* ================================================
+     Карточка товара
+     ================================================ */
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+    /* Обёртка для картинки ‒ фиксированное соотношение сторон + обрезка */
+  .product-card__img {
+    position: relative;
+    aspect-ratio: 4 / 5;     /* или другое соотношение, нужное вам */
+    overflow: hidden;
+  }
+
+/* Само изображение растягиваем на весь контейнер и обрезаем */
+.product-card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+  .product-card__badge {
+    position: absolute;
+    top: 10px; right: 8px;
+    background: var(--red-color);
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+  .product-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 23px 0;
+  }
+  .product-card__title {
+    font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  .product-card__price {
+    font-family: Commissioner;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: auto;
+  }
+  .price {
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+  }
+  .price--new {
+    color: var(--red-color);
+  }
+  .price--old {
+    font-size: 16px;
+    text-decoration: line-through;
+  }
+  
+  /* Кнопки действий */
+.product-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.product-card__btn {
+  display: inline-flex;           /* чтобы gap работал */
+  align-items: center;            /* выравнивание текста и иконки по центру */
+  justify-content: center;        /* кнопка растягивается равномерно */
+  flex: 1;
+  padding: 10px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  gap: 12px;                       /* расстояние между текстом и стрелкой */
+  border-radius: 7px;
+  font-size: .875rem;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.product-card__btn:hover {
+  background: var(--dark-color-primary);
+  color: #000;
+}
+
+.button__icon__primary {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+  
+  /* Избранное */
+  .product-card__wishlist {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  
+  .product-card__wishlist {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color .2s;
+  }
+  .product-card__wishlist:hover {
+    border-color: var(--color-primary);
+  }
+  /* размер иконки */
+  .product-card__wishlist .heart-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  
+  /* ================================================
+     Адаптивные настройки
+     ================================================ */
+  @media (max-width: 768px) {
+    /* Заголовок каталога */
+    .catalog-nav__title {
+      font-family: You2013;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 2%;
+      margin-top: 76px;
+      margin-bottom: 37px;
+    }
+    /* Фильтры — 2 колонки */
+    .catalog-nav__filters {
+      font-family: Commissioner;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 10px;
+      margin-bottom: 58px;
+    }
+    .catalog-nav__btn {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+
+    /* Товары — 2 колонки */
+    .catalog-products__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 0 0; /* чтобы не упираться в края */
+    }
+    /* Мелкие изменения в карточках */
+    .product-card__wishlist {
+      width: 38px;
+      height: 38px;
+    }
+    .product-card__wishlist .heart-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  /* === основная сетка === */
+.catalog-products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  position: relative;
+}
+
+/* Заголовок над всей сеткой */
+.catalog-products__title {
+  grid-column: 1 / -1;
+  font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 2%;
+
+  margin-bottom: 24px;
+}
+
+/* Подзаголовок — в последней колонке */
+.catalog-products__subtitle {
+  grid-column: -2 / -1;
+  
+  font-family: var(--font-base);
+  font-size: 18px;
+  margin: 0;
+  align-self: start;
+}
+
+/* Кнопка «Показать ещё» — сразу под первым рядом, растянута на всю ширину */
+.catalog-products__load-more {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 15px 45px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Commissioner;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.catalog-products__more { display: none; }
+
+/* Спрятанный контейнер */
+.catalog-products__more.visible {
+  grid-column: 1 / -1;
+  display: none;          /* скрыт по умолчанию */
+  grid-template-columns: inherit;
+  gap: inherit;
+  /* чтобы карточки шли как обычно */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+
+/* === Шапка: 4-колоночная сетка === */
+.catalog__header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  align-items: center;    /* выравниваем заголовок и субтайтл по центру строки */
+  margin-bottom: 33px;
+}
+
+.catalog__title {
+  grid-column: 1 / span 3; /* занимает первые три колонки */
+  margin: 0;
+  font-family: You2013, serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44.33px;
+  letter-spacing: 2%;
+  align-self: center;      /* центр внутри своей ячейки */
+}
+
+.catalog__subtitle {
+  grid-column: 4 / 5;      /* четвертая колонка */
+  margin: 0;
+  font-family: Commissioner, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  color: #333;
+  align-self: center;      /* центр по вертикали */
+}
+
+/* ----------------------------
+   CTA-блок в каталоге
+   ---------------------------- */
+.catalog__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 40px 0; /* отступы сверху/снизу */
+  gap: 0px;
+  margin-bottom: 80px;
+}
+
+/* Текст */
+.catalog__cta-text {
+  flex: 1;
+}
+.catalog__cta-text p {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+}
+.catalog__cta-title {
+    display: block;     /* вместо block */
+    margin-bottom: 5px;    /* сбрасываем нижний отступ */  
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+
+/* Кнопка */
+.catalog__cta-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  transition: background .2s, transform .2s;
+}
+.catalog__cta-btn:hover {
+  background: var(--dark-color-primary);
+  transform: translateY(-2px);
+}
+
+/* Иконка в кнопке */
+.catalog__cta-btn .button__icon {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+/* --- Адаптив (≤768px) --- */
+@media (max-width: 768px) {
+  .catalog__cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .catalog__cta-text p {
+    font-size: 18px;
+  }
+  .catalog__cta-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 18px;
+  }
+
+  /* === Сетка товаров: 2 колонки === */
+  .catalog-products__grid {
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 10px;
+    padding: 0;
+  }
+  .product-card__wishlist {
+    width: 38px;
+    height: 38px;
+  }
+  .product-card__wishlist .heart-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* === Кнопка «Показать ещё» === */
+  .catalog-products__load-more {
+    grid-column: 1 / -1;       /* вся ширина грид-контейнера */
+    justify-self: center;      /* центрируем по горизонтали */
+    width: 100%;
+    max-width: 240px;          /* ограничиваем, если нужно */
+    margin: 16px auto 0;       /* отступ сверху + центрирование */
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: var(--font-base);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* === Спрятанный контейнер карточек === */
+  .catalog-products__more.visible {
+    display: grid;                             /* включаем грид */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  /* === CTA-блок (как у вас уже задан) === */
+  .catalog__cta {
+    flex-direction: column;
+    text-align: start;
+    padding: 16px;
+  }
+  .catalog__cta-text p {
+    font-size: 14px;
+    
+  }
+  .catalog__cta-btn {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  /* Прячем третью и последующие прямые <article> внутри грид-контейнера */
+  .catalog-products__grid > article:nth-of-type(n+3) {
+    display: none;
+  }
+
+  /* Кнопка должна идти прямо под двумя оставшимися карточками */
+  .catalog-products__load-more {
+    grid-column: 1 / -1;
+    margin-top: 16px;
+  }
+
+  /* При раскрытии — показываем не только дополнительные, но и все прямые карточки */
+  .catalog-products__grid.all-visible > article {
+    display: block;  /* возвращаем видимость всем прямым карточкам */
+  }
+
+  .catalog__cta-title {
+    display: block;     /* вместо block */
+    margin-bottom: 5px;    /* сбрасываем нижний отступ */
+  }
+}
+
+@media (max-width: 768px) {
+  /* прячем 3-ю и последующие карточки */
+  .catalog-products__grid > article:nth-of-type(n+3) {
+    display: none;
+  }
+
+  /* контейнер “more” по умолчанию скрыт */
+  .catalog-products__more {
+    display: none;
+  }
+  /* когда добавляем класс .visible — он разворачивается */
+  .catalog-products__more.visible {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* при наличии .all-visible возвращаем к life всем карточкам */
+  .catalog-products__grid.all-visible > article {
+    display: block;
+  }
+
+  /* кнопка остаётся последним элементом грид-контейнера */
+  .catalog-products__load-more {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 20px 15px;
+    padding: 20px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: auto;
+  }
+}
+
+
+
+

@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Переменные
+   ========================================================================== */
+:root {
+  --color-primary: #719C2E;
+  --bg-section:   #FAF8F8;
+  --gap:          24px;
+}
+
+/* ==========================================================================
+   Сброс и базовые стили
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background-color: var(--bg-section);
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Подключение шрифтов
+   ========================================================================== */
+@font-face {
+  font-family: 'Commissioner';
+  src: url('../fonts/Commissioner.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'You2013';
+  src: url('../fonts/you2013.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   Секция .about
+   ========================================================================== */
+.about {
+  padding: 60px 0;
+  padding-bottom: 120px;
+  background: var(--bg-section);
+}
+
+.about__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  /* две узкие колонки + одна широкая */
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-auto-rows: auto;
+  gap: var(--gap);
+}
+
+/* ----------------------------------
+   Заголовок
+   ---------------------------------- */
+.about__title {
+  grid-column: 1 / -1;
+  font-family: You2013;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 2%;
+
+  margin-bottom: var(--gap);
+  color: #000;
+}
+
+/* ==========================================================================
+   Левый блок: summary + gallery
+   ========================================================================== */
+/* Текстовый блок */
+.about__summary {
+  grid-column: 1 / 3;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  padding-bottom: 30px;
+}
+
+.about__summary p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.about__highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Галерея */
+.about__gallery {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.about__gallery-item img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   Правый блок: список
+   ========================================================================== */
+.about__list {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  padding-bottom: 30px;
+}
+
+.about__list-title {
+  font-family: 'Commissioner', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.about__list-items {
+  list-style: none;
+  margin-top: auto;
+    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.about__list-items li {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.about__list-number {
+  font-family: 'Commissioner', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #000;
+  opacity: 0.1;
+}
+/* ==========================================================================  
+   Мобильная версия (≤768px)  
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Единая колонка вместо трёх */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Заголовок поменьше и с меньшим отступом */
+  .about__title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+            grid-row: 1;    
+
+  }
+
+  /* Summary — на всю ширину, более компактные паддинги */
+  .about__summary {
+        grid-column: 1;
+        padding: 18px;
+        padding-bottom: 20px;
+        grid-row: 2;    
+
+  }
+
+  /* Галерея остаётся 2-колоночной, gap поменьше */
+  .about__gallery {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-row: 3;    
+
+  }
+  .about__gallery-item img {
+    max-height: 150px;
+    border-radius: 8px;
+  }
+
+  /* Список под галереей, на всю ширину */
+  .about__list {
+    grid-column: 1;
+    grid-row: auto;
+    grid-row: 4;    
+
+    
+    padding: 16px;
+    padding-bottom: 20px;
+  }
+
+  /* Заголовок списка */
+  .about__list-title {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  /* Пункты 2×2 */
+  .about__list-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: auto; /* если нужен отрыв от шапки */
+    margin-bottom: 0;
+  }
+
+  /* Текст и номер поменьше */
+  .about__list-items li {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .about__list-number {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+}
+
