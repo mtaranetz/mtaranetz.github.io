@@ -248,9 +248,7 @@ html, body {
     cursor: pointer;
     transition: border-color .2s;
   }
-  .product-card__wishlist:hover {
-    border-color: var(--color-primary);
-  }
+  
   /* размер иконки */
   .product-card__wishlist .heart-icon {
     width: 20px;
